@@ -31,6 +31,8 @@ Claude agent padding that does not change the work:
 
 Specialists are slash-only (`/frontend-developer`) so 273 full files do not auto-load every turn. `/agency` is the catalog and the only auto-invocable skill. When a specialist runs, Grok gets the whole method.
 
+Subagent spawn: every child gets one specialist. Protocol: `integrations/grok/spawn.md`. Mechanical slice: `integrations/grok/slice.py`.
+
 ```bash
 python3 scripts/convert-grok.py
 # or

@@ -17,3 +17,7 @@ Output:
 
 - `skills/` at repo root (committed plugin layout)
 - `integrations/grok/skills/` (install.sh mirror, gitignored)
+
+## Spawn protocol
+
+Every Grok subagent gets an Agency specialist. See `spawn.md`. Slice METHOD with `slice.py <slug>`.

@@ -22,6 +22,7 @@ Each skill keeps the **full method**. Claude character-sheet padding is stripped
 - Specialists are slash skills (`/frontend-developer`). Slash-only, so the roster does not load every turn.
 - When the user names a role, read that skill's `SKILL.md` and follow the whole method.
 - If the role is ambiguous, list 3-5 matching slugs and ask.
+- Every agent/subagent spawn follows `integrations/grok/spawn.md` (slice via `integrations/grok/slice.py`). No generic helper.
 - Use Grok tools. Deliver the artifact. Do not recap the skill.
 
 Roster: 273 specialists.
