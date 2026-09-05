@@ -1,0 +1,13 @@
+{
+  "name": "agency-agents",
+  "version": "1.0.0",
+  "description": "The Agency, rewritten as Grok Build skills: compressed specialist procedures, slash-invocable, one auto-invoke catalog.",
+  "author": {
+    "name": "ed-munch",
+    "url": "https://github.com/ed-munch/agency-agents"
+  },
+  "homepage": "https://github.com/ed-munch/agency-agents",
+  "repository": "https://github.com/ed-munch/agency-agents",
+  "license": "MIT",
+  "keywords": ["grok", "skills", "agency-agents", "specialists"]
+}

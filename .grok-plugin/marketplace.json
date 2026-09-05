@@ -1,0 +1,15 @@
+{
+  "name": "Agency Agents for Grok",
+  "description": "Compressed specialist skills from msitarzewski/agency-agents, rewritten for Grok Build.",
+  "owner": { "name": "ed-munch", "url": "https://github.com/ed-munch" },
+  "plugins": [
+    {
+      "name": "agency-agents",
+      "description": "273 specialist Grok skills plus an /agency catalog. Slash-invocable; catalog is the only auto-invoke skill.",
+      "category": "productivity",
+      "source": { "type": "local", "path": "." },
+      "homepage": "https://github.com/ed-munch/agency-agents",
+      "keywords": ["grok", "skills", "agency"]
+    }
+  ]
+}

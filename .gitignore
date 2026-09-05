@@ -86,3 +86,6 @@ integrations/vibe/agents/
 integrations/vibe/prompts/
 integrations/zcode/agents/
 graphify-out/
+
+# Generated Grok mirror (committed copy lives in skills/)
+integrations/grok/skills/

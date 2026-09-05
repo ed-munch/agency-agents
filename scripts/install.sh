@@ -27,6 +27,7 @@
 #   osaurus      -- Copy skills to ~/.osaurus/skills/
 #   hermes       -- Copy lazy-router plugin to ~/.hermes/plugins/ and enable it
 #   vibe         -- Copy agents and prompts to ~/.vibe/agents/ and ~/.vibe/prompts/
+#   grok         -- Copy skills to ~/.grok/skills/
 #   all          -- Install for all detected tools (default)
 #
 # Selection (compose freely; empty = everything):
@@ -51,7 +52,7 @@
 #
 # Env: CLAUDE_CONFIG_DIR, COPILOT_AGENT_DIR, CURSOR_RULES_DIR, GEMINI_AGENTS_DIR,
 #      OPENCODE_AGENTS_DIR, OPENCLAW_DIR, QWEN_AGENTS_DIR, CODEX_AGENTS_DIR,
-#      OSAURUS_SKILLS_DIR, HERMES_HOME, HERMES_PLUGIN_DIR, VIBE_HOME
+#      OSAURUS_SKILLS_DIR, HERMES_HOME, HERMES_PLUGIN_DIR, VIBE_HOME, GROK_SKILLS_DIR
 #      override default install paths (checked before hardcoded defaults).
 #
 # --- USAGE-END ---  (sentinel for usage(); do not remove)
@@ -130,7 +131,7 @@ INTEGRATIONS="$REPO_ROOT/integrations"
 # shellcheck source=lib.sh
 . "$SCRIPT_DIR/lib.sh"
 
-ALL_TOOLS=(claude-code copilot antigravity gemini-cli opencode openclaw cursor aider windsurf qwen zcode kimi codex osaurus hermes vibe)
+ALL_TOOLS=(claude-code copilot antigravity gemini-cli opencode openclaw cursor aider windsurf qwen zcode kimi codex osaurus hermes vibe grok)
 
 # The division set is derived from divisions.json (the single source of truth)
 # so the installer can never drift from the catalog — a hardcoded copy silently
@@ -444,6 +445,7 @@ detect_codex()        { command -v codex >/dev/null 2>&1 || [[ -d "${HOME}/.code
 detect_osaurus()      { command -v osaurus >/dev/null 2>&1 || [[ -d "${HOME}/.osaurus" ]]; }
 detect_hermes()       { command -v hermes >/dev/null 2>&1 || [[ -d "${HERMES_HOME:-${HOME}/.hermes}" ]]; }
 detect_vibe()         { command -v vibe >/dev/null 2>&1 || [[ -d "${VIBE_HOME:-${HOME}/.vibe}" ]]; }
+detect_grok()         { command -v grok >/dev/null 2>&1 || [[ -d "${HOME}/.grok" ]]; }
 
 is_detected() {
   case "$1" in
@@ -463,6 +465,7 @@ is_detected() {
     osaurus)     detect_osaurus     ;;
     hermes)      detect_hermes      ;;
     vibe)        detect_vibe        ;;
+    grok)        detect_grok        ;;
     *)           return 1 ;;
   esac
 }
@@ -1195,6 +1198,27 @@ PY
   fi
 }
 
+
+install_grok() {
+  local src="$INTEGRATIONS/grok/skills"
+  [[ -d "$src" ]] || src="$REPO_ROOT/skills"
+  local dest; dest="$(resolve_dest grok "${GROK_SKILLS_DIR:-${HOME}/.grok/skills}")"
+  local count=0
+  [[ -d "$src" ]] || { err "Grok skills missing. Run ./scripts/convert.sh --tool grok first."; return 1; }
+  mkdir -p "$dest"
+  local d
+  while IFS= read -r -d '' d; do
+    local name; name="$(basename "$d")"
+    slug_allowed "$name" || continue
+    [[ -f "$d/SKILL.md" ]] || continue
+    mkdir -p "$dest/$name"
+    install_file "$d/SKILL.md" "$dest/$name/SKILL.md"
+    incr count
+  done < <(find "$src" -mindepth 1 -maxdepth 1 -type d -print0)
+  ok "Grok Build: $count skills -> $dest"
+  warn "Grok: prefer \`grok plugin install ed-munch/agency-agents --trust\` so the roster is one plugin, not 270+ user skills."
+}
+
 install_tool() {
   ensure_converted "$1"
   case "$1" in
@@ -1214,6 +1238,7 @@ install_tool() {
     osaurus)     install_osaurus     ;;
     hermes)      install_hermes      ;;
     vibe)        install_vibe        ;;
+    grok)        install_grok        ;;
   esac
 }
 
