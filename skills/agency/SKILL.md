@@ -1,6 +1,6 @@
 ---
 name: agency
-description: 'Agency specialist roster for Grok Build. Use when the user wants a specialist agent, an agency role, a domain expert, or runs /agency. Pick the matching slash skill and follow it.'
+description: 'Agency specialist roster for Grok Build. Full methods, written as Grok procedures. Use when the user wants a specialist, an agency role, or runs /agency.'
 when-to-use: agency, specialist, roster, persona, agent role, the agency
 disable-model-invocation: false
 user-invocable: true
@@ -14,15 +14,15 @@ metadata:
 
 # Agency
 
-This plugin is a compressed rewrite of [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) for Grok Build.
+Specialist skills ported from [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents).
+Each skill keeps the **full method**. Claude character-sheet padding is stripped. Nothing is summarized down to a handful of bullets.
 
 ## How to work
 
-- Specialists are slash skills (`/frontend-developer`). They have `disable-model-invocation: true` so they do not bloat auto-invoke context.
-- If the user names a role, read `skills/<slug>/SKILL.md` in this plugin (or `~/.grok/skills/<slug>/SKILL.md`) and follow it for the rest of the turn.
-- If the role is ambiguous, list 3-5 matching slugs from the roster below and ask.
-- Deliver the artifact. Do not recap the persona. Do not invent tools the session does not have.
-- UI changes: verify in the browser before claiming done.
+- Specialists are slash skills (`/frontend-developer`). Slash-only, so the roster does not load every turn.
+- When the user names a role, read that skill's `SKILL.md` and follow the whole method.
+- If the role is ambiguous, list 3-5 matching slugs and ask.
+- Use Grok tools. Deliver the artifact. Do not recap the skill.
 
 Roster: 273 specialists.
 

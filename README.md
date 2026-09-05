@@ -1,10 +1,8 @@
 # The Agency for Grok Build
 
-Fork of [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents), rewritten as **Grok skills**.
+Fork of [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents). Same specialists, written as **Grok skills**.
 
-Upstream is a catalog of specialist *personas* (median ~238 lines, ~73k lines total). Grok Build skills need the opposite: short procedures, slash commands, and almost nothing in auto-invoke context.
-
-This fork compresses the roster to **~18% of the original line count**, makes specialists slash-only, and keeps one auto-invocable catalog.
+Not a cropped Claude dump. Each skill keeps the full method (rules, workflow, frameworks, examples) and drops only the character-sheet padding (personality, memory, communication style). A short Grok block tells the model to use tools and deliver the artifact.
 
 ## Install
 
@@ -12,7 +10,7 @@ This fork compresses the roster to **~18% of the original line count**, makes sp
 grok plugin install ed-munch/agency-agents --trust
 ```
 
-Or copy skills into your Grok home:
+Or copy into Grok home:
 
 ```bash
 ./scripts/install.sh --tool grok
@@ -26,29 +24,28 @@ Subset:
 ./scripts/install.sh --tool grok --agent frontend-developer,code-reviewer
 ```
 
-Restart the Grok session (or reload plugins) so `/agency` and `/frontend-developer` appear.
+Reload plugins or start a new session so `/agency` and `/frontend-developer` appear.
 
 ## Use
 
 | Command | What it does |
 |---|---|
 | `/agency` | Catalog. Auto-invoked when you ask for a specialist. |
-| `/frontend-developer` | Run that specialist for this turn. |
-| `/code-reviewer` | Same, for review. |
+| `/frontend-developer` | Full frontend method for this turn. |
+| `/code-reviewer` | Full review method for this turn. |
 
-Ask: "use the frontend developer and build the settings page." Grok should load `/agency` or the named skill and follow it.
+## vs upstream
 
-## What changed vs upstream
-
-| | Upstream | This fork |
+| | Upstream (Claude) | This fork (Grok) |
 |---|---|---|
-| Unit | Persona `.md` agent | Grok `SKILL.md` |
-| Auto-invoke | Every agent description | Only `/agency` |
-| Body | Identity, vibe, sample code, templates | Do / Rules / Done when |
-| Size | ~73k lines | ~13k lines |
+| Unit | Persona `.md` agent | `SKILL.md` procedure |
+| Method | Full | Full (not cropped) |
+| Padding | Identity, vibe, memory, voice | Stripped |
+| How it runs | Claude Code agent | Slash skill + Grok tools |
+| Auto-invoke | Agent descriptions | Only `/agency` |
 | Install | `~/.claude/agents/` | `grok plugin install` or `~/.grok/skills/` |
 
-Source personas are still in `engineering/`, `design/`, … so you can sync upstream. Generated skills live in `skills/`. See [GROK.md](GROK.md).
+Source personas stay in `engineering/`, `design/`, … Generated skills live in `skills/`. See [GROK.md](GROK.md).
 
 ## Regenerate
 
@@ -58,13 +55,8 @@ Source personas are still in `engineering/`, `design/`, … so you can sync upst
 
 ## Other tools
 
-The original convert/install scripts still target Claude Code, Cursor, Codex, Gemini, and the rest. This fork adds **`grok`** as a first-class tool in `tools.json`.
-
-```bash
-./scripts/install.sh --tool claude-code   # unchanged
-./scripts/install.sh --tool grok          # new
-```
+Original convert/install still targets Claude Code, Cursor, Codex, Gemini, and the rest. This fork adds **`grok`**.
 
 ## License
 
-MIT, same as upstream. Personas by [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) contributors. Grok rewrite in this fork.
+MIT, same as upstream. Personas by [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) contributors.

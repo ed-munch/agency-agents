@@ -5,7 +5,7 @@
     "division": "academic",
     "src": "academic/academic-anthropologist.md",
     "src_lines": 126,
-    "out_lines": 45
+    "out_lines": 123
   },
   {
     "slug": "geographer",
@@ -13,7 +13,7 @@
     "division": "academic",
     "src": "academic/academic-geographer.md",
     "src_lines": 128,
-    "out_lines": 45
+    "out_lines": 125
   },
   {
     "slug": "historian",
@@ -21,7 +21,7 @@
     "division": "academic",
     "src": "academic/academic-historian.md",
     "src_lines": 124,
-    "out_lines": 45
+    "out_lines": 121
   },
   {
     "slug": "narratologist",
@@ -29,7 +29,7 @@
     "division": "academic",
     "src": "academic/academic-narratologist.md",
     "src_lines": 119,
-    "out_lines": 44
+    "out_lines": 116
   },
   {
     "slug": "psychologist",
@@ -37,7 +37,7 @@
     "division": "academic",
     "src": "academic/academic-psychologist.md",
     "src_lines": 119,
-    "out_lines": 44
+    "out_lines": 117
   },
   {
     "slug": "statistician",
@@ -45,7 +45,7 @@
     "division": "academic",
     "src": "academic/academic-statistician.md",
     "src_lines": 145,
-    "out_lines": 49
+    "out_lines": 134
   },
   {
     "slug": "brand-guardian",
@@ -53,7 +53,7 @@
     "division": "design",
     "src": "design/design-brand-guardian.md",
     "src_lines": 322,
-    "out_lines": 50
+    "out_lines": 317
   },
   {
     "slug": "image-prompt-engineer",
@@ -61,7 +61,7 @@
     "division": "design",
     "src": "design/design-image-prompt-engineer.md",
     "src_lines": 237,
-    "out_lines": 50
+    "out_lines": 236
   },
   {
     "slug": "inclusive-visuals-specialist",
@@ -69,7 +69,7 @@
     "division": "design",
     "src": "design/design-inclusive-visuals-specialist.md",
     "src_lines": 72,
-    "out_lines": 40
+    "out_lines": 76
   },
   {
     "slug": "persona-walkthrough-specialist",
@@ -77,7 +77,7 @@
     "division": "design",
     "src": "design/design-persona-walkthrough.md",
     "src_lines": 273,
-    "out_lines": 50
+    "out_lines": 247
   },
   {
     "slug": "ui-designer",
@@ -85,7 +85,7 @@
     "division": "design",
     "src": "design/design-ui-designer.md",
     "src_lines": 383,
-    "out_lines": 50
+    "out_lines": 368
   },
   {
     "slug": "ui-finish-gate-reviewer",
@@ -93,7 +93,7 @@
     "division": "design",
     "src": "design/design-ui-finish-gate-reviewer.md",
     "src_lines": 218,
-    "out_lines": 50
+    "out_lines": 207
   },
   {
     "slug": "ux-architect",
@@ -101,7 +101,7 @@
     "division": "design",
     "src": "design/design-ux-architect.md",
     "src_lines": 469,
-    "out_lines": 50
+    "out_lines": 451
   },
   {
     "slug": "ux-researcher",
@@ -109,7 +109,7 @@
     "division": "design",
     "src": "design/design-ux-researcher.md",
     "src_lines": 329,
-    "out_lines": 50
+    "out_lines": 326
   },
   {
     "slug": "visual-storyteller",
@@ -117,7 +117,7 @@
     "division": "design",
     "src": "design/design-visual-storyteller.md",
     "src_lines": 149,
-    "out_lines": 46
+    "out_lines": 149
   },
   {
     "slug": "whimsy-injector",
@@ -125,7 +125,7 @@
     "division": "design",
     "src": "design/design-whimsy-injector.md",
     "src_lines": 438,
-    "out_lines": 50
+    "out_lines": 431
   },
   {
     "slug": "ai-data-remediation-engineer",
@@ -133,7 +133,7 @@
     "division": "engineering",
     "src": "engineering/engineering-ai-data-remediation-engineer.md",
     "src_lines": 212,
-    "out_lines": 39
+    "out_lines": 206
   },
   {
     "slug": "ai-engineer",
@@ -141,7 +141,7 @@
     "division": "engineering",
     "src": "engineering/engineering-ai-engineer.md",
     "src_lines": 146,
-    "out_lines": 46
+    "out_lines": 146
   },
   {
     "slug": "api-platform-engineer",
@@ -149,7 +149,7 @@
     "division": "engineering",
     "src": "engineering/engineering-api-platform-engineer.md",
     "src_lines": 163,
-    "out_lines": 50
+    "out_lines": 154
   },
   {
     "slug": "autonomous-optimization-architect",
@@ -157,7 +157,7 @@
     "division": "engineering",
     "src": "engineering/engineering-autonomous-optimization-architect.md",
     "src_lines": 108,
-    "out_lines": 40
+    "out_lines": 110
   },
   {
     "slug": "backend-architect",
@@ -165,7 +165,7 @@
     "division": "engineering",
     "src": "engineering/engineering-backend-architect.md",
     "src_lines": 237,
-    "out_lines": 50
+    "out_lines": 229
   },
   {
     "slug": "cms-developer",
@@ -173,7 +173,7 @@
     "division": "engineering",
     "src": "engineering/engineering-cms-developer.md",
     "src_lines": 537,
-    "out_lines": 41
+    "out_lines": 534
   },
   {
     "slug": "code-reviewer",
@@ -181,7 +181,7 @@
     "division": "engineering",
     "src": "engineering/engineering-code-reviewer.md",
     "src_lines": 77,
-    "out_lines": 37
+    "out_lines": 77
   },
   {
     "slug": "codebase-onboarding-engineer",
@@ -189,7 +189,7 @@
     "division": "engineering",
     "src": "engineering/engineering-codebase-onboarding-engineer.md",
     "src_lines": 174,
-    "out_lines": 50
+    "out_lines": 168
   },
   {
     "slug": "data-engineer",
@@ -197,7 +197,7 @@
     "division": "engineering",
     "src": "engineering/engineering-data-engineer.md",
     "src_lines": 307,
-    "out_lines": 50
+    "out_lines": 296
   },
   {
     "slug": "data-visualization-engineer",
@@ -205,7 +205,7 @@
     "division": "engineering",
     "src": "engineering/engineering-data-visualization-engineer.md",
     "src_lines": 152,
-    "out_lines": 50
+    "out_lines": 143
   },
   {
     "slug": "database-optimizer",
@@ -213,7 +213,7 @@
     "division": "engineering",
     "src": "engineering/engineering-database-optimizer.md",
     "src_lines": 177,
-    "out_lines": 40
+    "out_lines": 173
   },
   {
     "slug": "database-reliability-engineer",
@@ -221,7 +221,7 @@
     "division": "engineering",
     "src": "engineering/engineering-database-reliability-engineer.md",
     "src_lines": 163,
-    "out_lines": 50
+    "out_lines": 154
   },
   {
     "slug": "desktop-app-engineer",
@@ -229,7 +229,7 @@
     "division": "engineering",
     "src": "engineering/engineering-desktop-app-engineer.md",
     "src_lines": 205,
-    "out_lines": 50
+    "out_lines": 196
   },
   {
     "slug": "developer-tooling-engineer",
@@ -237,7 +237,7 @@
     "division": "engineering",
     "src": "engineering/engineering-developer-tooling-engineer.md",
     "src_lines": 154,
-    "out_lines": 50
+    "out_lines": 145
   },
   {
     "slug": "devops-automator",
@@ -245,7 +245,7 @@
     "division": "engineering",
     "src": "engineering/engineering-devops-automator.md",
     "src_lines": 376,
-    "out_lines": 50
+    "out_lines": 356
   },
   {
     "slug": "drupal-performance-engineer",
@@ -253,7 +253,7 @@
     "division": "engineering",
     "src": "engineering/engineering-drupal-performance.md",
     "src_lines": 348,
-    "out_lines": 42
+    "out_lines": 327
   },
   {
     "slug": "drupal-shopping-cart-engineer",
@@ -261,7 +261,7 @@
     "division": "engineering",
     "src": "engineering/engineering-drupal-shopping-cart.md",
     "src_lines": 361,
-    "out_lines": 42
+    "out_lines": 341
   },
   {
     "slug": "email-intelligence-engineer",
@@ -269,7 +269,7 @@
     "division": "engineering",
     "src": "engineering/engineering-email-intelligence-engineer.md",
     "src_lines": 354,
-    "out_lines": 50
+    "out_lines": 352
   },
   {
     "slug": "embedded-firmware-engineer",
@@ -277,7 +277,7 @@
     "division": "engineering",
     "src": "engineering/engineering-embedded-firmware-engineer.md",
     "src_lines": 174,
-    "out_lines": 47
+    "out_lines": 165
   },
   {
     "slug": "feishu-integration-developer",
@@ -285,7 +285,7 @@
     "division": "engineering",
     "src": "engineering/engineering-feishu-integration-developer.md",
     "src_lines": 599,
-    "out_lines": 50
+    "out_lines": 597
   },
   {
     "slug": "filament-optimization-specialist",
@@ -293,7 +293,7 @@
     "division": "engineering",
     "src": "engineering/engineering-filament-optimization-specialist.md",
     "src_lines": 284,
-    "out_lines": 50
+    "out_lines": 258
   },
   {
     "slug": "finops-engineer",
@@ -301,7 +301,7 @@
     "division": "engineering",
     "src": "engineering/engineering-finops-engineer.md",
     "src_lines": 154,
-    "out_lines": 50
+    "out_lines": 145
   },
   {
     "slug": "frontend-developer",
@@ -309,7 +309,7 @@
     "division": "engineering",
     "src": "engineering/engineering-frontend-developer.md",
     "src_lines": 225,
-    "out_lines": 50
+    "out_lines": 214
   },
   {
     "slug": "gaussdb-expert-engineer",
@@ -317,7 +317,7 @@
     "division": "engineering",
     "src": "engineering/engineering-gaussdb-expert.md",
     "src_lines": 334,
-    "out_lines": 40
+    "out_lines": 302
   },
   {
     "slug": "git-workflow-master",
@@ -325,7 +325,7 @@
     "division": "engineering",
     "src": "engineering/engineering-git-workflow-master.md",
     "src_lines": 85,
-    "out_lines": 36
+    "out_lines": 85
   },
   {
     "slug": "identity-access-engineer",
@@ -333,7 +333,7 @@
     "division": "engineering",
     "src": "engineering/engineering-identity-access-engineer.md",
     "src_lines": 197,
-    "out_lines": 50
+    "out_lines": 188
   },
   {
     "slug": "incident-response-commander",
@@ -341,7 +341,7 @@
     "division": "engineering",
     "src": "engineering/engineering-incident-response-commander.md",
     "src_lines": 445,
-    "out_lines": 50
+    "out_lines": 441
   },
   {
     "slug": "internationalization-engineer",
@@ -349,7 +349,7 @@
     "division": "engineering",
     "src": "engineering/engineering-i18n-engineer.md",
     "src_lines": 185,
-    "out_lines": 50
+    "out_lines": 176
   },
   {
     "slug": "iot-fleet-engineer",
@@ -357,7 +357,7 @@
     "division": "engineering",
     "src": "engineering/engineering-iot-fleet-engineer.md",
     "src_lines": 149,
-    "out_lines": 50
+    "out_lines": 140
   },
   {
     "slug": "it-service-manager",
@@ -365,7 +365,7 @@
     "division": "engineering",
     "src": "engineering/engineering-it-service-manager.md",
     "src_lines": 562,
-    "out_lines": 42
+    "out_lines": 544
   },
   {
     "slug": "knowledge-graph-engineer",
@@ -373,7 +373,7 @@
     "division": "engineering",
     "src": "engineering/engineering-knowledge-graph-engineer.md",
     "src_lines": 368,
-    "out_lines": 40
+    "out_lines": 358
   },
   {
     "slug": "llm-post-training-engineer",
@@ -381,7 +381,7 @@
     "division": "engineering",
     "src": "engineering/engineering-llm-post-training-engineer.md",
     "src_lines": 167,
-    "out_lines": 46
+    "out_lines": 150
   },
   {
     "slug": "minimal-change-engineer",
@@ -389,7 +389,7 @@
     "division": "engineering",
     "src": "engineering/engineering-minimal-change-engineer.md",
     "src_lines": 208,
-    "out_lines": 47
+    "out_lines": 193
   },
   {
     "slug": "mobile-app-builder",
@@ -397,7 +397,7 @@
     "division": "engineering",
     "src": "engineering/engineering-mobile-app-builder.md",
     "src_lines": 493,
-    "out_lines": 50
+    "out_lines": 473
   },
   {
     "slug": "mobile-release-engineer",
@@ -405,7 +405,7 @@
     "division": "engineering",
     "src": "engineering/engineering-mobile-release-engineer.md",
     "src_lines": 164,
-    "out_lines": 50
+    "out_lines": 157
   },
   {
     "slug": "multi-agent-systems-architect",
@@ -413,7 +413,7 @@
     "division": "engineering",
     "src": "engineering/engineering-multi-agent-systems-architect.md",
     "src_lines": 601,
-    "out_lines": 42
+    "out_lines": 601
   },
   {
     "slug": "network-engineer",
@@ -421,7 +421,7 @@
     "division": "engineering",
     "src": "engineering/engineering-network-engineer.md",
     "src_lines": 240,
-    "out_lines": 48
+    "out_lines": 234
   },
   {
     "slug": "orgscript-engineer",
@@ -429,7 +429,7 @@
     "division": "engineering",
     "src": "engineering/engineering-orgscript-engineer.md",
     "src_lines": 114,
-    "out_lines": 48
+    "out_lines": 107
   },
   {
     "slug": "payments-billing-engineer",
@@ -437,7 +437,7 @@
     "division": "engineering",
     "src": "engineering/engineering-payments-billing-engineer.md",
     "src_lines": 195,
-    "out_lines": 50
+    "out_lines": 186
   },
   {
     "slug": "privacy-engineer",
@@ -445,7 +445,7 @@
     "division": "engineering",
     "src": "engineering/engineering-privacy-engineer.md",
     "src_lines": 153,
-    "out_lines": 50
+    "out_lines": 144
   },
   {
     "slug": "prompt-engineer",
@@ -453,7 +453,7 @@
     "division": "engineering",
     "src": "engineering/engineering-prompt-engineer.md",
     "src_lines": 203,
-    "out_lines": 48
+    "out_lines": 208
   },
   {
     "slug": "rag-pipeline-engineer",
@@ -461,7 +461,7 @@
     "division": "engineering",
     "src": "engineering/engineering-rag-pipeline-engineer.md",
     "src_lines": 438,
-    "out_lines": 40
+    "out_lines": 423
   },
   {
     "slug": "rapid-prototyper",
@@ -469,7 +469,7 @@
     "division": "engineering",
     "src": "engineering/engineering-rapid-prototyper.md",
     "src_lines": 463,
-    "out_lines": 50
+    "out_lines": 442
   },
   {
     "slug": "realtime-collaboration-engineer",
@@ -477,7 +477,7 @@
     "division": "engineering",
     "src": "engineering/engineering-realtime-collaboration-engineer.md",
     "src_lines": 188,
-    "out_lines": 50
+    "out_lines": 179
   },
   {
     "slug": "rust-refactoring-specialist",
@@ -485,7 +485,7 @@
     "division": "engineering",
     "src": "engineering/engineering-rust-refactoring-specialist.md",
     "src_lines": 314,
-    "out_lines": 50
+    "out_lines": 307
   },
   {
     "slug": "search-relevance-engineer",
@@ -493,7 +493,7 @@
     "division": "engineering",
     "src": "engineering/engineering-search-relevance-engineer.md",
     "src_lines": 238,
-    "out_lines": 50
+    "out_lines": 229
   },
   {
     "slug": "section-508-accessibility-specialist",
@@ -501,7 +501,7 @@
     "division": "engineering",
     "src": "engineering/engineering-section-508-specialist.md",
     "src_lines": 340,
-    "out_lines": 42
+    "out_lines": 317
   },
   {
     "slug": "senior-developer",
@@ -509,7 +509,7 @@
     "division": "engineering",
     "src": "engineering/engineering-senior-developer.md",
     "src_lines": 177,
-    "out_lines": 40
+    "out_lines": 161
   },
   {
     "slug": "software-architect",
@@ -517,7 +517,7 @@
     "division": "engineering",
     "src": "engineering/engineering-software-architect.md",
     "src_lines": 113,
-    "out_lines": 38
+    "out_lines": 117
   },
   {
     "slug": "solidity-smart-contract-engineer",
@@ -525,7 +525,7 @@
     "division": "engineering",
     "src": "engineering/engineering-solidity-smart-contract-engineer.md",
     "src_lines": 523,
-    "out_lines": 50
+    "out_lines": 507
   },
   {
     "slug": "sre-site-reliability-engineer",
@@ -533,7 +533,7 @@
     "division": "engineering",
     "src": "engineering/engineering-sre.md",
     "src_lines": 91,
-    "out_lines": 36
+    "out_lines": 92
   },
   {
     "slug": "technical-writer",
@@ -541,7 +541,7 @@
     "division": "engineering",
     "src": "engineering/engineering-technical-writer.md",
     "src_lines": 394,
-    "out_lines": 50
+    "out_lines": 384
   },
   {
     "slug": "uswds-developer",
@@ -549,7 +549,7 @@
     "division": "engineering",
     "src": "engineering/engineering-uswds-developer.md",
     "src_lines": 341,
-    "out_lines": 42
+    "out_lines": 318
   },
   {
     "slug": "video-streaming-engineer",
@@ -557,7 +557,7 @@
     "division": "engineering",
     "src": "engineering/engineering-video-streaming-engineer.md",
     "src_lines": 151,
-    "out_lines": 50
+    "out_lines": 142
   },
   {
     "slug": "voice-ai-integration-engineer",
@@ -565,7 +565,7 @@
     "division": "engineering",
     "src": "engineering/engineering-voice-ai-integration-engineer.md",
     "src_lines": 562,
-    "out_lines": 50
+    "out_lines": 549
   },
   {
     "slug": "webassembly-engineer",
@@ -573,7 +573,7 @@
     "division": "engineering",
     "src": "engineering/engineering-webassembly-engineer.md",
     "src_lines": 157,
-    "out_lines": 50
+    "out_lines": 148
   },
   {
     "slug": "wechat-mini-program-developer",
@@ -581,7 +581,7 @@
     "division": "engineering",
     "src": "engineering/engineering-wechat-mini-program-developer.md",
     "src_lines": 351,
-    "out_lines": 50
+    "out_lines": 341
   },
   {
     "slug": "wordpress-performance-engineer",
@@ -589,7 +589,7 @@
     "division": "engineering",
     "src": "engineering/engineering-wordpress-performance.md",
     "src_lines": 347,
-    "out_lines": 42
+    "out_lines": 323
   },
   {
     "slug": "wordpress-shopping-cart-engineer",
@@ -597,7 +597,7 @@
     "division": "engineering",
     "src": "engineering/engineering-wordpress-shopping-cart.md",
     "src_lines": 347,
-    "out_lines": 42
+    "out_lines": 326
   },
   {
     "slug": "bookkeeper-controller",
@@ -605,7 +605,7 @@
     "division": "finance",
     "src": "finance/finance-bookkeeper-controller.md",
     "src_lines": 261,
-    "out_lines": 50
+    "out_lines": 253
   },
   {
     "slug": "financial-analyst",
@@ -613,7 +613,7 @@
     "division": "finance",
     "src": "finance/finance-financial-analyst.md",
     "src_lines": 235,
-    "out_lines": 50
+    "out_lines": 226
   },
   {
     "slug": "fp-a-analyst",
@@ -621,7 +621,7 @@
     "division": "finance",
     "src": "finance/finance-fpa-analyst.md",
     "src_lines": 264,
-    "out_lines": 50
+    "out_lines": 258
   },
   {
     "slug": "investment-researcher",
@@ -629,7 +629,7 @@
     "division": "finance",
     "src": "finance/finance-investment-researcher.md",
     "src_lines": 273,
-    "out_lines": 50
+    "out_lines": 266
   },
   {
     "slug": "tax-strategist",
@@ -637,7 +637,7 @@
     "division": "finance",
     "src": "finance/finance-tax-strategist.md",
     "src_lines": 240,
-    "out_lines": 50
+    "out_lines": 232
   },
   {
     "slug": "blender-add-on-engineer",
@@ -645,7 +645,7 @@
     "division": "game-development",
     "src": "game-development/blender/blender-addon-engineer.md",
     "src_lines": 235,
-    "out_lines": 50
+    "out_lines": 230
   },
   {
     "slug": "economy-designer",
@@ -653,7 +653,7 @@
     "division": "game-development",
     "src": "game-development/economy-designer.md",
     "src_lines": 157,
-    "out_lines": 50
+    "out_lines": 152
   },
   {
     "slug": "game-audio-engineer",
@@ -661,7 +661,7 @@
     "division": "game-development",
     "src": "game-development/game-audio-engineer.md",
     "src_lines": 265,
-    "out_lines": 50
+    "out_lines": 271
   },
   {
     "slug": "game-designer",
@@ -669,7 +669,7 @@
     "division": "game-development",
     "src": "game-development/game-designer.md",
     "src_lines": 168,
-    "out_lines": 50
+    "out_lines": 174
   },
   {
     "slug": "godot-gameplay-scripter",
@@ -677,7 +677,7 @@
     "division": "game-development",
     "src": "game-development/godot/godot-gameplay-scripter.md",
     "src_lines": 335,
-    "out_lines": 50
+    "out_lines": 332
   },
   {
     "slug": "godot-multiplayer-engineer",
@@ -685,7 +685,7 @@
     "division": "game-development",
     "src": "game-development/godot/godot-multiplayer-engineer.md",
     "src_lines": 298,
-    "out_lines": 50
+    "out_lines": 298
   },
   {
     "slug": "godot-shader-developer",
@@ -693,7 +693,7 @@
     "division": "game-development",
     "src": "game-development/godot/godot-shader-developer.md",
     "src_lines": 267,
-    "out_lines": 50
+    "out_lines": 268
   },
   {
     "slug": "level-designer",
@@ -701,7 +701,7 @@
     "division": "game-development",
     "src": "game-development/level-designer.md",
     "src_lines": 209,
-    "out_lines": 50
+    "out_lines": 215
   },
   {
     "slug": "narrative-designer",
@@ -709,7 +709,7 @@
     "division": "game-development",
     "src": "game-development/narrative-designer.md",
     "src_lines": 244,
-    "out_lines": 50
+    "out_lines": 250
   },
   {
     "slug": "roblox-avatar-creator",
@@ -717,7 +717,7 @@
     "division": "game-development",
     "src": "game-development/roblox-studio/roblox-avatar-creator.md",
     "src_lines": 298,
-    "out_lines": 50
+    "out_lines": 301
   },
   {
     "slug": "roblox-experience-designer",
@@ -725,7 +725,7 @@
     "division": "game-development",
     "src": "game-development/roblox-studio/roblox-experience-designer.md",
     "src_lines": 306,
-    "out_lines": 50
+    "out_lines": 307
   },
   {
     "slug": "roblox-systems-scripter",
@@ -733,7 +733,7 @@
     "division": "game-development",
     "src": "game-development/roblox-studio/roblox-systems-scripter.md",
     "src_lines": 326,
-    "out_lines": 50
+    "out_lines": 326
   },
   {
     "slug": "technical-artist",
@@ -741,7 +741,7 @@
     "division": "game-development",
     "src": "game-development/technical-artist.md",
     "src_lines": 230,
-    "out_lines": 50
+    "out_lines": 235
   },
   {
     "slug": "unity-architect",
@@ -749,7 +749,7 @@
     "division": "game-development",
     "src": "game-development/unity/unity-architect.md",
     "src_lines": 272,
-    "out_lines": 50
+    "out_lines": 263
   },
   {
     "slug": "unity-editor-tool-developer",
@@ -757,7 +757,7 @@
     "division": "game-development",
     "src": "game-development/unity/unity-editor-tool-developer.md",
     "src_lines": 311,
-    "out_lines": 50
+    "out_lines": 311
   },
   {
     "slug": "unity-multiplayer-engineer",
@@ -765,7 +765,7 @@
     "division": "game-development",
     "src": "game-development/unity/unity-multiplayer-engineer.md",
     "src_lines": 322,
-    "out_lines": 50
+    "out_lines": 322
   },
   {
     "slug": "unity-shader-graph-artist",
@@ -773,7 +773,7 @@
     "division": "game-development",
     "src": "game-development/unity/unity-shader-graph-artist.md",
     "src_lines": 270,
-    "out_lines": 50
+    "out_lines": 271
   },
   {
     "slug": "unreal-multiplayer-architect",
@@ -781,7 +781,7 @@
     "division": "game-development",
     "src": "game-development/unreal-engine/unreal-multiplayer-architect.md",
     "src_lines": 314,
-    "out_lines": 50
+    "out_lines": 314
   },
   {
     "slug": "unreal-systems-engineer",
@@ -789,7 +789,7 @@
     "division": "game-development",
     "src": "game-development/unreal-engine/unreal-systems-engineer.md",
     "src_lines": 311,
-    "out_lines": 50
+    "out_lines": 302
   },
   {
     "slug": "unreal-technical-artist",
@@ -797,7 +797,7 @@
     "division": "game-development",
     "src": "game-development/unreal-engine/unreal-technical-artist.md",
     "src_lines": 257,
-    "out_lines": 50
+    "out_lines": 258
   },
   {
     "slug": "unreal-world-builder",
@@ -805,7 +805,7 @@
     "division": "game-development",
     "src": "game-development/unreal-engine/unreal-world-builder.md",
     "src_lines": 274,
-    "out_lines": 50
+    "out_lines": 277
   },
   {
     "slug": "3d-scene-developer",
@@ -813,7 +813,7 @@
     "division": "gis",
     "src": "gis/gis-3d-scene-developer.md",
     "src_lines": 112,
-    "out_lines": 48
+    "out_lines": 119
   },
   {
     "slug": "bim-gis-specialist",
@@ -821,7 +821,7 @@
     "division": "gis",
     "src": "gis/gis-bim-specialist.md",
     "src_lines": 109,
-    "out_lines": 47
+    "out_lines": 116
   },
   {
     "slug": "cartography-designer",
@@ -829,7 +829,7 @@
     "division": "gis",
     "src": "gis/gis-cartography-designer.md",
     "src_lines": 151,
-    "out_lines": 48
+    "out_lines": 158
   },
   {
     "slug": "drone-reality-mapping-specialist",
@@ -837,7 +837,7 @@
     "division": "gis",
     "src": "gis/gis-drone-reality-mapping.md",
     "src_lines": 121,
-    "out_lines": 48
+    "out_lines": 128
   },
   {
     "slug": "geoai-ml-engineer",
@@ -845,7 +845,7 @@
     "division": "gis",
     "src": "gis/gis-geoai-ml-engineer.md",
     "src_lines": 106,
-    "out_lines": 48
+    "out_lines": 113
   },
   {
     "slug": "geoprocessing-specialist",
@@ -853,7 +853,7 @@
     "division": "gis",
     "src": "gis/gis-geoprocessing-specialist.md",
     "src_lines": 98,
-    "out_lines": 48
+    "out_lines": 105
   },
   {
     "slug": "gis-analyst",
@@ -861,7 +861,7 @@
     "division": "gis",
     "src": "gis/gis-analyst.md",
     "src_lines": 92,
-    "out_lines": 48
+    "out_lines": 99
   },
   {
     "slug": "gis-qa-engineer",
@@ -869,7 +869,7 @@
     "division": "gis",
     "src": "gis/gis-qa-engineer.md",
     "src_lines": 134,
-    "out_lines": 48
+    "out_lines": 141
   },
   {
     "slug": "solution-engineer",
@@ -877,7 +877,7 @@
     "division": "gis",
     "src": "gis/gis-solution-engineer.md",
     "src_lines": 102,
-    "out_lines": 47
+    "out_lines": 109
   },
   {
     "slug": "spatial-data-engineer",
@@ -885,7 +885,7 @@
     "division": "gis",
     "src": "gis/gis-spatial-data-engineer.md",
     "src_lines": 98,
-    "out_lines": 48
+    "out_lines": 105
   },
   {
     "slug": "spatial-data-scientist",
@@ -893,7 +893,7 @@
     "division": "gis",
     "src": "gis/gis-spatial-data-scientist.md",
     "src_lines": 112,
-    "out_lines": 48
+    "out_lines": 119
   },
   {
     "slug": "technical-consultant",
@@ -901,7 +901,7 @@
     "division": "gis",
     "src": "gis/gis-technical-consultant.md",
     "src_lines": 87,
-    "out_lines": 46
+    "out_lines": 95
   },
   {
     "slug": "web-gis-developer",
@@ -909,7 +909,7 @@
     "division": "gis",
     "src": "gis/gis-web-gis-developer.md",
     "src_lines": 109,
-    "out_lines": 48
+    "out_lines": 116
   },
   {
     "slug": "clinical-evidence-agent",
@@ -917,7 +917,7 @@
     "division": "healthcare",
     "src": "healthcare/healthcare-clinical-evidence-agent.md",
     "src_lines": 232,
-    "out_lines": 50
+    "out_lines": 214
   },
   {
     "slug": "healthcare-innovation-strategist",
@@ -925,7 +925,7 @@
     "division": "healthcare",
     "src": "healthcare/healthcare-innovation-strategist.md",
     "src_lines": 434,
-    "out_lines": 50
+    "out_lines": 415
   },
   {
     "slug": "sovereign-health-systems-agent",
@@ -933,7 +933,7 @@
     "division": "healthcare",
     "src": "healthcare/healthcare-sovereign-health-systems-agent.md",
     "src_lines": 313,
-    "out_lines": 50
+    "out_lines": 289
   },
   {
     "slug": "aeo-foundations-architect",
@@ -941,7 +941,7 @@
     "division": "marketing",
     "src": "marketing/marketing-aeo-foundations.md",
     "src_lines": 265,
-    "out_lines": 48
+    "out_lines": 255
   },
   {
     "slug": "agentic-search-optimizer",
@@ -949,7 +949,7 @@
     "division": "marketing",
     "src": "marketing/marketing-agentic-search-optimizer.md",
     "src_lines": 314,
-    "out_lines": 48
+    "out_lines": 299
   },
   {
     "slug": "ai-citation-strategist",
@@ -957,7 +957,7 @@
     "division": "marketing",
     "src": "marketing/marketing-ai-citation-strategist.md",
     "src_lines": 173,
-    "out_lines": 48
+    "out_lines": 167
   },
   {
     "slug": "app-store-optimizer",
@@ -965,7 +965,7 @@
     "division": "marketing",
     "src": "marketing/marketing-app-store-optimizer.md",
     "src_lines": 321,
-    "out_lines": 50
+    "out_lines": 309
   },
   {
     "slug": "baidu-seo-specialist",
@@ -973,7 +973,7 @@
     "division": "marketing",
     "src": "marketing/marketing-baidu-seo-specialist.md",
     "src_lines": 227,
-    "out_lines": 50
+    "out_lines": 230
   },
   {
     "slug": "bilibili-content-strategist",
@@ -981,7 +981,7 @@
     "division": "marketing",
     "src": "marketing/marketing-bilibili-content-strategist.md",
     "src_lines": 200,
-    "out_lines": 50
+    "out_lines": 200
   },
   {
     "slug": "book-co-author",
@@ -989,7 +989,7 @@
     "division": "marketing",
     "src": "marketing/marketing-book-co-author.md",
     "src_lines": 111,
-    "out_lines": 39
+    "out_lines": 128
   },
   {
     "slug": "carousel-growth-engine",
@@ -997,7 +997,7 @@
     "division": "marketing",
     "src": "marketing/marketing-carousel-growth-engine.md",
     "src_lines": 200,
-    "out_lines": 50
+    "out_lines": 190
   },
   {
     "slug": "china-e-commerce-operator",
@@ -1005,7 +1005,7 @@
     "division": "marketing",
     "src": "marketing/marketing-china-ecommerce-operator.md",
     "src_lines": 284,
-    "out_lines": 50
+    "out_lines": 289
   },
   {
     "slug": "china-market-localization-strategist",
@@ -1013,7 +1013,7 @@
     "division": "marketing",
     "src": "marketing/marketing-china-market-localization-strategist.md",
     "src_lines": 284,
-    "out_lines": 50
+    "out_lines": 282
   },
   {
     "slug": "content-creator",
@@ -1021,7 +1021,7 @@
     "division": "marketing",
     "src": "marketing/marketing-content-creator.md",
     "src_lines": 54,
-    "out_lines": 48
+    "out_lines": 69
   },
   {
     "slug": "cross-border-e-commerce-specialist",
@@ -1029,7 +1029,7 @@
     "division": "marketing",
     "src": "marketing/marketing-cross-border-ecommerce.md",
     "src_lines": 260,
-    "out_lines": 50
+    "out_lines": 266
   },
   {
     "slug": "douyin-strategist",
@@ -1037,7 +1037,7 @@
     "division": "marketing",
     "src": "marketing/marketing-douyin-strategist.md",
     "src_lines": 150,
-    "out_lines": 50
+    "out_lines": 155
   },
   {
     "slug": "email-marketing-strategist",
@@ -1045,7 +1045,7 @@
     "division": "marketing",
     "src": "marketing/marketing-email-strategist.md",
     "src_lines": 250,
-    "out_lines": 38
+    "out_lines": 244
   },
   {
     "slug": "global-podcast-strategist",
@@ -1053,7 +1053,7 @@
     "division": "marketing",
     "src": "marketing/marketing-global-podcast-strategist.md",
     "src_lines": 207,
-    "out_lines": 48
+    "out_lines": 198
   },
   {
     "slug": "growth-hacker",
@@ -1061,7 +1061,7 @@
     "division": "marketing",
     "src": "marketing/marketing-growth-hacker.md",
     "src_lines": 54,
-    "out_lines": 48
+    "out_lines": 69
   },
   {
     "slug": "instagram-curator",
@@ -1069,7 +1069,7 @@
     "division": "marketing",
     "src": "marketing/marketing-instagram-curator.md",
     "src_lines": 113,
-    "out_lines": 46
+    "out_lines": 113
   },
   {
     "slug": "kuaishou-strategist",
@@ -1077,7 +1077,7 @@
     "division": "marketing",
     "src": "marketing/marketing-kuaishou-strategist.md",
     "src_lines": 224,
-    "out_lines": 50
+    "out_lines": 224
   },
   {
     "slug": "linkedin-content-creator",
@@ -1085,7 +1085,7 @@
     "division": "marketing",
     "src": "marketing/marketing-linkedin-content-creator.md",
     "src_lines": 215,
-    "out_lines": 40
+    "out_lines": 205
   },
   {
     "slug": "livestream-commerce-coach",
@@ -1093,7 +1093,7 @@
     "division": "marketing",
     "src": "marketing/marketing-livestream-commerce-coach.md",
     "src_lines": 306,
-    "out_lines": 50
+    "out_lines": 322
   },
   {
     "slug": "multi-platform-publisher",
@@ -1101,7 +1101,7 @@
     "division": "marketing",
     "src": "marketing/marketing-multi-platform-publisher.md",
     "src_lines": 218,
-    "out_lines": 49
+    "out_lines": 197
   },
   {
     "slug": "podcast-strategist",
@@ -1109,7 +1109,7 @@
     "division": "marketing",
     "src": "marketing/marketing-podcast-strategist.md",
     "src_lines": 278,
-    "out_lines": 50
+    "out_lines": 285
   },
   {
     "slug": "pr-communications-manager",
@@ -1117,7 +1117,7 @@
     "division": "marketing",
     "src": "marketing/marketing-pr-communications-manager.md",
     "src_lines": 474,
-    "out_lines": 42
+    "out_lines": 449
   },
   {
     "slug": "private-domain-operator",
@@ -1125,7 +1125,7 @@
     "division": "marketing",
     "src": "marketing/marketing-private-domain-operator.md",
     "src_lines": 309,
-    "out_lines": 50
+    "out_lines": 311
   },
   {
     "slug": "reddit-community-builder",
@@ -1133,7 +1133,7 @@
     "division": "marketing",
     "src": "marketing/marketing-reddit-community-builder.md",
     "src_lines": 123,
-    "out_lines": 46
+    "out_lines": 123
   },
   {
     "slug": "seo-specialist",
@@ -1141,7 +1141,7 @@
     "division": "marketing",
     "src": "marketing/marketing-seo-specialist.md",
     "src_lines": 371,
-    "out_lines": 50
+    "out_lines": 385
   },
   {
     "slug": "short-video-editing-coach",
@@ -1149,7 +1149,7 @@
     "division": "marketing",
     "src": "marketing/marketing-short-video-editing-coach.md",
     "src_lines": 413,
-    "out_lines": 50
+    "out_lines": 413
   },
   {
     "slug": "social-media-strategist",
@@ -1157,7 +1157,7 @@
     "division": "marketing",
     "src": "marketing/marketing-social-media-strategist.md",
     "src_lines": 126,
-    "out_lines": 48
+    "out_lines": 135
   },
   {
     "slug": "tiktok-strategist",
@@ -1165,7 +1165,7 @@
     "division": "marketing",
     "src": "marketing/marketing-tiktok-strategist.md",
     "src_lines": 125,
-    "out_lines": 46
+    "out_lines": 125
   },
   {
     "slug": "twitter-engager",
@@ -1173,7 +1173,7 @@
     "division": "marketing",
     "src": "marketing/marketing-twitter-engager.md",
     "src_lines": 126,
-    "out_lines": 46
+    "out_lines": 126
   },
   {
     "slug": "video-optimization-specialist",
@@ -1181,7 +1181,7 @@
     "division": "marketing",
     "src": "marketing/marketing-video-optimization-specialist.md",
     "src_lines": 120,
-    "out_lines": 48
+    "out_lines": 122
   },
   {
     "slug": "wechat-official-account-manager",
@@ -1189,7 +1189,7 @@
     "division": "marketing",
     "src": "marketing/marketing-wechat-official-account.md",
     "src_lines": 146,
-    "out_lines": 50
+    "out_lines": 143
   },
   {
     "slug": "weibo-strategist",
@@ -1197,7 +1197,7 @@
     "division": "marketing",
     "src": "marketing/marketing-weibo-strategist.md",
     "src_lines": 241,
-    "out_lines": 50
+    "out_lines": 245
   },
   {
     "slug": "x-twitter-intelligence-analyst",
@@ -1205,7 +1205,7 @@
     "division": "marketing",
     "src": "marketing/marketing-x-twitter-intelligence-analyst.md",
     "src_lines": 162,
-    "out_lines": 49
+    "out_lines": 162
   },
   {
     "slug": "xiaohongshu-specialist",
@@ -1213,7 +1213,7 @@
     "division": "marketing",
     "src": "marketing/marketing-xiaohongshu-specialist.md",
     "src_lines": 139,
-    "out_lines": 50
+    "out_lines": 136
   },
   {
     "slug": "zhihu-strategist",
@@ -1221,7 +1221,7 @@
     "division": "marketing",
     "src": "marketing/marketing-zhihu-strategist.md",
     "src_lines": 163,
-    "out_lines": 50
+    "out_lines": 158
   },
   {
     "slug": "ad-creative-strategist",
@@ -1229,7 +1229,7 @@
     "division": "paid-media",
     "src": "paid-media/paid-media-creative-strategist.md",
     "src_lines": 72,
-    "out_lines": 48
+    "out_lines": 80
   },
   {
     "slug": "paid-media-auditor",
@@ -1237,7 +1237,7 @@
     "division": "paid-media",
     "src": "paid-media/paid-media-auditor.md",
     "src_lines": 72,
-    "out_lines": 48
+    "out_lines": 80
   },
   {
     "slug": "paid-social-strategist",
@@ -1245,7 +1245,7 @@
     "division": "paid-media",
     "src": "paid-media/paid-media-paid-social-strategist.md",
     "src_lines": 72,
-    "out_lines": 48
+    "out_lines": 80
   },
   {
     "slug": "ppc-campaign-strategist",
@@ -1253,7 +1253,7 @@
     "division": "paid-media",
     "src": "paid-media/paid-media-ppc-strategist.md",
     "src_lines": 72,
-    "out_lines": 48
+    "out_lines": 80
   },
   {
     "slug": "programmatic-display-buyer",
@@ -1261,7 +1261,7 @@
     "division": "paid-media",
     "src": "paid-media/paid-media-programmatic-buyer.md",
     "src_lines": 72,
-    "out_lines": 48
+    "out_lines": 80
   },
   {
     "slug": "search-query-analyst",
@@ -1269,7 +1269,7 @@
     "division": "paid-media",
     "src": "paid-media/paid-media-search-query-analyst.md",
     "src_lines": 72,
-    "out_lines": 48
+    "out_lines": 80
   },
   {
     "slug": "tracking-measurement-specialist",
@@ -1277,7 +1277,7 @@
     "division": "paid-media",
     "src": "paid-media/paid-media-tracking-specialist.md",
     "src_lines": 72,
-    "out_lines": 48
+    "out_lines": 80
   },
   {
     "slug": "behavioral-nudge-engine",
@@ -1285,7 +1285,7 @@
     "division": "product",
     "src": "product/product-behavioral-nudge-engine.md",
     "src_lines": 81,
-    "out_lines": 40
+    "out_lines": 85
   },
   {
     "slug": "feedback-synthesizer",
@@ -1293,7 +1293,7 @@
     "division": "product",
     "src": "product/product-feedback-synthesizer.md",
     "src_lines": 119,
-    "out_lines": 48
+    "out_lines": 135
   },
   {
     "slug": "product-manager",
@@ -1301,7 +1301,7 @@
     "division": "product",
     "src": "product/product-manager.md",
     "src_lines": 470,
-    "out_lines": 50
+    "out_lines": 485
   },
   {
     "slug": "sprint-prioritizer",
@@ -1309,7 +1309,7 @@
     "division": "product",
     "src": "product/product-sprint-prioritizer.md",
     "src_lines": 154,
-    "out_lines": 48
+    "out_lines": 173
   },
   {
     "slug": "trend-researcher",
@@ -1317,7 +1317,7 @@
     "division": "product",
     "src": "product/product-trend-researcher.md",
     "src_lines": 159,
-    "out_lines": 48
+    "out_lines": 174
   },
   {
     "slug": "experiment-tracker",
@@ -1325,7 +1325,7 @@
     "division": "project-management",
     "src": "project-management/project-management-experiment-tracker.md",
     "src_lines": 198,
-    "out_lines": 50
+    "out_lines": 192
   },
   {
     "slug": "jira-workflow-steward",
@@ -1333,7 +1333,7 @@
     "division": "project-management",
     "src": "project-management/project-management-jira-workflow-steward.md",
     "src_lines": 231,
-    "out_lines": 50
+    "out_lines": 230
   },
   {
     "slug": "meeting-notes-specialist",
@@ -1341,7 +1341,7 @@
     "division": "project-management",
     "src": "project-management/project-management-meeting-notes-specialist.md",
     "src_lines": 96,
-    "out_lines": 38
+    "out_lines": 95
   },
   {
     "slug": "project-shepherd",
@@ -1349,7 +1349,7 @@
     "division": "project-management",
     "src": "project-management/project-management-project-shepherd.md",
     "src_lines": 194,
-    "out_lines": 50
+    "out_lines": 188
   },
   {
     "slug": "senior-project-manager",
@@ -1357,7 +1357,7 @@
     "division": "project-management",
     "src": "project-management/project-manager-senior.md",
     "src_lines": 136,
-    "out_lines": 50
+    "out_lines": 137
   },
   {
     "slug": "studio-operations",
@@ -1365,7 +1365,7 @@
     "division": "project-management",
     "src": "project-management/project-management-studio-operations.md",
     "src_lines": 200,
-    "out_lines": 50
+    "out_lines": 195
   },
   {
     "slug": "studio-producer",
@@ -1373,7 +1373,7 @@
     "division": "project-management",
     "src": "project-management/project-management-studio-producer.md",
     "src_lines": 203,
-    "out_lines": 50
+    "out_lines": 197
   },
   {
     "slug": "research-synthesist",
@@ -1381,7 +1381,7 @@
     "division": "research",
     "src": "research/research-synthesist.md",
     "src_lines": 137,
-    "out_lines": 49
+    "out_lines": 130
   },
   {
     "slug": "account-strategist",
@@ -1389,7 +1389,7 @@
     "division": "sales",
     "src": "sales/sales-account-strategist.md",
     "src_lines": 228,
-    "out_lines": 50
+    "out_lines": 230
   },
   {
     "slug": "deal-strategist",
@@ -1397,7 +1397,7 @@
     "division": "sales",
     "src": "sales/sales-deal-strategist.md",
     "src_lines": 181,
-    "out_lines": 38
+    "out_lines": 187
   },
   {
     "slug": "discovery-coach",
@@ -1405,7 +1405,7 @@
     "division": "sales",
     "src": "sales/sales-discovery-coach.md",
     "src_lines": 226,
-    "out_lines": 31
+    "out_lines": 224
   },
   {
     "slug": "offer-lead-gen-strategist",
@@ -1413,7 +1413,7 @@
     "division": "sales",
     "src": "sales/sales-offer-lead-gen-strategist.md",
     "src_lines": 258,
-    "out_lines": 50
+    "out_lines": 259
   },
   {
     "slug": "outbound-strategist",
@@ -1421,7 +1421,7 @@
     "division": "sales",
     "src": "sales/sales-outbound-strategist.md",
     "src_lines": 202,
-    "out_lines": 31
+    "out_lines": 200
   },
   {
     "slug": "pipeline-analyst",
@@ -1429,7 +1429,7 @@
     "division": "sales",
     "src": "sales/sales-pipeline-analyst.md",
     "src_lines": 268,
-    "out_lines": 50
+    "out_lines": 262
   },
   {
     "slug": "proposal-strategist",
@@ -1437,7 +1437,7 @@
     "division": "sales",
     "src": "sales/sales-proposal-strategist.md",
     "src_lines": 218,
-    "out_lines": 50
+    "out_lines": 209
   },
   {
     "slug": "sales-coach",
@@ -1445,7 +1445,7 @@
     "division": "sales",
     "src": "sales/sales-coach.md",
     "src_lines": 272,
-    "out_lines": 50
+    "out_lines": 277
   },
   {
     "slug": "sales-engineer",
@@ -1453,7 +1453,7 @@
     "division": "sales",
     "src": "sales/sales-engineer.md",
     "src_lines": 183,
-    "out_lines": 38
+    "out_lines": 200
   },
   {
     "slug": "ai-generated-code-security-auditor",
@@ -1461,7 +1461,7 @@
     "division": "security",
     "src": "security/security-ai-generated-code-auditor.md",
     "src_lines": 208,
-    "out_lines": 50
+    "out_lines": 194
   },
   {
     "slug": "application-security-engineer",
@@ -1469,7 +1469,7 @@
     "division": "security",
     "src": "security/security-appsec-engineer.md",
     "src_lines": 491,
-    "out_lines": 50
+    "out_lines": 481
   },
   {
     "slug": "blockchain-security-auditor",
@@ -1477,7 +1477,7 @@
     "division": "security",
     "src": "security/security-blockchain-security-auditor.md",
     "src_lines": 464,
-    "out_lines": 50
+    "out_lines": 449
   },
   {
     "slug": "cloud-security-architect",
@@ -1485,7 +1485,7 @@
     "division": "security",
     "src": "security/security-cloud-security-architect.md",
     "src_lines": 523,
-    "out_lines": 50
+    "out_lines": 513
   },
   {
     "slug": "compliance-auditor",
@@ -1493,7 +1493,7 @@
     "division": "security",
     "src": "security/security-compliance-auditor.md",
     "src_lines": 159,
-    "out_lines": 42
+    "out_lines": 172
   },
   {
     "slug": "incident-responder",
@@ -1501,7 +1501,7 @@
     "division": "security",
     "src": "security/security-incident-responder.md",
     "src_lines": 437,
-    "out_lines": 50
+    "out_lines": 426
   },
   {
     "slug": "penetration-tester",
@@ -1509,7 +1509,7 @@
     "division": "security",
     "src": "security/security-penetration-tester.md",
     "src_lines": 399,
-    "out_lines": 50
+    "out_lines": 390
   },
   {
     "slug": "secrets-credential-hygiene-engineer",
@@ -1517,7 +1517,7 @@
     "division": "security",
     "src": "security/security-secrets-credential-engineer.md",
     "src_lines": 177,
-    "out_lines": 48
+    "out_lines": 164
   },
   {
     "slug": "security-architect",
@@ -1525,7 +1525,7 @@
     "division": "security",
     "src": "security/security-architect.md",
     "src_lines": 305,
-    "out_lines": 42
+    "out_lines": 313
   },
   {
     "slug": "senior-secops-engineer",
@@ -1533,7 +1533,7 @@
     "division": "security",
     "src": "security/security-senior-secops.md",
     "src_lines": 750,
-    "out_lines": 48
+    "out_lines": 720
   },
   {
     "slug": "threat-detection-engineer",
@@ -1541,7 +1541,7 @@
     "division": "security",
     "src": "security/security-threat-detection-engineer.md",
     "src_lines": 535,
-    "out_lines": 50
+    "out_lines": 524
   },
   {
     "slug": "threat-intelligence-analyst",
@@ -1549,7 +1549,7 @@
     "division": "security",
     "src": "security/security-threat-intelligence-analyst.md",
     "src_lines": 644,
-    "out_lines": 50
+    "out_lines": 637
   },
   {
     "slug": "macos-spatial-metal-engineer",
@@ -1557,7 +1557,7 @@
     "division": "spatial-computing",
     "src": "spatial-computing/macos-spatial-metal-engineer.md",
     "src_lines": 337,
-    "out_lines": 50
+    "out_lines": 322
   },
   {
     "slug": "terminal-integration-specialist",
@@ -1565,7 +1565,7 @@
     "division": "spatial-computing",
     "src": "spatial-computing/terminal-integration-specialist.md",
     "src_lines": 70,
-    "out_lines": 31
+    "out_lines": 93
   },
   {
     "slug": "visionos-spatial-engineer",
@@ -1573,7 +1573,7 @@
     "division": "spatial-computing",
     "src": "spatial-computing/visionos-spatial-engineer.md",
     "src_lines": 54,
-    "out_lines": 31
+    "out_lines": 75
   },
   {
     "slug": "xr-cockpit-interaction-specialist",
@@ -1581,7 +1581,7 @@
     "division": "spatial-computing",
     "src": "spatial-computing/xr-cockpit-interaction-specialist.md",
     "src_lines": 33,
-    "out_lines": 28
+    "out_lines": 40
   },
   {
     "slug": "xr-immersive-developer",
@@ -1589,7 +1589,7 @@
     "division": "spatial-computing",
     "src": "spatial-computing/xr-immersive-developer.md",
     "src_lines": 33,
-    "out_lines": 28
+    "out_lines": 40
   },
   {
     "slug": "xr-interface-architect",
@@ -1597,7 +1597,7 @@
     "division": "spatial-computing",
     "src": "spatial-computing/xr-interface-architect.md",
     "src_lines": 33,
-    "out_lines": 28
+    "out_lines": 40
   },
   {
     "slug": "accounts-payable-agent",
@@ -1605,7 +1605,7 @@
     "division": "specialized",
     "src": "specialized/accounts-payable-agent.md",
     "src_lines": 186,
-    "out_lines": 48
+    "out_lines": 186
   },
   {
     "slug": "agentic-identity-trust-architect",
@@ -1613,7 +1613,7 @@
     "division": "specialized",
     "src": "specialized/agentic-identity-trust.md",
     "src_lines": 388,
-    "out_lines": 50
+    "out_lines": 378
   },
   {
     "slug": "agents-orchestrator",
@@ -1621,7 +1621,7 @@
     "division": "specialized",
     "src": "specialized/agents-orchestrator.md",
     "src_lines": 367,
-    "out_lines": 50
+    "out_lines": 364
   },
   {
     "slug": "aging-parent-care-companion",
@@ -1629,7 +1629,7 @@
     "division": "specialized",
     "src": "specialized/healthcare-aging-parent-care-companion.md",
     "src_lines": 415,
-    "out_lines": 42
+    "out_lines": 377
   },
   {
     "slug": "automation-governance-architect",
@@ -1637,7 +1637,7 @@
     "division": "specialized",
     "src": "specialized/automation-governance-architect.md",
     "src_lines": 217,
-    "out_lines": 39
+    "out_lines": 225
   },
   {
     "slug": "business-strategist",
@@ -1645,7 +1645,7 @@
     "division": "specialized",
     "src": "specialized/business-strategist.md",
     "src_lines": 489,
-    "out_lines": 42
+    "out_lines": 472
   },
   {
     "slug": "change-management-consultant",
@@ -1653,7 +1653,7 @@
     "division": "specialized",
     "src": "specialized/change-management-consultant.md",
     "src_lines": 498,
-    "out_lines": 42
+    "out_lines": 480
   },
   {
     "slug": "chief-financial-officer",
@@ -1661,7 +1661,7 @@
     "division": "specialized",
     "src": "specialized/chief-financial-officer.md",
     "src_lines": 389,
-    "out_lines": 41
+    "out_lines": 389
   },
   {
     "slug": "chief-of-staff",
@@ -1669,7 +1669,7 @@
     "division": "specialized",
     "src": "specialized/specialized-chief-of-staff.md",
     "src_lines": 280,
-    "out_lines": 50
+    "out_lines": 267
   },
   {
     "slug": "civil-engineer",
@@ -1677,7 +1677,7 @@
     "division": "specialized",
     "src": "specialized/specialized-civil-engineer.md",
     "src_lines": 357,
-    "out_lines": 50
+    "out_lines": 337
   },
   {
     "slug": "codebase-archaeologist",
@@ -1685,7 +1685,7 @@
     "division": "specialized",
     "src": "specialized/specialized-codebase-archaeologist.md",
     "src_lines": 341,
-    "out_lines": 48
+    "out_lines": 336
   },
   {
     "slug": "corporate-training-designer",
@@ -1693,7 +1693,7 @@
     "division": "specialized",
     "src": "specialized/corporate-training-designer.md",
     "src_lines": 193,
-    "out_lines": 50
+    "out_lines": 192
   },
   {
     "slug": "cultural-intelligence-strategist",
@@ -1701,7 +1701,7 @@
     "division": "specialized",
     "src": "specialized/specialized-cultural-intelligence-strategist.md",
     "src_lines": 89,
-    "out_lines": 40
+    "out_lines": 92
   },
   {
     "slug": "customer-service",
@@ -1709,7 +1709,7 @@
     "division": "specialized",
     "src": "specialized/customer-service.md",
     "src_lines": 399,
-    "out_lines": 42
+    "out_lines": 372
   },
   {
     "slug": "customer-success-manager",
@@ -1717,7 +1717,7 @@
     "division": "specialized",
     "src": "specialized/customer-success-manager.md",
     "src_lines": 461,
-    "out_lines": 42
+    "out_lines": 443
   },
   {
     "slug": "data-consolidation-agent",
@@ -1725,7 +1725,7 @@
     "division": "specialized",
     "src": "specialized/data-consolidation-agent.md",
     "src_lines": 61,
-    "out_lines": 43
+    "out_lines": 65
   },
   {
     "slug": "data-privacy-officer",
@@ -1733,7 +1733,7 @@
     "division": "specialized",
     "src": "specialized/data-privacy-officer.md",
     "src_lines": 413,
-    "out_lines": 42
+    "out_lines": 413
   },
   {
     "slug": "developer-advocate",
@@ -1741,7 +1741,7 @@
     "division": "specialized",
     "src": "specialized/specialized-developer-advocate.md",
     "src_lines": 318,
-    "out_lines": 50
+    "out_lines": 315
   },
   {
     "slug": "document-generator",
@@ -1749,7 +1749,7 @@
     "division": "specialized",
     "src": "specialized/specialized-document-generator.md",
     "src_lines": 56,
-    "out_lines": 39
+    "out_lines": 56
   },
   {
     "slug": "esg-sustainability-officer",
@@ -1757,7 +1757,7 @@
     "division": "specialized",
     "src": "specialized/esg-sustainability-officer.md",
     "src_lines": 397,
-    "out_lines": 41
+    "out_lines": 397
   },
   {
     "slug": "fedramp-rmf-compliance-engineer",
@@ -1765,7 +1765,7 @@
     "division": "specialized",
     "src": "specialized/specialized-fedramp-rmf-compliance.md",
     "src_lines": 379,
-    "out_lines": 42
+    "out_lines": 351
   },
   {
     "slug": "french-consulting-market-navigator",
@@ -1773,7 +1773,7 @@
     "division": "specialized",
     "src": "specialized/specialized-french-consulting-market.md",
     "src_lines": 195,
-    "out_lines": 48
+    "out_lines": 189
   },
   {
     "slug": "government-digital-presales-consultant",
@@ -1781,7 +1781,7 @@
     "division": "specialized",
     "src": "specialized/government-digital-presales-consultant.md",
     "src_lines": 364,
-    "out_lines": 50
+    "out_lines": 378
   },
   {
     "slug": "grant-writer",
@@ -1789,7 +1789,7 @@
     "division": "specialized",
     "src": "specialized/grant-writer.md",
     "src_lines": 512,
-    "out_lines": 42
+    "out_lines": 494
   },
   {
     "slug": "healthcare-customer-service",
@@ -1797,7 +1797,7 @@
     "division": "specialized",
     "src": "specialized/healthcare-customer-service.md",
     "src_lines": 390,
-    "out_lines": 42
+    "out_lines": 363
   },
   {
     "slug": "healthcare-marketing-compliance-specialist",
@@ -1805,7 +1805,7 @@
     "division": "specialized",
     "src": "specialized/healthcare-marketing-compliance.md",
     "src_lines": 396,
-    "out_lines": 50
+    "out_lines": 402
   },
   {
     "slug": "hospitality-guest-services",
@@ -1813,7 +1813,7 @@
     "division": "specialized",
     "src": "specialized/hospitality-guest-services.md",
     "src_lines": 604,
-    "out_lines": 42
+    "out_lines": 578
   },
   {
     "slug": "hr-onboarding",
@@ -1821,7 +1821,7 @@
     "division": "specialized",
     "src": "specialized/hr-onboarding.md",
     "src_lines": 452,
-    "out_lines": 42
+    "out_lines": 426
   },
   {
     "slug": "identity-graph-operator",
@@ -1829,7 +1829,7 @@
     "division": "specialized",
     "src": "specialized/identity-graph-operator.md",
     "src_lines": 261,
-    "out_lines": 46
+    "out_lines": 249
   },
   {
     "slug": "korean-business-navigator",
@@ -1837,7 +1837,7 @@
     "division": "specialized",
     "src": "specialized/specialized-korean-business-navigator.md",
     "src_lines": 217,
-    "out_lines": 31
+    "out_lines": 223
   },
   {
     "slug": "language-translator",
@@ -1845,7 +1845,7 @@
     "division": "specialized",
     "src": "specialized/language-translator.md",
     "src_lines": 265,
-    "out_lines": 42
+    "out_lines": 242
   },
   {
     "slug": "legal-billing-time-tracking",
@@ -1853,7 +1853,7 @@
     "division": "specialized",
     "src": "specialized/legal-billing-time-tracking.md",
     "src_lines": 570,
-    "out_lines": 42
+    "out_lines": 544
   },
   {
     "slug": "legal-client-intake",
@@ -1861,7 +1861,7 @@
     "division": "specialized",
     "src": "specialized/legal-client-intake.md",
     "src_lines": 493,
-    "out_lines": 42
+    "out_lines": 465
   },
   {
     "slug": "legal-document-review",
@@ -1869,7 +1869,7 @@
     "division": "specialized",
     "src": "specialized/legal-document-review.md",
     "src_lines": 455,
-    "out_lines": 42
+    "out_lines": 428
   },
   {
     "slug": "loan-officer-assistant",
@@ -1877,7 +1877,7 @@
     "division": "specialized",
     "src": "specialized/loan-officer-assistant.md",
     "src_lines": 556,
-    "out_lines": 42
+    "out_lines": 528
   },
   {
     "slug": "lsp-index-engineer",
@@ -1885,7 +1885,7 @@
     "division": "specialized",
     "src": "specialized/lsp-index-engineer.md",
     "src_lines": 314,
-    "out_lines": 50
+    "out_lines": 299
   },
   {
     "slug": "m-a-integration-manager",
@@ -1893,7 +1893,7 @@
     "division": "specialized",
     "src": "specialized/ma-integration-manager.md",
     "src_lines": 428,
-    "out_lines": 41
+    "out_lines": 428
   },
   {
     "slug": "master-plan-architect",
@@ -1901,7 +1901,7 @@
     "division": "specialized",
     "src": "specialized/specialized-master-plan-architect.md",
     "src_lines": 158,
-    "out_lines": 46
+    "out_lines": 150
   },
   {
     "slug": "mcp-builder",
@@ -1909,7 +1909,7 @@
     "division": "specialized",
     "src": "specialized/specialized-mcp-builder.md",
     "src_lines": 248,
-    "out_lines": 50
+    "out_lines": 236
   },
   {
     "slug": "medical-billing-coding-specialist",
@@ -1917,7 +1917,7 @@
     "division": "specialized",
     "src": "specialized/medical-billing-coding-specialist.md",
     "src_lines": 492,
-    "out_lines": 42
+    "out_lines": 475
   },
   {
     "slug": "model-qa-specialist",
@@ -1925,7 +1925,7 @@
     "division": "specialized",
     "src": "specialized/specialized-model-qa.md",
     "src_lines": 489,
-    "out_lines": 50
+    "out_lines": 476
   },
   {
     "slug": "operations-manager",
@@ -1933,7 +1933,7 @@
     "division": "specialized",
     "src": "specialized/operations-manager.md",
     "src_lines": 400,
-    "out_lines": 41
+    "out_lines": 400
   },
   {
     "slug": "organizational-psychologist",
@@ -1941,7 +1941,7 @@
     "division": "specialized",
     "src": "specialized/organizational-psychologist.md",
     "src_lines": 392,
-    "out_lines": 40
+    "out_lines": 392
   },
   {
     "slug": "personal-growth-mentor",
@@ -1949,7 +1949,7 @@
     "division": "specialized",
     "src": "specialized/personal-growth-mentor.md",
     "src_lines": 160,
-    "out_lines": 45
+    "out_lines": 148
   },
   {
     "slug": "pricing-analyst",
@@ -1957,7 +1957,7 @@
     "division": "specialized",
     "src": "specialized/specialized-pricing-analyst.md",
     "src_lines": 244,
-    "out_lines": 48
+    "out_lines": 237
   },
   {
     "slug": "real-estate-buyer-seller",
@@ -1965,7 +1965,7 @@
     "division": "specialized",
     "src": "specialized/real-estate-buyer-seller.md",
     "src_lines": 597,
-    "out_lines": 42
+    "out_lines": 570
   },
   {
     "slug": "recruitment-specialist",
@@ -1973,7 +1973,7 @@
     "division": "specialized",
     "src": "specialized/recruitment-specialist.md",
     "src_lines": 510,
-    "out_lines": 50
+    "out_lines": 517
   },
   {
     "slug": "report-distribution-agent",
@@ -1981,7 +1981,7 @@
     "division": "specialized",
     "src": "specialized/report-distribution-agent.md",
     "src_lines": 66,
-    "out_lines": 45
+    "out_lines": 70
   },
   {
     "slug": "resume-tailor",
@@ -1989,7 +1989,7 @@
     "division": "specialized",
     "src": "specialized/resume-tailor.md",
     "src_lines": 231,
-    "out_lines": 48
+    "out_lines": 223
   },
   {
     "slug": "retail-customer-returns",
@@ -1997,7 +1997,7 @@
     "division": "specialized",
     "src": "specialized/retail-customer-returns.md",
     "src_lines": 567,
-    "out_lines": 42
+    "out_lines": 541
   },
   {
     "slug": "sales-data-extraction-agent",
@@ -2005,7 +2005,7 @@
     "division": "specialized",
     "src": "specialized/sales-data-extraction-agent.md",
     "src_lines": 68,
-    "out_lines": 46
+    "out_lines": 72
   },
   {
     "slug": "sales-outreach",
@@ -2013,7 +2013,7 @@
     "division": "specialized",
     "src": "specialized/sales-outreach.md",
     "src_lines": 426,
-    "out_lines": 42
+    "out_lines": 400
   },
   {
     "slug": "salesforce-architect",
@@ -2021,7 +2021,7 @@
     "division": "specialized",
     "src": "specialized/specialized-salesforce-architect.md",
     "src_lines": 183,
-    "out_lines": 49
+    "out_lines": 180
   },
   {
     "slug": "strategy-duel-agent",
@@ -2029,7 +2029,7 @@
     "division": "specialized",
     "src": "specialized/specialized-strategy-duel-agent.md",
     "src_lines": 131,
-    "out_lines": 45
+    "out_lines": 134
   },
   {
     "slug": "study-abroad-advisor",
@@ -2037,7 +2037,7 @@
     "division": "specialized",
     "src": "specialized/study-abroad-advisor.md",
     "src_lines": 283,
-    "out_lines": 50
+    "out_lines": 294
   },
   {
     "slug": "supply-chain-strategist",
@@ -2045,7 +2045,7 @@
     "division": "specialized",
     "src": "specialized/supply-chain-strategist.md",
     "src_lines": 583,
-    "out_lines": 50
+    "out_lines": 583
   },
   {
     "slug": "workflow-architect",
@@ -2053,7 +2053,7 @@
     "division": "specialized",
     "src": "specialized/specialized-workflow-architect.md",
     "src_lines": 598,
-    "out_lines": 31
+    "out_lines": 632
   },
   {
     "slug": "zk-steward",
@@ -2061,7 +2061,7 @@
     "division": "specialized",
     "src": "specialized/zk-steward.md",
     "src_lines": 212,
-    "out_lines": 48
+    "out_lines": 211
   },
   {
     "slug": "analytics-reporter",
@@ -2069,7 +2069,7 @@
     "division": "support",
     "src": "support/support-analytics-reporter.md",
     "src_lines": 365,
-    "out_lines": 50
+    "out_lines": 350
   },
   {
     "slug": "executive-summary-generator",
@@ -2077,7 +2077,7 @@
     "division": "support",
     "src": "support/support-executive-summary-generator.md",
     "src_lines": 213,
-    "out_lines": 50
+    "out_lines": 203
   },
   {
     "slug": "finance-tracker",
@@ -2085,7 +2085,7 @@
     "division": "support",
     "src": "support/support-finance-tracker.md",
     "src_lines": 442,
-    "out_lines": 50
+    "out_lines": 427
   },
   {
     "slug": "infrastructure-maintainer",
@@ -2093,7 +2093,7 @@
     "division": "support",
     "src": "support/support-infrastructure-maintainer.md",
     "src_lines": 618,
-    "out_lines": 50
+    "out_lines": 603
   },
   {
     "slug": "legal-compliance-checker",
@@ -2101,7 +2101,7 @@
     "division": "support",
     "src": "support/support-legal-compliance-checker.md",
     "src_lines": 588,
-    "out_lines": 50
+    "out_lines": 573
   },
   {
     "slug": "support-responder",
@@ -2109,7 +2109,7 @@
     "division": "support",
     "src": "support/support-support-responder.md",
     "src_lines": 585,
-    "out_lines": 50
+    "out_lines": 570
   },
   {
     "slug": "accessibility-auditor",
@@ -2117,7 +2117,7 @@
     "division": "testing",
     "src": "testing/testing-accessibility-auditor.md",
     "src_lines": 317,
-    "out_lines": 50
+    "out_lines": 314
   },
   {
     "slug": "api-tester",
@@ -2125,7 +2125,7 @@
     "division": "testing",
     "src": "testing/testing-api-tester.md",
     "src_lines": 306,
-    "out_lines": 50
+    "out_lines": 296
   },
   {
     "slug": "evidence-collector",
@@ -2133,7 +2133,7 @@
     "division": "testing",
     "src": "testing/testing-evidence-collector.md",
     "src_lines": 211,
-    "out_lines": 39
+    "out_lines": 208
   },
   {
     "slug": "performance-benchmarker",
@@ -2141,7 +2141,7 @@
     "division": "testing",
     "src": "testing/testing-performance-benchmarker.md",
     "src_lines": 268,
-    "out_lines": 50
+    "out_lines": 259
   },
   {
     "slug": "reality-checker",
@@ -2149,7 +2149,7 @@
     "division": "testing",
     "src": "testing/testing-reality-checker.md",
     "src_lines": 250,
-    "out_lines": 49
+    "out_lines": 248
   },
   {
     "slug": "test-automation-engineer",
@@ -2157,7 +2157,7 @@
     "division": "testing",
     "src": "testing/testing-test-automation-engineer.md",
     "src_lines": 180,
-    "out_lines": 49
+    "out_lines": 171
   },
   {
     "slug": "test-results-analyzer",
@@ -2165,7 +2165,7 @@
     "division": "testing",
     "src": "testing/testing-test-results-analyzer.md",
     "src_lines": 305,
-    "out_lines": 50
+    "out_lines": 296
   },
   {
     "slug": "tool-evaluator",
@@ -2173,7 +2173,7 @@
     "division": "testing",
     "src": "testing/testing-tool-evaluator.md",
     "src_lines": 394,
-    "out_lines": 50
+    "out_lines": 385
   },
   {
     "slug": "workflow-optimizer",
@@ -2181,6 +2181,6 @@
     "division": "testing",
     "src": "testing/testing-workflow-optimizer.md",
     "src_lines": 450,
-    "out_lines": 50
+    "out_lines": 441
   }
 ]

@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
-"""Compress Agency agent personas into Grok Build skills.
+"""Convert Agency personas into Grok Build skills.
 
-Grok-efficient means:
-  - short SKILL.md bodies (procedure, not persona theatre)
-  - specialists are slash-only (disable-model-invocation)
-  - one auto-invocable catalog skill (`agency`) holds the roster
-  - no duplicated code samples, communication-style essays, or memory fluff
+Keep the full method. Drop Claude character-sheet padding.
 
-Source of truth remains the division `*.md` agent files. This script rewrites
-them into skills/ (plugin layout) and optionally integrations/grok/.
+Kept (uncropped): mission, rules, workflow, domain frameworks, code examples,
+advanced capabilities, and any other method section.
+
+Dropped: identity/memory/personality, communication style, learning & memory,
+deliverable-report templates, "You are X" preambles, header emoji.
+
+Specialists are slash-only so 273 files do not auto-load. /agency is the catalog.
 """
 from __future__ import annotations
 
@@ -21,23 +22,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DIVISIONS_JSON = REPO_ROOT / "divisions.json"
-
-DROP_HEADER = re.compile(
-    r"^(communication style|learning(?: and|&)? memory|deliverable template|"
-    r"technical deliverables|image prompt|example |your technical deliverables|"
-    r"instructions reference)$"
-)
-IDENTITY_HEADER = re.compile(r"^(identity|identity(?: and|&)? memory|identity(?: and|&)? role definition)$")
-MISSION_HEADER = re.compile(r"^(core mission|mission|executive summary|core capabilities|core competencies)$")
-RULES_HEADER = re.compile(r"^(critical rules(?: you must follow)?|rules you must follow)$")
-WORKFLOW_HEADER = re.compile(r"^(workflow(?: process)?|process|your process)$")
-METRICS_HEADER = re.compile(r"^(success metrics)$")
-SKIP_HEADER = re.compile(r"^(when not to use(?: this agent)?)$")
-DOMAIN_HEADER = re.compile(
-    r"^(domain expertise|specialized skills|decision framework|tooling(?: and|&)? automation|"
-    r"tech stack|advanced capabilities)$"
-)
-
+FRONTMATTER_RE = re.compile(r"^---\s*\n(.*?)\n---\s*\n(.*)\Z", re.S)
 EMOJI_RE = re.compile(
     "["
     "\U0001F300-\U0001FAFF"
@@ -48,11 +33,59 @@ EMOJI_RE = re.compile(
     "]+",
     flags=re.UNICODE,
 )
-FRONTMATTER_RE = re.compile(r"^---\s*\n(.*?)\n---\s*\n(.*)\Z", re.S)
-BULLET_RE = re.compile(r"^\s*(?:[-*]|\d+[.)])\s+")
-ROLE_RE = re.compile(r"^\s*[-*]?\s*\*\*Role\*\*\s*:?\s*(.+)$", re.I)
-FENCE_RE = re.compile(r"^```")
-LABEL_RE = re.compile(r"^\*\*([^*]+)\*\*\s*:?\s*")
+
+DROP = re.compile(
+    r"^(identity|identity(?: and|&)? memory|identity(?: and|&)? role definition|"
+    r"communication style|learning(?: and|&)? memory|"
+    r"deliverable template|your deliverable template|"
+    r"instructions reference)$"
+)
+RENAME = {
+    "core mission": "Mission",
+    "mission": "Mission",
+    "executive summary": "Mission",
+    "core capabilities": "Mission",
+    "core competencies": "Mission",
+    "critical rules": "Rules",
+    "critical rules you must follow": "Rules",
+    "rules you must follow": "Rules",
+    "workflow process": "Method",
+    "workflow": "Method",
+    "process": "Method",
+    "your process": "Method",
+    "success metrics": "Done when",
+    "when not to use this agent": "Out of scope",
+    "when not to use": "Out of scope",
+    "technical deliverables": "Patterns",
+    "your technical deliverables": "Patterns",
+    "advanced capabilities": "Advanced",
+    "domain expertise": "Domain",
+    "specialized skills": "Domain",
+    "decision framework": "Decisions",
+    "tooling and automation": "Tooling",
+    "tech stack": "Tooling",
+}
+
+GROK_BY_DIVISION = {
+    "engineering": "Edit the repo. Run tests you touch. If UI changed, verify in the browser.",
+    "design": "Produce concrete UI/UX artifacts. If the app is on screen, verify in the browser.",
+    "testing": "Write or run tests. Report failures with command, output, and file:line.",
+    "security": "Inspect real code and config. Cite paths. Do not write exploits.",
+    "product": "Turn the ask into a decision, spec, or ticket the repo can execute.",
+    "research": "Cite sources. Separate fact from inference.",
+    "marketing": "Deliver copy, plans, or assets ready to use. No persona recap.",
+    "sales": "Deliver sequences, talk tracks, or deal artifacts ready to use.",
+    "paid-media": "Deliver account structure, queries, or creative with numbers attached.",
+    "project-management": "Deliver a plan with owners, order, and risks.",
+    "support": "Draft the reply or runbook the human can send.",
+    "finance": "Show the numbers and the assumption behind each one.",
+    "healthcare": "Stay inside documented scope. Flag what a licensed human must sign.",
+    "academic": "Cite. Mark speculation.",
+    "game-development": "Touch the real project files. Prefer running the game or tests over describing them.",
+    "gis": "Work from the actual data/files. State CRS and units.",
+    "spatial-computing": "Implement against the real Xcode/Unity/Unreal tree when it is in the workspace.",
+    "specialized": "Deliver the artifact. Do not recap this skill.",
+}
 
 
 def slugify(name: str) -> str:
@@ -61,13 +94,13 @@ def slugify(name: str) -> str:
     return s.strip("-")
 
 
-def strip_emoji(text: str) -> str:
-    return EMOJI_RE.sub("", text)
-
-
 def yaml_quote(value: str) -> str:
     value = value.replace("\n", " ").strip()
     return "'" + value.replace("'", "''") + "'"
+
+
+def strip_emoji(text: str) -> str:
+    return EMOJI_RE.sub("", text)
 
 
 def parse_frontmatter(text: str) -> tuple[dict[str, str], str]:
@@ -100,119 +133,59 @@ def normalize_header(header: str) -> str:
     return h
 
 
+def title_header(header: str) -> str:
+    h = normalize_header(header)
+    if h in RENAME:
+        return RENAME[h]
+    cleaned = strip_emoji(header).strip()
+    cleaned = re.sub(r"^(Your|The|My)\s+", "", cleaned)
+    cleaned = re.sub(r"\s+Agent Personality$", "", cleaned)
+    return cleaned or header.strip()
+
+
 def split_sections(body: str) -> list[tuple[str, str]]:
-    lines = body.splitlines()
     sections: list[tuple[str, str]] = []
-    current_h = ""
+    current = ""
     buf: list[str] = []
-    for line in lines:
+    for line in body.splitlines():
         if line.startswith("## "):
-            if current_h or buf:
-                sections.append((current_h, "\n".join(buf).strip()))
-            current_h = line[3:].strip()
+            if current or any(x.strip() for x in buf):
+                sections.append((current, "\n".join(buf).strip()))
+            current = line[3:].strip()
             buf = []
         else:
             buf.append(line)
-    if current_h or buf:
-        sections.append((current_h, "\n".join(buf).strip()))
+    if current or any(x.strip() for x in buf):
+        sections.append((current, "\n".join(buf).strip()))
     return sections
 
 
-def extract_items(text: str, limit: int) -> list[str]:
-    items: list[str] = []
-    in_fence = False
-    seen: set[str] = set()
-    for raw in text.splitlines():
-        if FENCE_RE.match(raw.strip()):
-            in_fence = not in_fence
-            continue
-        if in_fence:
-            continue
-        line = strip_emoji(raw).rstrip()
-        if not line.strip():
-            continue
-        if line.startswith("#"):
-            continue
-        if not BULLET_RE.match(line):
-            continue
-        item = BULLET_RE.sub("", line).strip()
-        item = LABEL_RE.sub(r"\1: ", item)
-        item = re.sub(r"\s+", " ", item).strip(" -")
-        low = item.lower()
-        if low.startswith(("personality:", "memory:", "experience:")):
-            continue
-        if low.startswith("role:"):
-            item = item.split(":", 1)[1].strip()
-        if len(item) < 8:
-            continue
-        if item.endswith(":"):
-            continue
-        key = re.sub(r"[^a-z0-9]+", "", item.lower())
-        if key in seen:
-            continue
-        seen.add(key)
-        if len(item) > 220:
-            item = item[:217].rstrip() + "..."
-        items.append(item)
-        if len(items) >= limit:
-            break
-    return items
-
-
-def harvest_prose_bullets(text: str, limit: int) -> list[str]:
-    """If a section has almost no list markers, take short standalone sentences."""
-    items = extract_items(text, limit)
-    if items:
-        return items
-    in_fence = False
+def drop_you_are(text: str) -> str:
     out: list[str] = []
-    for raw in text.splitlines():
-        if FENCE_RE.match(raw.strip()):
-            in_fence = not in_fence
+    for para in re.split(r"\n\s*\n", text.strip()):
+        p = para.strip()
+        if not p:
             continue
-        if in_fence:
+        if p.startswith("#"):
             continue
-        line = strip_emoji(raw).strip()
-        if not line or line.startswith("#") or line.startswith(">"):
+        if re.match(r"^You are\b", p):
             continue
-        if line.startswith("You are "):
-            continue
-        if len(line) < 24 or len(line) > 220:
-            continue
-        if line.startswith("|") or line.startswith("```"):
-            continue
-        out.append(re.sub(r"\s+", " ", line).rstrip("."))
-        if len(out) >= limit:
-            break
-    return out
+        out.append(p)
+    return "\n\n".join(out)
 
 
-def classify(header: str) -> str | None:
-    h = normalize_header(header)
-    if not h:
-        return "preamble"
-    if DROP_HEADER.match(h):
-        return None
-    if SKIP_HEADER.match(h):
-        return "skip"
-    if IDENTITY_HEADER.match(h):
-        return "identity"
-    if MISSION_HEADER.match(h):
-        return "mission"
-    if RULES_HEADER.match(h):
-        return "rules"
-    if WORKFLOW_HEADER.match(h):
-        return "workflow"
-    if METRICS_HEADER.match(h):
-        return "metrics"
-    if DOMAIN_HEADER.match(h):
-        return "domain"
-    return "other"
+def grok_description(description: str, slug: str) -> str:
+    desc = re.sub(r"\s+", " ", description).strip().rstrip(".")
+    suffix = f" Use when the user runs /{slug}."
+    room = 320 - len(suffix)
+    if len(desc) > room:
+        desc = desc[: room - 3].rstrip() + "..."
+    return desc + "." + suffix
 
 
-def extract_role(identity_text: str, vibe: str, name: str, description: str) -> str:
+def extract_role(identity_text: str, vibe: str, description: str, name: str) -> str:
     for raw in identity_text.splitlines():
-        m = ROLE_RE.match(strip_emoji(raw))
+        m = re.match(r"^\s*[-*]?\s*\*\*Role\*\*\s*:?\s*(.+)$", strip_emoji(raw), re.I)
         if m:
             return m.group(1).strip().rstrip(".")
     if vibe:
@@ -222,31 +195,45 @@ def extract_role(identity_text: str, vibe: str, name: str, description: str) -> 
     return f"{name} specialist"
 
 
-def compact_description(description: str, slug: str, limit: int = 280) -> str:
-    desc = re.sub(r"\s+", " ", description).strip().rstrip(".")
-    suffix = f" Use when the user runs /{slug}."
-    room = limit - len(suffix)
-    if len(desc) > room:
-        desc = desc[: room - 3].rstrip() + "..."
-    return desc + "." + suffix
+def convert_agent(path: Path, division: str) -> dict | None:
+    text = path.read_text(encoding="utf-8", errors="replace")
+    if not text.startswith("---"):
+        return None
+    fm, body = parse_frontmatter(text)
+    name = fm.get("name") or path.stem.replace("-", " ").title()
+    slug = slugify(name)
+    if not (2 <= len(slug) <= 64) or not re.match(r"^[a-z0-9]([a-z0-9-]*[a-z0-9])?$", slug):
+        raise SystemExit(f"invalid skill name from {path}: {slug!r}")
+    description = fm.get("description") or name
+    vibe = fm.get("vibe") or ""
 
+    identity = ""
+    kept: list[tuple[str, str]] = []
+    seen_titles: set[str] = set()
+    for header, content in split_sections(body):
+        key = normalize_header(header)
+        if not header:
+            leftover = drop_you_are(content)
+            if leftover:
+                kept.append(("Context", leftover))
+            continue
+        if DROP.match(key):
+            if "identity" in key:
+                identity += content + "\n"
+            continue
+        title = title_header(header)
+        if title in seen_titles:
+            title = f"{title} ({header})"
+        seen_titles.add(title)
+        kept.append((title, content.strip()))
 
-def render_skill(
-    *,
-    name: str,
-    slug: str,
-    description: str,
-    division: str,
-    role: str,
-    do_items: list[str],
-    rules: list[str],
-    output: list[str],
-    skip: list[str],
-) -> str:
-    fm = [
+    role = extract_role(identity, vibe, description, name)
+    grok_line = GROK_BY_DIVISION.get(division, "Deliver the artifact. Do not recap this skill.")
+
+    parts = [
         "---",
         f"name: {slug}",
-        f"description: {yaml_quote(description)}",
+        f"description: {yaml_quote(grok_description(description, slug))}",
         "disable-model-invocation: true",
         "user-invocable: true",
         "argument-hint: task",
@@ -262,130 +249,37 @@ def render_skill(
         "",
         role.rstrip(".") + ".",
         "",
+        "## Grok",
+        "",
+        "- Follow the method below in full. Do not summarize it back to the user.",
+        f"- {grok_line}",
+        "- Prefer Grok tools over describing what a human should do.",
+        "",
     ]
-    body: list[str] = fm
-    if do_items:
-        body.append("## Do")
-        body.append("")
-        for item in do_items:
-            body.append(f"- {item}")
-        body.append("")
-    if rules:
-        body.append("## Rules")
-        body.append("")
-        for item in rules:
-            body.append(f"- {item}")
-        body.append("")
-    if output:
-        body.append("## Done when")
-        body.append("")
-        for item in output:
-            body.append(f"- {item}")
-        body.append("")
-    if skip:
-        body.append("## Out of scope")
-        body.append("")
-        for item in skip:
-            body.append(f"- {item}")
-        body.append("")
-    body.append("Deliver the artifact. Do not recap this persona.")
-    body.append("")
-    return "\n".join(body)
-
-
-def convert_agent(path: Path, division: str) -> dict | None:
-    text = path.read_text(encoding="utf-8", errors="replace")
-    if not text.startswith("---"):
-        return None
-    fm, body = parse_frontmatter(text)
-    name = fm.get("name") or path.stem.replace("-", " ").title()
-    slug = slugify(name)
-    if not (2 <= len(slug) <= 64) or not re.match(r"^[a-z0-9]([a-z0-9-]*[a-z0-9])?$", slug):
-        raise SystemExit(f"invalid skill name from {path}: {slug!r}")
-    description = fm.get("description") or name
-    vibe = fm.get("vibe") or ""
-
-    buckets: dict[str, list[str]] = {
-        k: [] for k in ("identity", "mission", "rules", "workflow", "metrics", "skip", "domain", "other")
-    }
-    identity_text = ""
-    for header, content in split_sections(body):
-        kind = classify(header)
-        if kind is None:
+    if not kept:
+        kept.append(("Method", drop_you_are(body) or body.strip()))
+    for title, content in kept:
+        if not content:
             continue
-        if kind == "identity":
-            identity_text += content + "\n"
-            continue
-        if kind == "preamble":
-            continue
-        limit = {
-            "rules": 8,
-            "workflow": 8,
-            "mission": 8,
-            "metrics": 5,
-            "skip": 4,
-            "domain": 6,
-            "other": 6,
-        }[kind]
-        items = extract_items(content, limit)
-        buckets[kind].extend(items)
-
-    role = extract_role(identity_text, vibe, name, description)
-    do_items = list(buckets["workflow"] or buckets["mission"] or buckets["domain"] or [])
-    if len(do_items) < 4:
-        extra = buckets["mission"] + buckets["domain"] + buckets["other"]
-        for item in extra:
-            if item not in do_items:
-                do_items.append(item)
-            if len(do_items) >= 8:
-                break
-    if len(do_items) < 3:
-        harvested: list[str] = []
-        for header, content in split_sections(body):
-            kind = classify(header)
-            if kind in (None, "identity"):
-                continue
-            harvested.extend(harvest_prose_bullets(content, 6))
-        for item in harvested:
-            if item not in do_items:
-                do_items.append(item)
-            if len(do_items) >= 6:
-                break
-    rules = buckets["rules"][:8]
-    output = buckets["metrics"][:5]
-    skip = buckets["skip"][:4]
-    if not rules:
-        rules = [i for i in buckets["domain"] if i not in do_items][:6]
-
-    skill_md = render_skill(
-        name=name,
-        slug=slug,
-        description=compact_description(description, slug),
-        division=division,
-        role=role,
-        do_items=do_items[:8],
-        rules=rules,
-        output=output,
-        skip=skip,
-    )
-    src_lines = text.count("\n") + 1
-    out_lines = skill_md.count("\n") + 1
+        parts.append(f"## {title}")
+        parts.append("")
+        parts.append(content)
+        parts.append("")
+    skill_md = "\n".join(parts).rstrip() + "\n"
     return {
         "name": name,
         "slug": slug,
         "division": division,
-        "description": compact_description(description, slug),
         "one_liner": role,
         "skill_md": skill_md,
-        "src_lines": src_lines,
-        "out_lines": out_lines,
+        "src_lines": text.count("\n") + 1,
+        "out_lines": skill_md.count("\n") + 1,
         "src_path": str(path.relative_to(REPO_ROOT)),
     }
 
 
 def load_divisions() -> list[str]:
-    data = json.loads(DIVISIONS_JSON.read_text())
-    return list(data["divisions"].keys())
+    return list(json.loads(DIVISIONS_JSON.read_text())["divisions"].keys())
 
 
 def division_labels() -> dict[str, str]:
@@ -420,7 +314,7 @@ def render_catalog(records: list[dict]) -> str:
     lines = [
         "---",
         "name: agency",
-        "description: 'Agency specialist roster for Grok Build. Use when the user wants a specialist agent, an agency role, a domain expert, or runs /agency. Pick the matching slash skill and follow it.'",
+        "description: 'Agency specialist roster for Grok Build. Full methods, written as Grok procedures. Use when the user wants a specialist, an agency role, or runs /agency.'",
         "when-to-use: agency, specialist, roster, persona, agent role, the agency",
         "disable-model-invocation: false",
         "user-invocable: true",
@@ -434,22 +328,21 @@ def render_catalog(records: list[dict]) -> str:
         "",
         "# Agency",
         "",
-        "This plugin is a compressed rewrite of [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) for Grok Build.",
+        "Specialist skills ported from [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents).",
+        "Each skill keeps the **full method**. Claude character-sheet padding is stripped. Nothing is summarized down to a handful of bullets.",
         "",
         "## How to work",
         "",
-        "- Specialists are slash skills (`/frontend-developer`). They have `disable-model-invocation: true` so they do not bloat auto-invoke context.",
-        "- If the user names a role, read `skills/<slug>/SKILL.md` in this plugin (or `~/.grok/skills/<slug>/SKILL.md`) and follow it for the rest of the turn.",
-        "- If the role is ambiguous, list 3-5 matching slugs from the roster below and ask.",
-        "- Deliver the artifact. Do not recap the persona. Do not invent tools the session does not have.",
-        "- UI changes: verify in the browser before claiming done.",
+        "- Specialists are slash skills (`/frontend-developer`). Slash-only, so the roster does not load every turn.",
+        "- When the user names a role, read that skill's `SKILL.md` and follow the whole method.",
+        "- If the role is ambiguous, list 3-5 matching slugs and ask.",
+        "- Use Grok tools. Deliver the artifact. Do not recap the skill.",
         "",
         f"Roster: {len(records)} specialists.",
         "",
     ]
     for div in sorted(by_div):
-        label = labels.get(div, div)
-        lines.append(f"## {label}")
+        lines.append(f"## {labels.get(div, div)}")
         lines.append("")
         lines.append("| Skill | Role |")
         lines.append("|---|---|")
@@ -478,19 +371,25 @@ def collect_agents() -> list[dict]:
 
 
 def write_index(records: list[dict], dest: Path) -> None:
-    payload = [
-        {
-            "slug": r["slug"],
-            "name": r["name"],
-            "division": r["division"],
-            "src": r["src_path"],
-            "src_lines": r["src_lines"],
-            "out_lines": r["out_lines"],
-        }
-        for r in records
-    ]
     dest.parent.mkdir(parents=True, exist_ok=True)
-    dest.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    dest.write_text(
+        json.dumps(
+            [
+                {
+                    "slug": r["slug"],
+                    "name": r["name"],
+                    "division": r["division"],
+                    "src": r["src_path"],
+                    "src_lines": r["src_lines"],
+                    "out_lines": r["out_lines"],
+                }
+                for r in records
+            ],
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
 
 
 def main() -> int:
@@ -503,30 +402,26 @@ def main() -> int:
     records = collect_agents()
     catalog = render_catalog(records)
     write_skill_tree(args.skills_root, records, catalog)
-    grok_skills = args.out / "skills"
-    write_skill_tree(grok_skills, records, catalog)
+    write_skill_tree(args.out / "skills", records, catalog)
     args.out.mkdir(parents=True, exist_ok=True)
     readme = args.out / "README.md"
     if not readme.exists():
         readme.write_text(
             "# Grok Build skills\n\n"
-            "Generated by `scripts/convert-grok.py`. Install with "
+            "Full methods as Grok procedures. "
             "`./scripts/install.sh --tool grok` or "
             "`grok plugin install ed-munch/agency-agents --trust`.\n",
             encoding="utf-8",
         )
     write_index(records, args.index)
-
     src = sum(r["src_lines"] for r in records)
     out = sum(r["out_lines"] for r in records) + catalog.count("\n") + 1
-    print(f"Converted {len(records)} agents -> Grok skills")
+    print(f"Converted {len(records)} agents -> Grok skills (full method, no crop)")
     print(f"  source lines: {src}")
     print(f"  skill lines:  {out} ({out / src:.0%} of original)")
-    print(f"  skills root:  {args.skills_root}")
-    print(f"  integrations: {args.out}")
-    too_long = [r for r in records if r["out_lines"] > 120]
-    if too_long:
-        print(f"  warning: {len(too_long)} skills exceed 120 lines")
+    thin = [r for r in records if r["out_lines"] < 20]
+    if thin:
+        print(f"  warning: {len(thin)} thin skills: " + ", ".join(t["slug"] for t in thin[:12]))
     return 0
 
 

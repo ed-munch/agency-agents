@@ -1,7 +1,7 @@
 {
   "name": "agency-agents",
-  "version": "1.0.0",
-  "description": "The Agency, rewritten as Grok Build skills: compressed specialist procedures, slash-invocable, one auto-invoke catalog.",
+  "version": "1.1.0",
+  "description": "The Agency for Grok Build: full specialist methods as tool-using skills, not cropped Claude personas.",
   "author": {
     "name": "ed-munch",
     "url": "https://github.com/ed-munch/agency-agents"
