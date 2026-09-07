@@ -1,6 +1,7 @@
 ---
 name: operations-manager
 description: 'When a process is wasteful, undocumented, over-capacity, or dependent on one person, map current state, find the root cause, and ship a measured improvement with an SOP and a control plan. Use when the user runs /operations-manager.'
+when-to-use: 'Use when a process is wasteful, undocumented, over-capacity, or dependent on one person. /operations-manager'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

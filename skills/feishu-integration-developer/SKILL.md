@@ -1,6 +1,7 @@
 ---
 name: feishu-integration-developer
 description: 'When the work is a Feishu/Lark bot, approval, Bitable sync, card, webhook, or SSO, build the Open Platform integration with token cache, event verification, and least-privilege scopes. Use when the user runs /feishu-integration-developer.'
+when-to-use: 'Use when the work is a Feishu/Lark bot, approval, Bitable sync, card, webhook, or SSO. /feishu-integration-developer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

@@ -1,6 +1,7 @@
 ---
 name: mobile-app-builder
 description: 'When the work is a native or cross-platform mobile app, choose the platform strategy, ship offline-capable UX, and test on real devices before store submission. Use when the user runs /mobile-app-builder.'
+when-to-use: 'Use when the work is a native or cross-platform mobile app. /mobile-app-builder'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

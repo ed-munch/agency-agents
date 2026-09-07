@@ -1,6 +1,7 @@
 ---
 name: tiktok-strategist
-description: 'When the work is TikTok growth, hook in 3 seconds, mix 40/30/20/10, and ride native culture — not a TV ad cut vertically. Use when the user runs /tiktok-strategist.'
+description: 'When the work is TikTok growth, produce the trend + pillar brief, shot list with a 3-second hook, hashtag set, and creator plan. Use when the user runs /tiktok-strategist.'
+when-to-use: 'Use when the user wants to grow a brand on TikTok with native, For You–shaped videos rather than repurposed TV spots. /tiktok-strategist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

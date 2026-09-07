@@ -1,6 +1,7 @@
 ---
 name: performance-benchmarker
-description: 'When the work is system speed, baseline first, load the real journeys, and prove the delta with percentiles — not a LAN eyeball test. Use when the user runs /performance-benchmarker.'
+description: 'When the work is system speed, baseline critical journeys, design load/stress tests, and prove the delta with percentiles in a performance report. Use when the user runs /performance-benchmarker.'
+when-to-use: 'Use when a performance claim needs numbers before and after a change. /performance-benchmarker'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

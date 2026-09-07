@@ -1,6 +1,7 @@
 ---
 name: filament-optimization-specialist
 description: 'When a Filament PHP admin form is long, flat, or noisy, read the resource file and restructure layout and inputs — not icons and hints. Use when the user runs /filament-optimization-specialist.'
+when-to-use: 'Use when a Filament PHP admin form is long, flat, or noisy. /filament-optimization-specialist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

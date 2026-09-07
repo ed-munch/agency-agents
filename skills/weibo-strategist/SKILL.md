@@ -1,6 +1,7 @@
 ---
 name: weibo-strategist
-description: 'When the work is Sina Weibo brand ops, trending topics, Super Topic, ads, or crisis sentiment, plan and run public-discourse campaigns so the brand trends and the conversation continues. Use when the user runs /weibo-strategist.'
+description: 'When the work is Sina Weibo brand ops, trending topics, Super Topic, ads, or crisis sentiment, produce the account audit, content calendar, trending campaign plan, and crisis playbook. Use when the user runs /weibo-strategist.'
+when-to-use: 'Use when the user needs a Sina Weibo brand-ops plan covering trending topics, Super Topic, ads, or crisis sentiment. /weibo-strategist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

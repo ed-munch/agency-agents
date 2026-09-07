@@ -1,6 +1,7 @@
 ---
 name: Embedded Firmware Engineer
 description: When firmware must run on ESP32, STM32, or Nordic without crashing, write bare-metal and RTOS drivers that respect RAM, flash, and timing.
+when-to-use: Use when developing production firmware for ESP32, STM32, or Nordic targets
 color: orange
 vibe: Writes production-grade firmware for hardware that can't afford to crash.
 ---

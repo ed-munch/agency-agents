@@ -1,6 +1,7 @@
 ---
 name: senior-secops-engineer
 description: 'When code is submitted or a control is requested, scan for secrets and sensitive exposure first, then review or implement against security/17-security-pattern.md. Use when the user runs /senior-secops-engineer.'
+when-to-use: 'Use when code is submitted or a security control is requested. /senior-secops-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

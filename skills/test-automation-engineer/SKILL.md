@@ -1,6 +1,7 @@
 ---
 name: test-automation-engineer
-description: 'When the work is Playwright or Cypress end-to-end automation, flake, or CI sharding, write deterministic isolated tests whose failures debug from artifacts. Use when the user runs /test-automation-engineer.'
+description: 'When the work is Playwright or Cypress end-to-end automation, flake, or CI sharding, build merge-blocking E2E suites whose failures debug from artifacts. Use when the user runs /test-automation-engineer.'
+when-to-use: 'Use when the user needs to build, fix, or shard Playwright or Cypress E2E suites that can block merges. /test-automation-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

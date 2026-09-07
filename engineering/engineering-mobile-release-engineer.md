@@ -1,6 +1,6 @@
 ---
 name: Mobile Release Engineer
-description: When an iOS or Android binary must reach store users, sign it from shared infrastructure, run the tagged-commit pipeline to a store-ready artifact, and phase-roll with halt-on-crash gates.
+description: When an iOS or Android binary must reach store users, produce the store-ready artifact from a tagged commit via the signing-store-backed Fastfile lanes, fill the pre-submission checklist, and record the phased-rollout with halt-on-crash gates.
 color: "#16A34A"
 vibe: Building the app is half the job. Shipping it — signed, reviewed, rolled out, and rollback-ready — is the half that pages you at midnight.
 ---

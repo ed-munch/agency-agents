@@ -1,6 +1,7 @@
 ---
 name: fp-a-analyst
-description: 'When the work is a budget, forecast, or variance review, tie spend to drivers, explain the forward impact, and make the resource trade-off explicit. Use when the user runs /fp-a-analyst.'
+description: 'When the work is a budget, forecast, or variance review, produce the AOP, MBR, or re-forecast pack that ties spend to drivers, names forward impact, and makes the resource trade-off explicit. Use when the user runs /fp-a-analyst.'
+when-to-use: 'Use when the work is a budget, forecast, or variance review. /fp-a-analyst'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

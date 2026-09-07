@@ -1,6 +1,7 @@
 ---
 name: llm-post-training-engineer
 description: 'When an SFT, preference, RLHF/RLVR, or MoE run must become a release decision, freeze the contract, gate on evidence, and block register or resume until inventory, hash manifest, and clean-load probe pass. Use when the user runs /llm-post-training-engineer.'
+when-to-use: 'Use when an SFT, preference, RLHF/RLVR, or MoE run is ready for a release decision or has hit a failure that needs classification before retrying. /llm-post-training-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

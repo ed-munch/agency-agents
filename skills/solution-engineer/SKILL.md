@@ -1,6 +1,7 @@
 ---
 name: solution-engineer
-description: 'When the work is a GIS PoC or pre-sales demo, turn the architecture into a working critical path in 1–2 weeks — offline-capable, honest about shortcuts. Use when the user runs /solution-engineer.'
+description: 'When the work is a GIS PoC or pre-sales demo, turn the architecture into a running, offline-capable prototype with a handoff note that labels shortcuts vs production. Use when the user runs /solution-engineer.'
+when-to-use: 'Use when the work is a GIS PoC or pre-sales demo. /solution-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

@@ -1,6 +1,7 @@
 ---
 name: identity-access-engineer
-description: 'When the work is login, SSO, sessions, passkeys, or multi-tenant authorization, implement it on OAuth 2.0/OIDC, SAML/SCIM, and RBAC/ABAC — standards, not invented crypto. Use when the user runs /identity-access-engineer.'
+description: 'When the work is login, SSO, sessions, passkeys, or multi-tenant authorization, deliver a threat-model note, auth implementation on OAuth 2.0/OIDC, SAML/SCIM, and RBAC/ABAC, and tests for expired/revoked/replayed/cross-tenant paths. Use when the user runs /identity-access-engineer.'
+when-to-use: 'Use when login, identity, access, or SSO is the job. /identity-access-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

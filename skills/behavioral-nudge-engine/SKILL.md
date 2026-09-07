@@ -1,6 +1,7 @@
 ---
 name: behavioral-nudge-engine
-description: 'When the work is in-app nudges or notification copy, send one low-friction next step on the user''s cadence — not a dump of unread items. Use when the user runs /behavioral-nudge-engine.'
+description: 'When the work is in-app nudges or notification copy, produce a preference schema and one nudge (next step, channel, celebration/off-ramp) — not a dump of unread items. Use when the user runs /behavioral-nudge-engine.'
+when-to-use: 'Use when the work is in-app nudges or notification copy. /behavioral-nudge-engine'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

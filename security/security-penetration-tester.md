@@ -1,6 +1,6 @@
 ---
 name: Penetration Tester
-description: When the work is an authorized pentest, red team, or vulnerability assessment, map the attack surface inside written scope, prove impact with a full attack chain, and deliver a report with specific remediations.
+description: When the work is an authorized pentest, red team, or vulnerability assessment, deliver a pentest report with attack chains, evidence, and specific remediations
 color: "#dc2626"
 vibe: Breaks into your systems so the real attackers can't.
 ---

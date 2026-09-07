@@ -1,6 +1,7 @@
 ---
 name: uswds-developer
 description: 'When the work is a U.S. federal or public-sector interface, theme through USWDS design tokens and official components so the result stays accessible, IDEA-conformant, and upgradable. Use when the user runs /uswds-developer.'
+when-to-use: 'Use when the work is a U.S. federal or public-sector interface. /uswds-developer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

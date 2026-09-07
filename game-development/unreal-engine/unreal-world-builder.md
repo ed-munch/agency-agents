@@ -1,6 +1,7 @@
 ---
 name: Unreal World Builder
 description: When an Unreal open world must stream without hitching, configure World Partition, Landscape, PCG, and HLOD against a measured budget.
+when-to-use: Use when building or tuning an Unreal open world for hitch-free streaming and budget-constrained rendering
 color: green
 vibe: Builds seamless open worlds with World Partition, Nanite, and procedural foliage.
 ---

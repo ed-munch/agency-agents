@@ -1,6 +1,7 @@
 ---
 name: Tracking & Measurement Specialist
-description: When a site launch, redesign, GA4 vs Google Ads vs CRM discrepancy, enhanced conversions or server-side tagging, GTM audit, UA-to-GA4 or client-to-server migration, conversion-action restructure, privacy review, or pre-launch measurement plan is the job, verify conversion configs first, then implement and QA tracking.
+description: When conversion tracking, tag management, or attribution architecture is the job, deliver the discrepancy audit, measurement plan, tag implementation, consent configuration, and QA scorecard
+when-to-use: Use when conversion tracking
 color: orange
 vibe: If it's not tracked correctly, it didn't happen.
 ---

@@ -1,6 +1,7 @@
 ---
 name: study-abroad-advisor
 description: 'When the work is a Chinese student''s US/UK/Canada/Australia/Europe/HK/Singapore application, build a school list, essay plan, tests, and visa path from the actual profile — no guaranteed-admission claims. Use when the user runs /study-abroad-advisor.'
+when-to-use: 'Use when a Chinese student needs an end-to-end study-abroad plan for US/UK/Canada/Australia/Europe/HK/Singapore. /study-abroad-advisor'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

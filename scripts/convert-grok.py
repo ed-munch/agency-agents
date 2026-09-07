@@ -185,6 +185,56 @@ def grok_description(description: str, slug: str) -> str:
     return desc + "." + suffix
 
 
+_METHOD_VERBS = (
+    "implement|inspect|return|hold|sequence|source|map|simulate|ship|"
+    "route|set|keep|write|audit|build|design|run|turn|reconstruct|"
+    "lock|research|choose|pick|capture|scan|extract|default|"
+    "cross-check|refuse|draft|flag|make|treat|add|remove|"
+    "optimize|deliver|certify|rewrite|architect|produce|baseline|"
+    "inventory|forecast|theme|checkout|paper-test|then|"
+    "never|always|do not|don't|convert|translate|orchestrate|"
+    "score|rank|recommend|plan|roll|test|measure|prove|"
+    "find|fix|break|review|gate|validate|verify|"
+    "read|parse|emit|generate|render|compile|deploy|"
+    "ask|list|follow|use|prefer|edit|collect|coach|operate|"
+    "get|rebuild|grade|classify|allocate|complete|package|"
+    "bound|grow|copy|burn|communicate|close|assign|include|"
+    "judge|promote|tag|commit|check|resolve|reconcile|drive|"
+    "decode|ingest|decompose|walk|change|document|hit|code|scrub"
+)
+_CUT_COMMA = re.compile(r",\s+(?:" + _METHOD_VERBS + r")\b", re.I)
+_CUT_AND = re.compile(r"\s+and\s+(?:" + _METHOD_VERBS + r")\b", re.I)
+_CUT_DASH = re.compile(r"\s+[—–-]\s+(?:" + _METHOD_VERBS + r")\b", re.I)
+
+
+def grok_when_to_use(description: str, slug: str) -> str:
+    """Situation trigger only: Use when <situation>. /{slug}. Method/do stays in description."""
+    desc = re.sub(r"\s+", " ", description).strip().rstrip(".")
+    cuts = [m.start() for rx in (_CUT_COMMA, _CUT_AND, _CUT_DASH) if (m := rx.search(desc))]
+    situ = desc[: min(cuts)] if cuts else desc
+    situ = situ.strip().rstrip(",").rstrip("—–-").strip()
+    if situ.lower().startswith("when "):
+        situ = "Use when " + situ[5:]
+    elif not situ.lower().startswith("use when "):
+        situ = "Use when " + situ
+    situ = re.sub(r"\s+", " ", situ).strip().rstrip(".")
+    return f"{situ}. /{slug}"
+
+
+def normalize_when_to_use(text: str, slug: str) -> str:
+    """One home for override when-to-use: situation plus /{slug}."""
+    situ = re.sub(r"\s+", " ", text).strip().rstrip(".")
+    trailing = f"/{slug}"
+    if situ.endswith(trailing):
+        situ = situ[: -len(trailing)].strip().rstrip(".")
+    if situ.startswith("When ") and not situ.startswith("Use when "):
+        situ = "Use when " + situ[len("When ") :]
+    elif not situ.startswith("Use when "):
+        situ = "Use when " + situ
+    situ = re.sub(r"\s+", " ", situ).strip().rstrip(".")
+    return f"{situ}. /{slug}"
+
+
 def extract_role(identity_text: str, vibe: str, description: str, name: str) -> str:
     for raw in identity_text.splitlines():
         m = re.match(r"^\s*[-*]?\s*\*\*Role\*\*\s*:?\s*(.+)$", strip_emoji(raw), re.I)
@@ -231,11 +281,18 @@ def convert_agent(path: Path, division: str) -> dict | None:
 
     role = extract_role(identity, vibe, description, name)
     grok_line = GROK_BY_DIVISION.get(division, "Deliver the artifact. Do not recap this skill.")
+    # Catalog /agency is hardcoded in render_catalog. Never treat slug agency as a specialist override.
+    source_wtu = fm.get("when-to-use") if slug != "agency" else None
+    if source_wtu:
+        when_to_use = normalize_when_to_use(source_wtu, slug)
+    else:
+        when_to_use = grok_when_to_use(description, slug)
 
     parts = [
         "---",
         f"name: {slug}",
         f"description: {yaml_quote(grok_description(description, slug))}",
+        f"when-to-use: {yaml_quote(when_to_use)}",
         "disable-model-invocation: true",
         "user-invocable: true",
         "argument-hint: task",
@@ -399,8 +456,9 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--out", type=Path, default=REPO_ROOT / "integrations" / "grok")
     parser.add_argument("--skills-root", type=Path, default=REPO_ROOT / "skills")
-    parser.add_argument("--index", type=Path, default=REPO_ROOT / "skills" / "index.json")
+    parser.add_argument("--index", type=Path, default=None)
     args = parser.parse_args()
+    index_path = args.index if args.index is not None else args.skills_root / "index.json"
 
     records = collect_agents()
     catalog = render_catalog(records)
@@ -416,7 +474,7 @@ def main() -> int:
             "`grok plugin install ed-munch/agency-agents --trust`.\n",
             encoding="utf-8",
         )
-    write_index(records, args.index)
+    write_index(records, index_path)
     src = sum(r["src_lines"] for r in records)
     out = sum(r["out_lines"] for r in records) + catalog.count("\n") + 1
     print(f"Converted {len(records)} agents -> Grok skills (full method, no crop)")

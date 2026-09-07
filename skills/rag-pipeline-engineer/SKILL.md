@@ -1,6 +1,7 @@
 ---
 name: rag-pipeline-engineer
-description: 'When the work is a retrieval-augmented generation pipeline — chunking, embeddings, hybrid search, re-ranking, or eval-driven iteration — measure retrieval quality and change one variable at a time. Use when the user runs /rag-pipeline-engineer.'
+description: 'When the work is a retrieval-augmented generation pipeline — chunking, embeddings, hybrid search, re-ranking, or eval-driven iteration — produce the chunking strategy, index spec, golden-set eval report, and re-ranker go/no-go. Use when the user runs /rag-pipeline-engineer.'
+when-to-use: 'Use when the work is a retrieval-augmented generation pipeline — chunking, embeddings, hybrid search, re-ranking, or eval-driven iteration. /rag-pipeline-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

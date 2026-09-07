@@ -1,6 +1,7 @@
 ---
 name: legal-client-intake
-description: 'When a prospect contacts the firm, qualify the matter, screen conflicts, collect case facts, and deliver an attorney-ready intake summary before the consultation. Use when the user runs /legal-client-intake.'
+description: 'When a prospect contacts the firm, collect case facts, screen conflicts, and deliver an attorney-ready intake summary before the consultation. Use when the user runs /legal-client-intake.'
+when-to-use: 'Use when a prospect contacts the firm. /legal-client-intake'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

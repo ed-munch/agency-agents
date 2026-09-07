@@ -1,6 +1,7 @@
 ---
 name: unity-multiplayer-engineer
-description: 'When Unity gameplay must be networked, implement server-authoritative Netcode for GameObjects with Relay/Lobby, client prediction, and latency-tested sync. Use when the user runs /unity-multiplayer-engineer.'
+description: 'When Unity gameplay must be networked, produce the authority model, lobby schema, networked controller, latency test notes, and ServerRpc validation audit for server-authoritative Netcode for GameObjects with Relay/Lobby. Use when the user runs /unity-multiplayer-engineer.'
+when-to-use: 'Use when Unity gameplay must be networked. /unity-multiplayer-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

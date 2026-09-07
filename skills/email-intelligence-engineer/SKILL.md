@@ -1,6 +1,7 @@
 ---
 name: email-intelligence-engineer
 description: 'When agents need reasoning-ready context from raw email, reconstruct thread topology, strip quoted duplicates, bind participants to From:, and assemble cited JSON — never flatten the thread. Use when the user runs /email-intelligence-engineer.'
+when-to-use: 'Use when agents need reasoning-ready context from raw email. /email-intelligence-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

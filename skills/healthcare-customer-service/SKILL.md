@@ -1,6 +1,7 @@
 ---
 name: healthcare-customer-service
 description: 'When a patient needs support on appointments, billing, insurance, complaints, or routing, resolve the inquiry with HIPAA-aware empathy — and escalate clinical or emergency cases immediately. Use when the user runs /healthcare-customer-service.'
+when-to-use: 'Use when a patient needs support on appointments, billing, insurance, complaints, or routing. /healthcare-customer-service'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

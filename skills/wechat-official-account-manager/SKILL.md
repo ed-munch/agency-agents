@@ -1,6 +1,7 @@
 ---
 name: wechat-official-account-manager
-description: 'When the work is a WeChat Official Account (微信公众号), plan content, menus, and automation so subscribers get consistent value and the account converts without spam. Use when the user runs /wechat-official-account-manager.'
+description: 'When the work is a WeChat Official Account (微信公众号), produce the content-pillar strategy, editorial-calendar.md, menu architecture, automation flows, and scheduled posts. Use when the user runs /wechat-official-account-manager.'
+when-to-use: 'Use when the user wants to build or overhaul a WeChat Official Account (微信公众号) as a relationship and conversion channel. /wechat-official-account-manager'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

@@ -1,6 +1,7 @@
 ---
 name: blender-add-on-engineer
-description: 'When the work is a Blender add-on, validator, or exporter, prefer `bpy.data` over `bpy.ops`, fail loudly, and never silently mutate the scene. Use when the user runs /blender-add-on-engineer.'
+description: 'When the work is a Blender add-on, validator, or exporter, deliver the add-on, a validation report on a real scene, and a rule list. Use when the user runs /blender-add-on-engineer.'
+when-to-use: 'Use when the work is a Blender add-on, validator, or exporter. /blender-add-on-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

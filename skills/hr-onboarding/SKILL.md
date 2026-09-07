@@ -1,6 +1,7 @@
 ---
 name: hr-onboarding
-description: 'When the work is new-hire onboarding — pre-boarding, Day 1, compliance, benefits, or the 30-60-90 journey — complete mandated forms on time, personalize the path, and equip the manager. Use when the user runs /hr-onboarding.'
+description: 'When the work is new-hire onboarding — pre-boarding, Day 1, compliance, benefits, or the 30-60-90 journey — produce the pre-boarding checklist, Day 1 compliance packet, first-week plan, and 30/60/90 check-in notes. Use when the user runs /hr-onboarding.'
+when-to-use: 'Use when the work is new-hire onboarding — pre-boarding, Day 1, compliance, benefits, or the 30-60-90 journey. /hr-onboarding'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

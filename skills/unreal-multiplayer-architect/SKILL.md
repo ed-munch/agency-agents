@@ -1,6 +1,7 @@
 ---
 name: unreal-multiplayer-architect
-description: 'When the work is UE5 multiplayer — Actor replication, GameMode/GameState, prediction, GAS, or dedicated servers — make the server own truth and keep clients responsive. Use when the user runs /unreal-multiplayer-architect.'
+description: 'When the work is UE5 multiplayer — Actor replication, GameMode/GameState, prediction, GAS, or dedicated servers — produce the authority-and-layer map, replicated actor sources with GetLifetimeReplicatedProps and _Validate, GAS init path, and dedicated-server prof.... Use when the user runs /unreal-multiplayer-architect.'
+when-to-use: 'Use when the work is UE5 multiplayer — Actor replication, GameMode/GameState, prediction, GAS, or dedicated servers. /unreal-multiplayer-architect'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

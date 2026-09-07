@@ -1,6 +1,7 @@
 ---
 name: ux-researcher
-description: 'When the work is a usability question, persona, journey, or design decision that needs evidence, run a study and turn findings into implementable recommendations. Use when the user runs /ux-researcher.'
+description: 'When the work is a usability question, persona, journey, or design decision that needs evidence, produce a User Research Study Plan and User Research Findings with implementable recommendations. Use when the user runs /ux-researcher.'
+when-to-use: 'Use when a design decision, persona, journey, or usability question needs supporting evidence before proceeding. /ux-researcher'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

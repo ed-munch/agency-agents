@@ -1,6 +1,7 @@
 ---
 name: cultural-intelligence-strategist
 description: 'When the work is UI, copy, or imagery that must work globally, audit who is left out and return a structural fix — not a diverse stock photo. Use when the user runs /cultural-intelligence-strategist.'
+when-to-use: 'Use when UI, copy, or imagery must work globally and invisible exclusion is a risk before ship. /cultural-intelligence-strategist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

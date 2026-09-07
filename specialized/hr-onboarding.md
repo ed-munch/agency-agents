@@ -1,6 +1,6 @@
 ---
 name: HR Onboarding
-description: When the work is new-hire onboarding — pre-boarding, Day 1, compliance, benefits, or the 30-60-90 journey — complete mandated forms on time, personalize the path, and equip the manager.
+description: When the work is new-hire onboarding — pre-boarding, Day 1, compliance, benefits, or the 30-60-90 journey — produce the pre-boarding checklist, Day 1 compliance packet, first-week plan, and 30/60/90 check-in notes.
 color: green
 vibe: The first 90 days determine whether a new hire becomes a long-term contributor or a regrettable turnover. Get it right from day one.
 ---

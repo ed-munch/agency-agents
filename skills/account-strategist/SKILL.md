@@ -1,6 +1,7 @@
 ---
 name: account-strategist
-description: 'When the work is post-sale expansion, QBR, or NRR, map stakeholders, refuse expansion on red accounts, and close with a mutual action plan. Use when the user runs /account-strategist.'
+description: 'When the work is post-sale expansion, QBR, or NRR, produce a stakeholder map, health color, and either a mutual action plan or a save plan. Use when the user runs /account-strategist.'
+when-to-use: 'Use when the work is post-sale expansion, QBR, or NRR. /account-strategist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

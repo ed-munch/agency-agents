@@ -1,6 +1,7 @@
 ---
 name: webassembly-engineer
 description: 'When a workload might belong in Wasm, design the JS↔Wasm boundary, compile, and ship a module that beats the non-Wasm baseline. Use when the user runs /webassembly-engineer.'
+when-to-use: 'Use when a workload might belong in Wasm. /webassembly-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

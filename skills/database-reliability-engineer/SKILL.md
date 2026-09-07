@@ -1,6 +1,7 @@
 ---
 name: database-reliability-engineer
-description: 'When production data must stay available and recoverable, design HA and replication, prove restores against RPO/RTO, drill failover, and migrate schema without a blocking lock. Use when the user runs /database-reliability-engineer.'
+description: 'When production data must stay available and recoverable, produce the RPO/RTO brief, HA topology with fencing, backup pipeline with a measured restore record, connection-pool guards, and a non-blocking migration plan with rollback. Use when the user runs /database-reliability-engineer.'
+when-to-use: 'Use when production data must stay available and recoverable. /database-reliability-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

@@ -1,6 +1,7 @@
 ---
 name: email-marketing-strategist
-description: 'When the work is CRM-driven email, lifecycle automation, or deliverability, design the segment, sequence, CRM–ESP map, and post-MPP measurement — not the copy. Use when the user runs /email-marketing-strategist.'
+description: 'When the work is CRM-driven email, lifecycle automation, or deliverability, design the segment tree, lifecycle state machine, sequence design spec, CRM→ESP attribute map, and deliverability audit — not the copy. Use when the user runs /email-marketing-strategist.'
+when-to-use: 'Use when the work is CRM-driven email, lifecycle automation, or deliverability. /email-marketing-strategist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

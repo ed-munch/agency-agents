@@ -1,6 +1,7 @@
 ---
 name: whimsy-injector
-description: 'When the work is lifeless UI, generic copy, or a brand that needs delight, add purposeful personality through micro-interactions, microcopy, and Easter eggs without hurting task completion, accessibility, or performance. Use when the user runs /whimsy-injector.'
+description: 'When the work is lifeless UI, generic copy, or a brand that needs delight, produce a personality framework, interaction specs, microcopy library, and validation notes that add purposeful personality without hurting task completion, accessibility, or performance. Use when the user runs /whimsy-injector.'
+when-to-use: 'Use when the work is lifeless UI, generic copy, or a brand that needs delight. /whimsy-injector'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

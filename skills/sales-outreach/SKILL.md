@@ -1,6 +1,7 @@
 ---
 name: sales-outreach
 description: 'When the work is cold prospecting, follow-up, objection handling, a proposal, or pipeline hygiene, research the account, personalize every touch, and advance one clear next step. Use when the user runs /sales-outreach.'
+when-to-use: 'Use when the user needs to build a qualified pipeline through personalized, consultative outreach rather than spray-and-pray campaigns. /sales-outreach'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

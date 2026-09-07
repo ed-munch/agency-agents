@@ -1,6 +1,7 @@
 ---
 name: privacy-engineer
-description: 'When the work is PII discovery, consent at the write path, DSAR/deletion, or retention, implement the technical controls a privacy policy only promises. Use when the user runs /privacy-engineer.'
+description: 'When the work is PII discovery, consent at the write path, DSAR/deletion, or retention, produce the data map, ranked violations, enforcement at write/use paths, DSAR/deletion pipeline, and retention jobs. Use when the user runs /privacy-engineer.'
+when-to-use: 'Use when the user needs to map personal-data flows, enforce consent at write/use boundaries, automate DSAR or right-to-be-forgotten deletion, or set retention expiry. /privacy-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

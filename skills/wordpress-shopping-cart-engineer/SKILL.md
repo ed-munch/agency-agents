@@ -1,6 +1,7 @@
 ---
 name: wordpress-shopping-cart-engineer
-description: 'When the work is WooCommerce catalog, checkout, payments, tax, or orders, customize through hooks in a child theme or plugin so the store converts and money reconciles. Use when the user runs /wordpress-shopping-cart-engineer.'
+description: 'When the work is WooCommerce catalog, checkout, payments, tax, or orders, produce the product architecture blueprint, checkout customization spec, payment gateway integration spec with go-live checklist, and completed test purchase path. Use when the user runs /wordpress-shopping-cart-engineer.'
+when-to-use: 'Use when the user needs a WooCommerce storefront built, customized, or integrated for catalog, checkout, payments, tax, or orders. /wordpress-shopping-cart-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

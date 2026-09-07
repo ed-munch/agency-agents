@@ -1,6 +1,7 @@
 ---
 name: solidity-smart-contract-engineer
 description: 'When the work is EVM contracts, design the architecture, write Solidity against OpenZeppelin, and prove it with Foundry tests, gas snapshots, and an audit-ready deploy path. Use when the user runs /solidity-smart-contract-engineer.'
+when-to-use: 'Use when the work is EVM smart contracts destined for mainnet. /solidity-smart-contract-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

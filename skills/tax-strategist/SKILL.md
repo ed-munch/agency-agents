@@ -1,6 +1,7 @@
 ---
 name: tax-strategist
-description: 'When the work is entity structure, ETR, or a tax position, optimize inside the law, document contemporaneously, and quantify audit risk — not a tip that cannot be defended. Use when the user runs /tax-strategist.'
+description: 'When the work is entity structure, ETR, or a tax position, produce a planning memo (or ETR analysis) with documented positions and quantified audit risk. Use when the user runs /tax-strategist.'
+when-to-use: 'Use when the work is entity structure, ETR, or a tax position. /tax-strategist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

@@ -59,6 +59,7 @@ Which specialist is assigned to which spawn stays out of scope.
 ## Source and generate
 
 Source of truth: division `*.md` files. Generated: `skills/<slug>/SKILL.md`.
+Convert emits specialist `when-to-use` as the situation trigger plus `/{slug}`, not the full description.
 
 Specialists are slash-only. `/agency` is the catalog.
 

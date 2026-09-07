@@ -1,6 +1,7 @@
 ---
 name: deal-strategist
 description: 'When the work is a B2B opportunity, forecast call, or competitive deal, score it with MEDDPICC, expose gaps, and write a win plan that survives forecast review. Use when the user runs /deal-strategist.'
+when-to-use: 'Use when the work is a complex B2B opportunity, forecast call, or competitive deal needing MEDDPICC qualification. /deal-strategist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

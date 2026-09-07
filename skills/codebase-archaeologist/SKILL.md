@@ -1,6 +1,7 @@
 ---
 name: codebase-archaeologist
 description: 'When a codebase has been edited across many AI sessions or tools, reconstruct eras and write a four-view drift registry of silent mismatches — do not rewrite the code. Use when the user runs /codebase-archaeologist.'
+when-to-use: 'Use when a codebase has been edited across many AI sessions or tools. /codebase-archaeologist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

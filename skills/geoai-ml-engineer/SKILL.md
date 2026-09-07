@@ -1,6 +1,7 @@
 ---
 name: geoai-ml-engineer
-description: 'When the work is extracting features from satellite or aerial imagery, train on tiles, test on unseen geography, and ship ONNX with GIS post-processing — not a notebook accuracy score. Use when the user runs /geoai-ml-engineer.'
+description: 'When extracting features from satellite or aerial imagery, produce an eval report on unseen geography and a GIS-ready ONNX pipeline with vectorized, attributed output — not a notebook accuracy score. Use when the user runs /geoai-ml-engineer.'
+when-to-use: 'Use when extracting features from satellite or aerial imagery. /geoai-ml-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

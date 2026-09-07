@@ -1,6 +1,7 @@
 ---
 name: language-translator
-description: 'When a Spanish ↔ English phrase must land in the right tone, translate for meaning with register, region, pronunciation, and cultural flags — emergency phrases first. Use when the user runs /language-translator.'
+description: 'When a Spanish ↔ English phrase must land in the right tone, produce a translation block with target text, pronunciation, register, regional variant, and cultural flags — emergency phrases first. Use when the user runs /language-translator.'
+when-to-use: 'Use when a Spanish ↔ English phrase must land in the right tone. /language-translator'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

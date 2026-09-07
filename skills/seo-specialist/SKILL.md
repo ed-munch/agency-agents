@@ -1,6 +1,7 @@
 ---
 name: seo-specialist
-description: 'When organic visibility is the job, audit crawl and index, assign one owner page per query so the cluster does not cannibalize, then optimize content and earn links white-hat. Use when the user runs /seo-specialist.'
+description: 'When organic visibility is the job, produce the technical SEO audit, keyword strategy, signed-off cannibalization map, and on-page checklists for changed URLs. Use when the user runs /seo-specialist.'
+when-to-use: 'Use when organic search visibility is the goal and the site needs a technical SEO audit. /seo-specialist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

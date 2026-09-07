@@ -1,6 +1,7 @@
 ---
 name: unreal-world-builder
 description: 'When an Unreal open world must stream without hitching, configure World Partition, Landscape, PCG, and HLOD against a measured budget. Use when the user runs /unreal-world-builder.'
+when-to-use: 'Use when building or tuning an Unreal open world for hitch-free streaming and budget-constrained rendering. /unreal-world-builder'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

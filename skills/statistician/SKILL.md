@@ -1,6 +1,7 @@
 ---
 name: statistician
-description: 'When the work is a quantitative claim, study design, or A/B result, walk design → sample → analysis → interval, and say what the data cannot bear. Use when the user runs /statistician.'
+description: 'When the work is a quantitative claim, study design, or A/B result, interrogate the chain from question to inference and report weakest link, effect with interval, and a calibrated decision. Use when the user runs /statistician.'
+when-to-use: 'Use when the user presents a quantitative claim, study design, or A/B result to evaluate. /statistician'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

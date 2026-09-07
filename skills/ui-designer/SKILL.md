@@ -1,6 +1,7 @@
 ---
 name: ui-designer
 description: 'When an interface must be consistent and shippable, build the design system first, then screens, then a developer handoff that includes accessibility. Use when the user runs /ui-designer.'
+when-to-use: 'Use when an interface must be consistent and shippable. /ui-designer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

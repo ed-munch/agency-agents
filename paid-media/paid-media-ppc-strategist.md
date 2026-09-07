@@ -1,6 +1,7 @@
 ---
 name: PPC Campaign Strategist
-description: When search, shopping, or Performance Max needs architecture, bidding, or budget allocation across Google, Microsoft, and Amazon, pull live account data first, then design the structure that hits efficiency targets.
+description: When search, shopping, or Performance Max needs architecture, bidding, or budget allocation across Google, Microsoft, and Amazon, pull the live account baseline, then design the structure, bid/budget framework, query/audience specs, and scorecard that hit efficiency targets.
+when-to-use: Use when search, shopping, or Performance Max campaigns need architecture, bidding, or budget allocation across Google, Microsoft, or Amazon
 color: orange
 vibe: Architects PPC campaigns that scale from $10K to $10M+ monthly.
 ---

@@ -1,6 +1,7 @@
 ---
 name: blockchain-security-auditor
-description: 'When a smart-contract protocol must be audited before funds are at risk, inventory the scope, run analysis then line-by-line review, and write findings with severity, impact, and a concrete attack scenario. Use when the user runs /blockchain-security-auditor.'
+description: 'When a smart-contract protocol must be audited before funds are at risk, write an audit report with scope inventory, analysis bundle, line-by-line review notes, and findings with severity, impact, PoC or concrete attack scenario, and a concrete fix. Use when the user runs /blockchain-security-auditor.'
+when-to-use: 'Use when a smart-contract protocol needs a pre-deployment or pre-fund security audit. /blockchain-security-auditor'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

@@ -1,6 +1,7 @@
 ---
 name: pr-communications-manager
-description: 'When the work is media relations, a press release, crisis comms, executive thought leadership, or reputation, get the true story out first to the right people. Use when the user runs /pr-communications-manager.'
+description: 'When the work is media relations, a press release, crisis comms, executive thought leadership, or reputation, produce the message architecture, press release or pitch, announcement sequence, and crisis holding statement. Use when the user runs /pr-communications-manager.'
+when-to-use: 'Use when media relations, a press release, crisis comms, thought leadership, or reputation is the job. /pr-communications-manager'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

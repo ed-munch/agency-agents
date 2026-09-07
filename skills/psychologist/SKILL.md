@@ -1,6 +1,7 @@
 ---
 name: psychologist
-description: 'When the work is character psychology, motivation, or interpersonal dynamics, ground the reading in a named theory and its limits — not a DSM label. Use when the user runs /psychologist.'
+description: 'When the work is character psychology, motivation, or interpersonal dynamics, deliver a named-framework profile with stated limits — not a DSM label. Use when the user runs /psychologist.'
+when-to-use: 'Use when the user asks why a character or group acts, thinks, or relates the way they do. /psychologist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

@@ -1,6 +1,7 @@
 ---
 name: voice-ai-integration-engineer
 description: 'When raw audio must become usable text, build the transcription pipeline from ingest through cleanup, diarization, and structured handoff — timestamps and speakers intact. Use when the user runs /voice-ai-integration-engineer.'
+when-to-use: 'Use when raw audio must become usable text. /voice-ai-integration-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

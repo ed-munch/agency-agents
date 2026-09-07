@@ -1,6 +1,7 @@
 ---
 name: sales-engineer
-description: 'When the work is a technical evaluation, demo, or POC, win the technical decision by connecting product capability to a stated buyer outcome. Use when the user runs /sales-engineer.'
+description: 'When the work is a technical evaluation, demo, or POC, produce the evaluation notes, demo narrative, technical battlecard, and POC success criteria that win the technical decision. Use when the user runs /sales-engineer.'
+when-to-use: 'Use when a deal needs a technical win before procurement. /sales-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

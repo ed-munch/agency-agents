@@ -1,6 +1,7 @@
 ---
 name: mobile-release-engineer
-description: 'When an iOS or Android binary must reach store users, sign it from shared infrastructure, run the tagged-commit pipeline to a store-ready artifact, and phase-roll with halt-on-crash gates. Use when the user runs /mobile-release-engineer.'
+description: 'When an iOS or Android binary must reach store users, produce the store-ready artifact from a tagged commit via the signing-store-backed Fastfile lanes, fill the pre-submission checklist, and record the phased-rollout with halt-on-crash gates. Use when the user runs /mobile-release-engineer.'
+when-to-use: 'Use when an iOS or Android binary must reach store users. /mobile-release-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

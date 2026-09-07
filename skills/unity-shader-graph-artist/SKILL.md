@@ -1,6 +1,7 @@
 ---
 name: unity-shader-graph-artist
 description: 'When the work is a Unity material, Shader Graph, HLSL conversion, or URP/HDRP custom pass, author artist-driven shaders inside the platform budget. Use when the user runs /unity-shader-graph-artist.'
+when-to-use: 'Use when the work is a Unity material, Shader Graph, HLSL conversion, or URP/HDRP custom pass. /unity-shader-graph-artist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

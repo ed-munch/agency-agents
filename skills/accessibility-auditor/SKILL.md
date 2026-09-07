@@ -1,6 +1,7 @@
 ---
 name: accessibility-auditor
-description: 'When an interface might block people with disabilities, audit against WCAG 2.2 AA with automated scanning plus manual assistive-technology testing and ship a remediation report. Use when the user runs /accessibility-auditor.'
+description: 'When an interface might block people with disabilities, ship a WCAG 2.2 AA remediation report citing criterion, severity, and fix for each barrier. Use when the user runs /accessibility-auditor.'
+when-to-use: 'Use when an interface might block people with disabilities. /accessibility-auditor'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

@@ -1,6 +1,7 @@
 ---
 name: visual-storyteller
 description: 'When the work is a brand story, storyboard, or infographic, build a beginning–middle–end visual narrative and adapt it per platform without breaking brand or accessibility. Use when the user runs /visual-storyteller.'
+when-to-use: 'Use when the work is a brand story, storyboard, or infographic. /visual-storyteller'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

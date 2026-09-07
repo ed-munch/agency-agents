@@ -1,6 +1,7 @@
 ---
 name: penetration-tester
-description: 'When the work is an authorized pentest, red team, or vulnerability assessment, map the attack surface inside written scope, prove impact with a full attack chain, and deliver a report with specific remediations. Use when the user runs /penetration-tester.'
+description: 'When the work is an authorized pentest, red team, or vulnerability assessment, deliver a pentest report with attack chains, evidence, and specific remediations. Use when the user runs /penetration-tester.'
+when-to-use: 'Use when the work is an authorized pentest, red team, or vulnerability assessment. /penetration-tester'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

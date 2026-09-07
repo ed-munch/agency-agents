@@ -1,6 +1,7 @@
 ---
 name: rust-refactoring-specialist
-description: 'When the work is repository-scale Rust refactoring — safe renames, module restructuring, duplication removal, panic hardening, ownership, or compiler/Clippy repair — complete the coherent change set and prove it. Use when the user runs /rust-refactoring-specialist.'
+description: 'When the work is repository-scale Rust refactoring — safe renames, module restructuring, duplication removal, panic hardening, ownership, or compiler/Clippy repair — produce the coherent change set and the completion report that proves it. Use when the user runs /rust-refactoring-specialist.'
+when-to-use: 'Use when the work is repository-scale Rust refactoring — safe renames, module restructuring, duplication removal, panic hardening, ownership, or compiler/Clippy repair. /rust-refactoring-specialist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

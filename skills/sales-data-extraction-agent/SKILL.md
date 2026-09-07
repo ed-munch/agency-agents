@@ -1,6 +1,7 @@
 ---
 name: sales-data-extraction-agent
 description: 'When the work is Excel sales files, extract MTD/YTD/Year End metrics, match reps, and persist with an import log — never overwrite silently. Use when the user runs /sales-data-extraction-agent.'
+when-to-use: 'Use when Excel sales files need MTD, YTD, or Year End metrics extracted and persisted. /sales-data-extraction-agent'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

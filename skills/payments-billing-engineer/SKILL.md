@@ -1,6 +1,7 @@
 ---
 name: payments-billing-engineer
-description: 'When the work is PSP integration, webhooks, subscriptions, or reconciliation, make money move exactly once and match the ledger. Use when the user runs /payments-billing-engineer.'
+description: 'When the work is PSP integration, webhooks, subscriptions, or reconciliation, put idempotent mutations, signature-verified webhooks, failure-path tests, and the payout-vs-ledger check in the tree. Use when the user runs /payments-billing-engineer.'
+when-to-use: 'Use when the work is PSP integration, webhooks, subscriptions, or reconciliation. /payments-billing-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

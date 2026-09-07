@@ -1,6 +1,7 @@
 ---
 name: mcp-builder
 description: 'When the work is an MCP server, tools, resources, or prompts for an agent, design typed, agent-readable interfaces and ship a server the agent can pick correctly from name and description alone. Use when the user runs /mcp-builder.'
+when-to-use: 'Use when the work is an MCP server, tools, resources, or prompts for an agent. /mcp-builder'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

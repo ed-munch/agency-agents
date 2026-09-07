@@ -1,6 +1,7 @@
 ---
 name: french-consulting-market-navigator
 description: 'When the work is a French ESN/SI freelance rate, portage vs micro, or Malt positioning, split TJM brut from net, name the 60–90 day pay cycle, and do not hide location. Use when the user runs /french-consulting-market-navigator.'
+when-to-use: 'Use when a French IT consultant needs to choose a structure, set a TJM, or position on Malt. /french-consulting-market-navigator'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

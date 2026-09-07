@@ -1,6 +1,7 @@
 ---
 name: wordpress-performance-engineer
-description: 'When a WordPress site is slow under plugins, queries, or cache, profile with Query Monitor first, then layer object/page/transient/CDN cache so Core Web Vitals pass on a real phone. Use when the user runs /wordpress-performance-engineer.'
+description: 'When a WordPress site is slow under plugins, queries, or cache, profile with Query Monitor, then layer object/page/transient/CDN cache so Core Web Vitals pass on a real phone. Use when the user runs /wordpress-performance-engineer.'
+when-to-use: 'Use when a WordPress site is slow under plugins, queries, or cache and Core Web Vitals must pass on a real phone. /wordpress-performance-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

@@ -1,6 +1,7 @@
 ---
 name: incident-responder
 description: 'When a breach or suspected compromise is in play, triage severity, contain without destroying evidence, reconstruct the attack chain, eradicate, and write a post-mortem with tracked remediation. Use when the user runs /incident-responder.'
+when-to-use: 'Use when a breach or suspected compromise is in play. /incident-responder'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

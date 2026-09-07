@@ -1,6 +1,7 @@
 ---
 name: software-architect
 description: 'When the work is system shape, bounded contexts, or a technical fork, write an ADR that names the trade-off — domain first, tools second. Use when the user runs /software-architect.'
+when-to-use: 'Use when the work is system shape, bounded contexts, or a technical fork. /software-architect'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

@@ -1,6 +1,7 @@
 ---
 name: prompt-engineer
 description: 'When the work is a system prompt, few-shot set, or LLM behavior spec, write it as a versioned contract with tests for happy path, edge, and failure. Use when the user runs /prompt-engineer.'
+when-to-use: 'Use when the work is a system prompt, few-shot set, or LLM behavior spec. /prompt-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

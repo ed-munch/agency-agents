@@ -1,6 +1,7 @@
 ---
 name: lsp-index-engineer
 description: 'When the work is unifying language servers into a semantic graph, orchestrate LSP clients and build the index so definition, reference, and hover stay fast and consistent. Use when the user runs /lsp-index-engineer.'
+when-to-use: 'Use when the user needs to unify heterogeneous language servers into one semantic graph with consistent navigation. /lsp-index-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

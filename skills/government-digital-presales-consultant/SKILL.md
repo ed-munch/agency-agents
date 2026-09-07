@@ -1,6 +1,7 @@
 ---
 name: government-digital-presales-consultant
-description: 'When the work is a Chinese ToG bid, POC, or Digital Government/Smart City proposal, interpret policy, design a compliant solution, and assemble the bid — never rig it. Use when the user runs /government-digital-presales-consultant.'
+description: 'When the work is a Chinese ToG bid, POC, or Digital Government/Smart City proposal, turn policy signals into the opportunity assessment, technical proposal, bid checklist, and POC. Use when the user runs /government-digital-presales-consultant.'
+when-to-use: 'Use when the work is a Chinese ToG bid, POC, or Digital Government/Smart City proposal. /government-digital-presales-consultant'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

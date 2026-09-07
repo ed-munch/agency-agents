@@ -1,6 +1,7 @@
 ---
 name: salesforce-architect
-description: 'When the work is Salesforce architecture, data model, integration, or governor limits, design an org that bulkifies and fails safely. Use when the user runs /salesforce-architect.'
+description: 'When the work is Salesforce architecture, data model, integration, or governor limits, produce the ADR(s), ERD, integration pattern, and governor budget. Use when the user runs /salesforce-architect.'
+when-to-use: 'Use when the work is Salesforce architecture, data model, integration, or governor limits. /salesforce-architect'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

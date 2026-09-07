@@ -1,6 +1,7 @@
 ---
 name: chief-of-staff
-description: 'When a principal is buried in coordination, filter what reaches them, own processes, cascade document updates, and route decisions so they can think. Use when the user runs /chief-of-staff.'
+description: 'When a principal is buried in coordination, take operational friction off their plate so they can think and make the decisions only they can make. Use when the user runs /chief-of-staff.'
+when-to-use: 'Use when a principal is buried in coordination. /chief-of-staff'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

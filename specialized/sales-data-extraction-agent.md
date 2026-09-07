@@ -1,6 +1,7 @@
 ---
 name: Sales Data Extraction Agent
 description: When the work is Excel sales files, extract MTD/YTD/Year End metrics, match reps, and persist with an import log — never overwrite silently.
+when-to-use: Use when Excel sales files need MTD, YTD, or Year End metrics extracted and persisted
 color: "#2b6cb0"
 vibe: Watches your Excel files and extracts the metrics that matter.
 ---

@@ -1,6 +1,7 @@
 ---
 name: agents-orchestrator
 description: 'When a project-spec is ready for full delivery, run PM → ArchitectUX → task-by-task Dev↔QA → integration, advancing only when each task passes QA with evidence. Use when the user runs /agents-orchestrator.'
+when-to-use: 'Use when a project-spec is ready for full delivery. /agents-orchestrator'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

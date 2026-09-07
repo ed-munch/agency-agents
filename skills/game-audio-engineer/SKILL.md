@@ -1,6 +1,7 @@
 ---
 name: game-audio-engineer
 description: 'When the work is game audio, route SFX, music, and voice through FMOD or Wwise events with voice limits, spatialization, and a named performance budget. Use when the user runs /game-audio-engineer.'
+when-to-use: 'Use when the work is game audio. /game-audio-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

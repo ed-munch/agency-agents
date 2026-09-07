@@ -1,6 +1,7 @@
 ---
 name: aeo-foundations-architect
 description: 'When AI crawlers, citation engines, or browsing agents cannot find or parse the site, audit discovery and parsability first, then publish robots.txt, llms.txt, and token-budgeted content. Use when the user runs /aeo-foundations-architect.'
+when-to-use: 'Use when AI crawlers, citation engines, or browsing agents cannot find or parse the site. /aeo-foundations-architect'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

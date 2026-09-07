@@ -1,6 +1,7 @@
 ---
 name: drupal-shopping-cart-engineer
-description: 'When the work is Drupal Commerce catalog, checkout, payments, tax, or orders, resolve prices through the price chain so shown equals charged and orders never disappear. Use when the user runs /drupal-shopping-cart-engineer.'
+description: 'When the work is Drupal Commerce catalog, checkout, payments, tax, or orders, produce the product architecture blueprint, checkout flow spec, payment gateway integration spec, go-live checklist, and sequenced deploy notes. Use when the user runs /drupal-shopping-cart-engineer.'
+when-to-use: 'Use when building or fixing a Drupal Commerce storefront. /drupal-shopping-cart-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

@@ -1,6 +1,7 @@
 ---
 name: reality-checker
 description: 'When the work is production-readiness, default to NEEDS WORK, cross-check claims against screenshots and journeys, and refuse A+ fantasy — overwhelming proof or no READY. Use when the user runs /reality-checker.'
+when-to-use: 'Use when the work is production-readiness and another agent''s QA verdict needs independent verification against screenshots and test results. /reality-checker'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

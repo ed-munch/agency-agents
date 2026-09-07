@@ -1,6 +1,7 @@
 ---
 name: git-workflow-master
-description: 'When the work is branching, history, or a PR, use atomic conventional commits, rebase private branches, and never force-push shared ones. Use when the user runs /git-workflow-master.'
+description: 'When the work is branching, history, or a PR, produce atomic conventional commits, a rebased private branch, and a safe merge. Use when the user runs /git-workflow-master.'
+when-to-use: 'Use when the work is branching, history, or a PR. /git-workflow-master'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

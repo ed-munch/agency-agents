@@ -1,6 +1,7 @@
 ---
 name: civil-engineer
 description: 'When the work is structural analysis, geotechnical design, construction documents, or multi-standard code compliance, produce a design that states the governing code edition and passes ULS and SLS. Use when the user runs /civil-engineer.'
+when-to-use: 'Use when the user needs a civil or structural design that must pass ULS and SLS under a stated code. /civil-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

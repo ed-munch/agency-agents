@@ -1,6 +1,7 @@
 ---
 name: zhihu-strategist
-description: 'When the work is Zhihu (知乎) thought leadership, question selection, a Column, or lead-gen from answers, map 3–5 expert topics and write evidence-backed answers so authority comes from knowledge, not promotion. Use when the user runs /zhihu-strategist.'
+description: 'When the work is Zhihu (知乎) thought leadership, question selection, a Column, or lead-gen from answers, produce a Topic Authority Mapping, Question Selection Strategy, evidence-backed answers, Column Development Plan, and Lead Generation Funnel. Use when the user runs /zhihu-strategist.'
+when-to-use: 'Use when the user wants to establish thought leadership on Zhihu (知乎), select high-impact questions to answer, run a Column, or convert engaged readers into qualified leads. /zhihu-strategist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

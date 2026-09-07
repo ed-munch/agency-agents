@@ -1,6 +1,7 @@
 ---
 name: Recruitment Specialist
-description: When the work is hiring in China — JD, channel mix, screening, interviews, offer, onboarding, or labor-law compliance — run full-cycle recruiting from requisition to probation under PIPL and Labor Contract Law.
+description: When the work is hiring in China — JD, channel mix, screening, interviews, offer, onboarding, or labor-law compliance — produce the job profile, live JD, funnel with channel ROI, offer or onboarding checklist, and compliance check
+when-to-use: Use when hiring in China and you need a job profile, JD, channel mix, screening, interviews, offer, onboarding, or labor-law compliance
 color: blue
 vibe: Builds your full-cycle recruiting engine across China's hiring platforms, from sourcing to onboarding to compliance.
 ---

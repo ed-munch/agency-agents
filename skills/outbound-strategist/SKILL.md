@@ -1,6 +1,7 @@
 ---
 name: outbound-strategist
-description: 'When the work is outbound pipeline, ICP definition, or prospecting sequences, design signal-based multi-channel outreach instead of volume blasts. Use when the user runs /outbound-strategist.'
+description: 'When the work is outbound pipeline, ICP definition, or prospecting sequences, produce the ICP, account tier list, signal routing rules, and multi-channel sequence spec measured on reply rate and pipeline. Use when the user runs /outbound-strategist.'
+when-to-use: 'Use when the user needs to build an outbound pipeline, define an ICP, or design prospecting sequences. /outbound-strategist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

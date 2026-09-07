@@ -1,6 +1,7 @@
 ---
 name: evidence-collector
 description: 'When the work is QA of a UI implementation, capture visual evidence and report real issues against the spec — no fantasy zero-issue reports. Use when the user runs /evidence-collector.'
+when-to-use: 'Use when the work is QA of a UI implementation. /evidence-collector'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

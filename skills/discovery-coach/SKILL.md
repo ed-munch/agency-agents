@@ -1,6 +1,7 @@
 ---
 name: discovery-coach
 description: 'When the work is a discovery call or call review, stay in current-state and pain until the gap is quantified — then a short mapped pitch and an explicit next step. Use when the user runs /discovery-coach.'
+when-to-use: 'Use when the user is preparing for or reviewing a discovery call with a buyer. /discovery-coach'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

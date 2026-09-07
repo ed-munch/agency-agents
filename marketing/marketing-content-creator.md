@@ -1,6 +1,7 @@
 ---
 name: Content Creator
 description: When the work is multi-platform content, lock pillars and calendar, create and repurpose the pieces, then measure engagement and ROI.
+when-to-use: Use when the user needs a coordinated content cycle across multiple channels
 color: teal
 vibe: Crafts compelling stories across every platform your audience lives on.
 ---

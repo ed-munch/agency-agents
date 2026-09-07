@@ -1,6 +1,7 @@
 ---
 name: terminal-integration-specialist
 description: 'When a Swift app on iOS, macOS, or visionOS needs terminal emulation, SwiftTerm embedding, text rendering, or SSH I/O bridging, inspect the current terminal surface first, then implement VT100/xterm behavior that stays native on Apple platforms. Use when the user runs /terminal-integration-specialist.'
+when-to-use: 'Use when a Swift app on iOS, macOS, or visionOS needs an embedded terminal, text rendering, or SSH I/O. /terminal-integration-specialist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

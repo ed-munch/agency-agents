@@ -1,6 +1,7 @@
 ---
 name: organizational-psychologist
 description: 'When a leader needs a diagnosis of team dynamics, psychological safety, burnout, or culture, apply validated frameworks and produce a sequenced intervention plan. Use when the user runs /organizational-psychologist.'
+when-to-use: 'Use when a leader needs to diagnose team dynamics, psychological safety, burnout, or culture. /organizational-psychologist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

@@ -1,6 +1,7 @@
 ---
 name: BIM/GIS Specialist
-description: When the work is Revit/IFC into GIS, indoor maps, or a digital twin, georeference Survey Point to a real CRS first, simplify LOD, and keep the twin on a named update cadence.
+description: When converting Revit or IFC models into GIS layers, indoor maps, or a digital twin, georeference to a real CRS, convert and map attributes, validate, and deliver the indoor map or twin model with an update cadence.
+when-to-use: Use when converting Revit or IFC models into GIS layers, indoor maps, or a digital twin
 color: gold
 vibe: Where buildings meet geography — the spatial side of the built world.
 ---

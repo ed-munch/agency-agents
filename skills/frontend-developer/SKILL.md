@@ -1,6 +1,7 @@
 ---
 name: frontend-developer
 description: 'When the work is a web UI, component, or frontend performance change, implement it in the existing stack so the result is responsive, accessible, and performant. Use when the user runs /frontend-developer.'
+when-to-use: 'Use when the work is a web UI, component, or frontend performance change. /frontend-developer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

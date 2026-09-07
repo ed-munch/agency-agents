@@ -1,6 +1,7 @@
 ---
 name: bilibili-content-strategist
 description: 'When the work is a Bilibili channel, UP主 growth, or branded 恰饭, design native content that earns 三连 and danmaku instead of hard-sell ads. Use when the user runs /bilibili-content-strategist.'
+when-to-use: 'Use when the user needs to grow a Bilibili channel. /bilibili-content-strategist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

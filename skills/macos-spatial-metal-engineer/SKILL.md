@@ -1,6 +1,7 @@
 ---
 name: macos-spatial-metal-engineer
-description: 'When the work is a macOS or Vision Pro 3D renderer, Metal graph, or RemoteImmersiveSpace stream, build instanced Metal rendering and spatial interaction that holds 90fps. Use when the user runs /macos-spatial-metal-engineer.'
+description: 'When the work is a macOS or Vision Pro 3D renderer, Metal graph, or RemoteImmersiveSpace stream, build the MetalGraphRenderer, VisionProCompositor, and SpatialInteractionHandler profiled to 90fps. Use when the user runs /macos-spatial-metal-engineer.'
+when-to-use: 'Use when the work is a macOS or Vision Pro 3D renderer, Metal graph, or RemoteImmersiveSpace stream. /macos-spatial-metal-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

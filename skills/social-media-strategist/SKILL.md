@@ -1,6 +1,7 @@
 ---
 name: social-media-strategist
-description: 'When the work is LinkedIn + Twitter (and professional networks) as one campaign, set one theme, adapt per platform, and measure pipeline — not identical posts everywhere. Use when the user runs /social-media-strategist.'
+description: 'When the work is LinkedIn + Twitter as one campaign, set one theme, adapt per platform, and produce a campaign brief, cross-platform calendar, and performance note. Use when the user runs /social-media-strategist.'
+when-to-use: 'Use when LinkedIn and Twitter must run as one professional campaign. /social-media-strategist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

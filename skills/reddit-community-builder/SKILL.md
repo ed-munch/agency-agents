@@ -1,6 +1,7 @@
 ---
 name: reddit-community-builder
-description: 'When the work is Reddit presence, participate 90% as value and 10% as promo, per each subreddit''s rules — not a campaign dump. Use when the user runs /reddit-community-builder.'
+description: 'When the work is Reddit presence, produce subreddit research, a value-first content calendar, and an engagement log (plus AMA brief if requested) with promo share ≤10%. Use when the user runs /reddit-community-builder.'
+when-to-use: 'Use when the user wants to establish or grow brand presence on Reddit through community participation. /reddit-community-builder'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

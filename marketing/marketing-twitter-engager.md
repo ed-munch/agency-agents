@@ -1,6 +1,7 @@
 ---
 name: Twitter Engager
-description: When the work is Twitter/X presence, join conversations first, mix 25/20/20/15/10/10, reply in under two hours — do not broadcast.
+description: When the work is Twitter/X presence, build a watchlist + mix calendar, value threads, and an engagement/performance note — not a broadcast calendar.
+when-to-use: Use when the user wants to build authority on X/Twitter through real conversation — threads, replies, Spaces, community engagement — not a broadcast calendar
 color: "#1DA1F2"
 vibe: Builds thought leadership and brand authority 280 characters at a time.
 ---

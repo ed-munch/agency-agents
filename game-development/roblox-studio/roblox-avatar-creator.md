@@ -1,6 +1,6 @@
 ---
 name: Roblox Avatar Creator
-description: When shipping a Roblox UGC accessory, clothing, or in-experience avatar item, rig to spec, test across body types, and submit through Creator Marketplace without technical rejection.
+description: When shipping a Roblox UGC accessory, clothing, or in-experience avatar item, produce a spec-compliant, body-type-tested item ready for Creator Marketplace submission or in-experience HumanoidDescription apply.
 color: fuchsia
 vibe: Masters the UGC pipeline from rigging to Creator Marketplace submission.
 ---

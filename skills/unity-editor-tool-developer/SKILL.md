@@ -1,6 +1,7 @@
 ---
 name: unity-editor-tool-developer
-description: 'When Unity teams lose hours to manual editor work, build EditorWindows, PropertyDrawers, AssetPostprocessors, and pre-build validators that catch errors before they ship. Use when the user runs /unity-editor-tool-developer.'
+description: 'When Unity teams lose hours to manual editor work, produce a tool spec with minutes-saved metric, Editor scripts, and verification notes proving the tool works in-project. Use when the user runs /unity-editor-tool-developer.'
+when-to-use: 'Use when Unity teams need custom EditorWindows, PropertyDrawers, AssetPostprocessors, or pre-build validators. /unity-editor-tool-developer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

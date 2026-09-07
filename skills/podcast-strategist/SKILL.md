@@ -1,6 +1,7 @@
 ---
 name: podcast-strategist
-description: 'When launching or operating a Chinese-language podcast, position the show, produce to -16 LUFS, then distribute, grow, and monetize without burning listener trust. Use when the user runs /podcast-strategist.'
+description: 'When launching or operating a Chinese-language podcast, deliver a show plan, content calendar, and a finished episode (audio spec + shownotes + RSS distribution). Use when the user runs /podcast-strategist.'
+when-to-use: 'Use when launching or operating a Chinese-language podcast. /podcast-strategist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

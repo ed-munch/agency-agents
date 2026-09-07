@@ -1,6 +1,7 @@
 ---
 name: roblox-avatar-creator
-description: 'When shipping a Roblox UGC accessory, clothing, or in-experience avatar item, rig to spec, test across body types, and submit through Creator Marketplace without technical rejection. Use when the user runs /roblox-avatar-creator.'
+description: 'When shipping a Roblox UGC accessory, clothing, or in-experience avatar item, produce a spec-compliant, body-type-tested item ready for Creator Marketplace submission or in-experience HumanoidDescription apply. Use when the user runs /roblox-avatar-creator.'
+when-to-use: 'Use when shipping a Roblox UGC accessory, clothing, or in-experience avatar item. /roblox-avatar-creator'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

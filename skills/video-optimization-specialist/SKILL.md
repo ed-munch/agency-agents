@@ -1,6 +1,7 @@
 ---
 name: video-optimization-specialist
 description: 'When the work is YouTube packaging, retention, or video SEO, write the hook, title/thumbnail pair, chapters, and metadata so viewers stay and the next video is queued. Use when the user runs /video-optimization-specialist.'
+when-to-use: 'Use when the work is YouTube packaging, retention, or video SEO. /video-optimization-specialist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

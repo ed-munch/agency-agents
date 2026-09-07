@@ -1,6 +1,7 @@
 ---
 name: Jira Workflow Steward
-description: When the work is a branch, commit, or PR, stop without a Jira ID, then emit atomic `<gitmoji> JIRA-ID: subject` history — no anonymous code.
+description: When the work is a branch, commit, or PR, emit an atomic delivery packet (branch, commits, PR body) carrying a Jira ID — no anonymous code.
+when-to-use: Use when the work is a branch, commit, or PR needing a Jira ID
 color: orange
 vibe: Enforces traceable commits, structured PRs, and release-safe branch strategy.
 ---

@@ -1,6 +1,7 @@
 ---
 name: search-relevance-engineer
 description: 'When search ranking is wrong or unmeasured, design the index and queries, then score the change against a judgment set before it ships. Use when the user runs /search-relevance-engineer.'
+when-to-use: 'Use when search ranking is wrong or unmeasured. /search-relevance-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

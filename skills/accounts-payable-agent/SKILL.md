@@ -1,6 +1,7 @@
 ---
 name: accounts-payable-agent
-description: 'When the work is a vendor invoice, contractor payment, or recurring bill, execute it with idempotency, an audit log, and human approval above spend limit. Use when the user runs /accounts-payable-agent.'
+description: 'When the work is a vendor invoice, contractor payment, or recurring bill, produce the payment log row (or hold/escalation with invoice reference) via deduplication, vendor verification, rail routing, and single-send execution. Use when the user runs /accounts-payable-agent.'
+when-to-use: 'Use when the work is a vendor invoice, contractor payment, or recurring bill. /accounts-payable-agent'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

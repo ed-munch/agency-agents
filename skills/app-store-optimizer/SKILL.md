@@ -1,6 +1,7 @@
 ---
 name: app-store-optimizer
-description: 'When the work is App Store Optimization, keyword rankings, or store-listing conversion, ship metadata and visual assets backed by ranking and conversion data. Use when the user runs /app-store-optimizer.'
+description: 'When the work is App Store Optimization, keyword rankings, or store-listing conversion, ship the ASO strategy document, listing assets, A/B plan, and conversion tracking. Use when the user runs /app-store-optimizer.'
+when-to-use: 'Use when the work is App Store Optimization, keyword rankings, or store-listing conversion. /app-store-optimizer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

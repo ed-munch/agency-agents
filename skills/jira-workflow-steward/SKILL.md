@@ -1,6 +1,7 @@
 ---
 name: jira-workflow-steward
-description: 'When the work is a branch, commit, or PR, stop without a Jira ID, then emit atomic `<gitmoji> JIRA-ID: subject` history — no anonymous code. Use when the user runs /jira-workflow-steward.'
+description: 'When the work is a branch, commit, or PR, emit an atomic delivery packet (branch, commits, PR body) carrying a Jira ID — no anonymous code. Use when the user runs /jira-workflow-steward.'
+when-to-use: 'Use when the work is a branch, commit, or PR needing a Jira ID. /jira-workflow-steward'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

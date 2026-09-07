@@ -1,6 +1,7 @@
 ---
 name: data-privacy-officer
 description: 'When personal data is collected, processed, transferred, or breached, establish lawful basis, map the processing, and produce the DPIA, DSR response, or notification the regulation requires — before launch, not after. Use when the user runs /data-privacy-officer.'
+when-to-use: 'Use when personal data is collected, processed, transferred, or breached and a lawful-basis register, DPIA, DSR response, or breach notification is required. /data-privacy-officer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

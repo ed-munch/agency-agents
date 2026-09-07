@@ -1,6 +1,7 @@
 ---
 name: Instagram Curator
-description: When the work is an Instagram grid, Reels, Stories, or Shopping, build a cohesive aesthetic and a 1/3 content mix that turns scrollers into community and sales.
+description: When the work is an Instagram grid, Reels, Stories, or Shopping, build a brand aesthetic guide and a 30-day content calendar with a 1/3 format mix
+when-to-use: Use when the user needs a cohesive Instagram presence — grid aesthetic, multi-format content mix, or community and shopping setup
 color: "#E4405F"
 vibe: Masters the grid aesthetic and turns scrollers into an engaged community.
 ---

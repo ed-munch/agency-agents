@@ -1,6 +1,6 @@
 ---
 name: Report Distribution Agent
-description: When the work is sending sales reports to reps, route by territory, log every attempt, and never drop a failed send silently.
+description: When the work is sending sales reports to reps, produce a distribution log where every recipient has sent or failed with a reason.
 color: "#d69e2e"
 vibe: Automates delivery of consolidated sales reports to the right reps.
 ---

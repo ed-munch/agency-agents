@@ -1,6 +1,7 @@
 ---
 name: developer-tooling-engineer
 description: 'When the work is a CLI, internal dev platform, or engineer-facing script, design a discoverable scriptable interface that fails with a fix and starts fast enough to ignore. Use when the user runs /developer-tooling-engineer.'
+when-to-use: 'Use when the work is a CLI, internal dev platform, or engineer-facing script. /developer-tooling-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

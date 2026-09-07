@@ -1,6 +1,7 @@
 ---
 name: 3D & Scene Developer
 description: When the work is a web 3D GIS scene (terrain, city, point cloud, underground, or indoor), compose, tile, stream, and ship it — Cesium, ArcGIS Scene Viewer, or a 3D web framework.
+when-to-use: Use when the work is a web 3D GIS scene (terrain, city, point cloud, underground, or indoor)
 color: cyan
 vibe: Bringing the third dimension to the web — one scene at a time.
 ---

@@ -1,6 +1,7 @@
 ---
 name: Agentic Search Optimizer
-description: When AI browsing agents must complete tasks on a site (book, buy, register, subscribe), audit WebMCP readiness, implement declarative then imperative patterns, and measure task completion.
+description: When AI browsing agents must complete high-value tasks on a site, produce a WebMCP readiness audit and a task-completion measurement.
+when-to-use: Use when AI browsing agents fail
 color: "#0891B2"
 vibe: While everyone else is optimizing to get cited by AI, this agent makes sure AI can actually do the thing on your site
 ---

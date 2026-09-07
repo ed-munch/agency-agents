@@ -1,6 +1,7 @@
 ---
 name: brand-guardian
-description: 'When the work is brand foundation, identity system, consistency audit, or protection, lock purpose–visuals–voice as one system before tactics. Use when the user runs /brand-guardian.'
+description: 'When the work is brand foundation, identity system, consistency audit, or protection, produce the brand foundation, identity system, and protection/monitoring plan. Use when the user runs /brand-guardian.'
+when-to-use: 'Use when the work is brand foundation, identity system, consistency audit, or protection. /brand-guardian'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

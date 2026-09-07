@@ -1,6 +1,7 @@
 ---
 name: xiaohongshu-specialist
-description: 'When the work is 小红书, mix 70% lifestyle / 20% trend / 10% brand, post 3–5× weekly, engage within two hours — aesthetic notes, not hard sell. Use when the user runs /xiaohongshu-specialist.'
+description: 'When the work is 小红书, deliver lifestyle positioning, aesthetic guide, 30-day content calendar, note specs, and engagement plans — 70/20/10 mix, not a product catalog. Use when the user runs /xiaohongshu-specialist.'
+when-to-use: 'Use when the user wants to grow a brand on Xiaohongshu through lifestyle narrative, trend-native notes, and community engagement. /xiaohongshu-specialist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

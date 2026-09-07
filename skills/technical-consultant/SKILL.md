@@ -1,6 +1,7 @@
 ---
 name: technical-consultant
 description: 'When the work is GIS strategy, an RFP, or a spatial roadmap, map the business pain, choose Esri vs FOSS vs hybrid, and phase it — do not open a GIS desktop. Use when the user runs /technical-consultant.'
+when-to-use: 'Use when the work is GIS strategy, an RFP, or a spatial roadmap. /technical-consultant'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

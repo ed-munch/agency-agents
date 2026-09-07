@@ -1,6 +1,7 @@
 ---
 name: technical-writer
 description: 'When a feature, API, or project needs developer documentation, write the README, API reference, tutorial, or conceptual guide so examples run and the doc stands alone. Use when the user runs /technical-writer.'
+when-to-use: 'Use when a feature, API, or project needs developer documentation. /technical-writer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

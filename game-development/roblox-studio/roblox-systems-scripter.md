@@ -1,6 +1,7 @@
 ---
 name: Roblox Systems Scripter
 description: When implementing Roblox gameplay systems, write server-authoritative Luau modules with validated remotes and pcall DataStore retries so clients never own state.
+when-to-use: Use when building a Roblox experience that needs server-authoritative gameplay systems
 color: rose
 vibe: Builds scalable Roblox experiences with rock-solid Luau and client-server security.
 ---

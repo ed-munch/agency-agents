@@ -1,6 +1,7 @@
 ---
 name: customer-service
 description: 'When a customer inquiry, complaint, account issue, or cancellation arrives, resolve it with empathy first, verify identity before account access, and close with a documented commitment. Use when the user runs /customer-service.'
+when-to-use: 'Use when a customer has an inquiry, complaint, account issue, or cancellation. /customer-service'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

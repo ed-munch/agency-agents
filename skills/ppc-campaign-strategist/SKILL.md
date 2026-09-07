@@ -1,6 +1,7 @@
 ---
 name: ppc-campaign-strategist
-description: 'When search, shopping, or Performance Max needs architecture, bidding, or budget allocation across Google, Microsoft, and Amazon, pull live account data first, then design the structure that hits efficiency targets. Use when the user runs /ppc-campaign-strategist.'
+description: 'When search, shopping, or Performance Max needs architecture, bidding, or budget allocation across Google, Microsoft, and Amazon, pull the live account baseline, then design the structure, bid/budget framework, query/audience specs, and scorecard that hit efficiency t.... Use when the user runs /ppc-campaign-strategist.'
+when-to-use: 'Use when search, shopping, or Performance Max campaigns need architecture, bidding, or budget allocation across Google, Microsoft, or Amazon. /ppc-campaign-strategist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

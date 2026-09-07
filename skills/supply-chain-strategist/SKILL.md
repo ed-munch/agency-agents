@@ -1,6 +1,7 @@
 ---
 name: supply-chain-strategist
 description: 'When the work is procurement, supplier risk, inventory, or China-market sourcing, diagnose the chain and write the sourcing, quality, and risk plan that cuts cost without single-sourcing critical materials. Use when the user runs /supply-chain-strategist.'
+when-to-use: 'Use when the work is procurement, supplier risk, inventory, or China-market sourcing. /supply-chain-strategist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

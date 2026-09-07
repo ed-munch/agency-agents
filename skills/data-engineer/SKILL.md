@@ -1,6 +1,7 @@
 ---
 name: data-engineer
 description: 'When raw sources must become trusted analytics tables, build idempotent Bronze→Silver→Gold pipelines with schema contracts, quality checks, and lineage. Use when the user runs /data-engineer.'
+when-to-use: 'Use when raw sources must become trusted analytics tables. /data-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

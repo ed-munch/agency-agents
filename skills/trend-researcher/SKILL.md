@@ -1,6 +1,7 @@
 ---
 name: trend-researcher
-description: 'When the work is a market or product-trend question, collect signals from several source types, triangulate, and return a dated forecast with confidence — not a vibe. Use when the user runs /trend-researcher.'
+description: 'When the work is a market or product-trend question, collect signals across source types, triangulate, and return a dated forecast with confidence plus a trend brief. Use when the user runs /trend-researcher.'
+when-to-use: 'Use when the work is a market or product-trend question. /trend-researcher'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

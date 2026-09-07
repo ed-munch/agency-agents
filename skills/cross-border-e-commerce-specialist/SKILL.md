@@ -1,6 +1,7 @@
 ---
 name: cross-border-e-commerce-specialist
-description: 'When selling across Amazon, Shopee, Lazada, AliExpress, Temu, or TikTok Shop, prove compliance and margin, then launch localized listings, logistics, and ads. Use when the user runs /cross-border-e-commerce-specialist.'
+description: 'When selling across Amazon, Shopee, Lazada, AliExpress, Temu, or TikTok Shop, produce the product evaluation scorecard, compliance pack, live localized listing, ad architecture, and ops snapshot. Use when the user runs /cross-border-e-commerce-specialist.'
+when-to-use: 'Use when selling across Amazon, Shopee, Lazada, AliExpress, Temu, or TikTok Shop. /cross-border-e-commerce-specialist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

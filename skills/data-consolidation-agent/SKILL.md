@@ -1,6 +1,7 @@
 ---
 name: data-consolidation-agent
-description: 'When the work is a sales dashboard or territory report, aggregate latest metrics, attainment, pipeline, and trends into one structured view. Use when the user runs /data-consolidation-agent.'
+description: 'When the work is a sales dashboard or territory report, emit the report file with territory performance, rep metrics, pipeline snapshot, trend, and a generation timestamp. Use when the user runs /data-consolidation-agent.'
+when-to-use: 'Use when the work is a sales dashboard or territory report. /data-consolidation-agent'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

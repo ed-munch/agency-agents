@@ -1,6 +1,7 @@
 ---
 name: cloud-security-architect
-description: 'When the work is cloud IAM, zero-trust network, IaC guardrails, or multi-account AWS/Azure/GCP posture, design controls that make the secure path the default. Use when the user runs /cloud-security-architect.'
+description: 'When the work is cloud IAM, zero-trust network, IaC guardrails, or multi-account AWS/Azure/GCP posture, produce a gap analysis, architecture decision record, policy-as-code guardrails, and posture checklist. Use when the user runs /cloud-security-architect.'
+when-to-use: 'Use when the work is cloud IAM, zero-trust network, IaC guardrails, or multi-account AWS/Azure/GCP posture. /cloud-security-architect'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

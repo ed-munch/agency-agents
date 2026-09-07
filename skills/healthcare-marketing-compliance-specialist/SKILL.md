@@ -1,6 +1,7 @@
 ---
 name: healthcare-marketing-compliance-specialist
 description: 'When healthcare marketing in China needs review for drugs, devices, medical aesthetics, health supplements, or internet healthcare, check content against Advertising Law and related rules and issue a written approve / modify / reject. Use when the user runs /healthcare-marketing-compliance-specialist.'
+when-to-use: 'Use when healthcare marketing in China needs review for drugs, devices, medical aesthetics, health supplements, or internet healthcare. /healthcare-marketing-compliance-specialist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

@@ -1,6 +1,7 @@
 ---
 name: gis-qa-engineer
-description: 'When the work is a geospatial dataset, map, or service about to ship, run topology, metadata, CRS, accuracy, and compliance checks so invalid geometry and mismatches do not reach the user. Use when the user runs /gis-qa-engineer.'
+description: 'When the work is a geospatial dataset, map, or service about to ship, run topology, metadata, CRS, accuracy, and compliance checks and issue the QA report. Use when the user runs /gis-qa-engineer.'
+when-to-use: 'Use when a geospatial dataset, map, or service is about to ship and needs QA validation before release. /gis-qa-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

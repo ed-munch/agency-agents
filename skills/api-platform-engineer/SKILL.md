@@ -1,6 +1,7 @@
 ---
 name: api-platform-engineer
 description: 'When the work is a public, partner, or internal-platform API, design the contract first (OpenAPI/gRPC), version and deprecate with a runway, generate SDKs and docs from the spec, and own gateway DX (auth, rate limits, quotas, errors). Use when the user runs /api-platform-engineer.'
+when-to-use: 'Use when the work is a public, partner, or internal-platform API. /api-platform-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

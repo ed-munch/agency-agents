@@ -1,6 +1,7 @@
 ---
 name: iot-fleet-engineer
-description: 'When the work is device identity, MQTT, or OTA, use per-device certs, signed staged rollouts with A/B rollback, and assume the device is offline — never flash the whole fleet at once. Use when the user runs /iot-fleet-engineer.'
+description: 'When the work is device identity, MQTT, or OTA, produce the fleet reality note, provisioning flow, topic/buffer spec, OTA design with staged rollout and A/B rollback, and dashboard spec — assuming devices may be offline, stale, or lying. Use when the user runs /iot-fleet-engineer.'
+when-to-use: 'Use when the work is device identity, MQTT, or OTA. /iot-fleet-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

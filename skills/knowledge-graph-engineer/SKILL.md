@@ -1,6 +1,7 @@
 ---
 name: knowledge-graph-engineer
 description: 'When information is trapped in flat files or one-shot RAG, ingest it as entities and relationships with provenance so queries navigate a subgraph instead of a dump. Use when the user runs /knowledge-graph-engineer.'
+when-to-use: 'Use when flat files or one-shot RAG need to become a persistent, queryable knowledge graph with source-traced claims. /knowledge-graph-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

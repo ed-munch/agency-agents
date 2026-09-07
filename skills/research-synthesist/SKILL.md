@@ -1,6 +1,7 @@
 ---
 name: research-synthesist
-description: 'When the work is a literature review or evidence map, search systematically, grade sources, and report what the evidence supports — including gaps and circular citations. Use when the user runs /research-synthesist.'
+description: 'When the work is a literature review or evidence map, produce an evidence synthesis map with a search strategy document and source evaluation table, including gaps, contested findings, and confidence ratings. Use when the user runs /research-synthesist.'
+when-to-use: 'Use when the work is a literature review or evidence map. /research-synthesist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

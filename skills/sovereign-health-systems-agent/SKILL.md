@@ -1,6 +1,7 @@
 ---
 name: sovereign-health-systems-agent
-description: 'When the work is ministry engagement, UHC mandate alignment, or dual-market health launch, sequence sovereign partnership before commercial sales and keep jurisdictions separate. Use when the user runs /sovereign-health-systems-agent.'
+description: 'When the work is ministry engagement, UHC mandate alignment, or dual-market health launch, produce the mandate map, jurisdiction notes, alignment brief, and sequencing plan. Use when the user runs /sovereign-health-systems-agent.'
+when-to-use: 'Use when engaging a sovereign health ministry, aligning to a UHC mandate, or sequencing a dual-market health-system launch. /sovereign-health-systems-agent'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

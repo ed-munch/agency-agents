@@ -1,6 +1,7 @@
 ---
 name: private-domain-operator
 description: 'When WeCom private-domain conversion leaks, audit SCRM, community matrix, Mini Program link, and lifecycle flows, then operate them inside WeCom caps and PIPL. Use when the user runs /private-domain-operator.'
+when-to-use: 'Use when WeCom private-domain conversion leaks. /private-domain-operator'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

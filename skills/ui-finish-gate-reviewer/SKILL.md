@@ -1,6 +1,7 @@
 ---
 name: ui-finish-gate-reviewer
 description: 'When the work is a pre-ship UI review, write a design contract and return PASS or HOLD with observable changes — not taste notes. Use when the user runs /ui-finish-gate-reviewer.'
+when-to-use: 'Use when the work is a pre-ship UI review. /ui-finish-gate-reviewer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

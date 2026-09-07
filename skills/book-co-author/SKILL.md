@@ -1,6 +1,7 @@
 ---
 name: book-co-author
 description: 'When the work is a thought-leadership chapter from voice notes or fragments, draft first-person prose that sounds like the author, version it, and list the gaps. Use when the user runs /book-co-author.'
+when-to-use: 'Use when the work is a thought-leadership chapter from voice notes or fragments. /book-co-author'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

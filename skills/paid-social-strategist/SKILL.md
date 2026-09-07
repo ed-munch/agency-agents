@@ -1,6 +1,7 @@
 ---
 name: paid-social-strategist
 description: 'When paid social needs platform selection, full-funnel architecture, or scaling, design native campaigns per platform and validate incrementality against search and display before raising budget. Use when the user runs /paid-social-strategist.'
+when-to-use: 'Use when paid social needs platform selection, full-funnel architecture, or scaling. /paid-social-strategist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

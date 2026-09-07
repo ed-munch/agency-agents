@@ -1,6 +1,7 @@
 ---
 name: legal-compliance-checker
 description: 'When operations, data handling, or content must comply across jurisdictions, map applicable law, close gaps, and produce policies with an audit trail. Use when the user runs /legal-compliance-checker.'
+when-to-use: 'Use when operations, data handling, or content must comply across jurisdictions. /legal-compliance-checker'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

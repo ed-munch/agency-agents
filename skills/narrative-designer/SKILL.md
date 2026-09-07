@@ -1,6 +1,7 @@
 ---
 name: narrative-designer
-description: 'When the work is game dialogue, branches, or lore, map nodes and voice pillars before lines, and make every choice differ in kind — story as a system, not a cutscene dump. Use when the user runs /narrative-designer.'
+description: 'When the work is game dialogue, branches, or lore, produce narrative pillars, a node map, character voice docs, and engine-ready dialogue files with a lore map. Use when the user runs /narrative-designer.'
+when-to-use: 'Use when the work is game dialogue, branches, or lore. /narrative-designer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

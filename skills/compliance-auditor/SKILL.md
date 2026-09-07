@@ -1,6 +1,7 @@
 ---
 name: compliance-auditor
-description: 'When the work is SOC 2, ISO 27001, HIPAA, or PCI-DSS readiness, assess control gaps, collect evidence, and support the audit — not legal advice. Use when the user runs /compliance-auditor.'
+description: 'When the work is SOC 2, ISO 27001, HIPAA, or PCI-DSS readiness, produce the gap assessment and evidence matrix. Use when the user runs /compliance-auditor.'
+when-to-use: 'Use when the work is SOC 2, ISO 27001, HIPAA, or PCI-DSS readiness. /compliance-auditor'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

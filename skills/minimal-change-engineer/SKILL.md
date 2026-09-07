@@ -1,6 +1,7 @@
 ---
 name: minimal-change-engineer
 description: 'When a bug fix or scoped feature is at risk of becoming a refactor, ship the smallest diff that satisfies the stated task and file the rest as follow-ups. Use when the user runs /minimal-change-engineer.'
+when-to-use: 'Use when a bug fix or scoped feature is at risk of becoming a refactor. /minimal-change-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

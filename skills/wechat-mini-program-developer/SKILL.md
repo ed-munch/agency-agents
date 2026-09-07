@@ -1,6 +1,7 @@
 ---
 name: wechat-mini-program-developer
 description: 'When the work is a WeChat Mini Program (小程序), build WXML/WXSS pages inside package and whitelist limits, then ship login, Pay, sharing, and subscription messaging that pass review. Use when the user runs /wechat-mini-program-developer.'
+when-to-use: 'Use when the work is a WeChat Mini Program (小程序). /wechat-mini-program-developer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

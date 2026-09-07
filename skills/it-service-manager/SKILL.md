@@ -1,6 +1,7 @@
 ---
 name: it-service-manager
-description: 'When IT is unreliable or unmeasured, design the service catalog, run incident/problem/change, and report SLAs and CSI against the CMDB — not against folklore. Use when the user runs /it-service-manager.'
+description: 'When IT is unreliable or unmeasured, produce the service catalog, incident/problem/change records, SLA report, CMDB health, and CSI register. Use when the user runs /it-service-manager.'
+when-to-use: 'Use when IT is unreliable or unmeasured. /it-service-manager'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

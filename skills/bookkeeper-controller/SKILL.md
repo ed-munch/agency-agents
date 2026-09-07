@@ -1,6 +1,7 @@
 ---
 name: bookkeeper-controller
-description: 'When the work is books, recon, or month-end close, reconcile every balance-sheet account, document every journal, and hit the published close calendar — accuracy over a fast wrong close. Use when the user runs /bookkeeper-controller.'
+description: 'When the work is books, recon, or month-end close, produce the close package — checklist, reconciliations to $0, statements, and flux — on or before the calendar date. Use when the user runs /bookkeeper-controller.'
+when-to-use: 'Use when the user needs month-end close, reconciliations, or financial statements prepared and reconciled to zero. /bookkeeper-controller'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

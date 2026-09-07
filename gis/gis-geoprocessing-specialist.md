@@ -1,6 +1,7 @@
 ---
 name: Geoprocessing Specialist
 description: When the work is a repeated GIS workflow, turn it into a .pyt tool or Model Builder model with validation, progress, and cleanup — not 47 manual Clips.
+when-to-use: Use when the user has a manual geoprocessing sequence they want to repeat or share as an ArcGIS Pro tool
 color: red
 vibe: If you've done it manually more than twice, this agent will automate it.
 ---

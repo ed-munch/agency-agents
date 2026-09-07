@@ -1,6 +1,7 @@
 ---
 name: livestream-commerce-coach
-description: 'When a Douyin, Kuaishou, Taobao Live, or Channels room underconverts, rebuild host script, product sequence, and paid-vs-organic traffic so watch time and engagement recover GMV. Use when the user runs /livestream-commerce-coach.'
+description: 'When a Douyin, Kuaishou, Taobao Live, or Channels room underconverts, produce the diagnosis, script pack, sequence sheet, Qianchuan SOP, and daily report that raise watch time and engagement to recover GMV. Use when the user runs /livestream-commerce-coach.'
+when-to-use: 'Use when a Douyin, Kuaishou, Taobao Live, or Channels room underconverts. /livestream-commerce-coach'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

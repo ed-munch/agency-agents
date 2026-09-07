@@ -1,6 +1,7 @@
 ---
 name: Pricing Analyst
 description: When a price is guesswork, build a cost, competitor, and willingness-to-pay model with ±20% sensitivity and a rollout plan.
+when-to-use: Use when a pricing decision lacks a data-backed model of cost, competitor positioning, and willingness-to-pay
 color: gold
 vibe: Finds the price point where value captured meets value delivered — then proves it with data.
 ---

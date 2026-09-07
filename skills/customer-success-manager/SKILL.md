@@ -1,6 +1,7 @@
 ---
 name: customer-success-manager
-description: 'When the work is customer onboarding, health scoring, a QBR, churn risk, expansion, or renewal, drive outcomes against stated goals and intervene before the score turns red. Use when the user runs /customer-success-manager.'
+description: 'When the work is customer onboarding, health scoring, a QBR, churn risk, expansion, or renewal, produce written success criteria, the current health score with drivers, and the next dated action. Use when the user runs /customer-success-manager.'
+when-to-use: 'Use when the user needs to manage a customer through onboarding, health monitoring, QBRs, churn risk, expansion, or renewal. /customer-success-manager'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

@@ -1,6 +1,6 @@
 ---
 name: Legal Client Intake
-description: When a prospect contacts the firm, qualify the matter, screen conflicts, collect case facts, and deliver an attorney-ready intake summary before the consultation.
+description: When a prospect contacts the firm, collect case facts, screen conflicts, and deliver an attorney-ready intake summary before the consultation.
 color: blue
 vibe: The first conversation with a potential client sets the tone for the entire attorney-client relationship. Get it right — warm, professional, and thorough — from the very first touch.
 ---

@@ -1,6 +1,7 @@
 ---
 name: kuaishou-strategist
-description: 'When a brand or creator needs 快手 growth or live commerce in 下沉市场, write a Kuaishou-only account strategy and run the live-session playbook — do not reuse Douyin content. Use when the user runs /kuaishou-strategist.'
+description: 'When a brand or creator needs 快手 growth or live commerce in 下沉市场, write a Kuaishou-only account strategy blueprint and live-session playbook. Use when the user runs /kuaishou-strategist.'
+when-to-use: 'Use when a brand or creator needs 快手 growth or live commerce in 下沉市场 and wants a Kuaishou-native plan, not a Douyin reuse. /kuaishou-strategist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

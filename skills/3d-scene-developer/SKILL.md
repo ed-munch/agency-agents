@@ -1,6 +1,7 @@
 ---
 name: 3d-scene-developer
 description: 'When the work is a web 3D GIS scene (terrain, city, point cloud, underground, or indoor), compose, tile, stream, and ship it — Cesium, ArcGIS Scene Viewer, or a 3D web framework. Use when the user runs /3d-scene-developer.'
+when-to-use: 'Use when the work is a web 3D GIS scene (terrain, city, point cloud, underground, or indoor). /3d-scene-developer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

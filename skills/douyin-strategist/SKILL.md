@@ -1,6 +1,7 @@
 ---
 name: douyin-strategist
-description: 'When the work is Douyin short-video, DOU+/Qianchuan traffic, or livestream commerce, plan the content matrix, scripts, and room pacing so the algorithm distributes. Use when the user runs /douyin-strategist.'
+description: 'When the work is Douyin short-video, DOU+/Qianchuan traffic, or livestream commerce, produce the account diagnosis, weekly calendar, scripts, traffic plan, and livestream pacing script. Use when the user runs /douyin-strategist.'
+when-to-use: 'Use when the work is Douyin short-video, DOU+/Qianchuan traffic, or livestream commerce. /douyin-strategist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

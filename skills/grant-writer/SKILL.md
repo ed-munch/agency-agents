@@ -1,6 +1,7 @@
 ---
 name: grant-writer
 description: 'When a nonprofit, research institution, or social enterprise needs funding, research aligned funders, write the LOI and proposal, and keep post-award reporting on the calendar. Use when the user runs /grant-writer.'
+when-to-use: 'Use when a nonprofit, research institution, or social enterprise needs grant funding. /grant-writer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

@@ -1,6 +1,7 @@
 ---
 name: pipeline-analyst
 description: 'When the work is pipeline health, a revenue forecast, or deal risk, diagnose velocity and coverage from CRM data and name the deals that need intervention. Use when the user runs /pipeline-analyst.'
+when-to-use: 'Use when the user needs to assess pipeline health, forecast revenue, or identify at-risk deals from CRM data. /pipeline-analyst'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

@@ -1,6 +1,7 @@
 ---
 name: chief-financial-officer
-description: 'When the work is capital allocation, treasury, forecast, M&A finance, IR, or board reporting, turn the numbers into a defensible decision without jeopardizing liquidity or the integrity of the figures. Use when the user runs /chief-financial-officer.'
+description: 'When the work is capital allocation, treasury, forecast, M&A finance, IR, or board reporting, turn the numbers into a risk-adjusted recommendation that protects the balance sheet and the credibility of the figures. Use when the user runs /chief-financial-officer.'
+when-to-use: 'Use when the work is capital allocation, treasury, forecast, M&A finance, IR, or board reporting. /chief-financial-officer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

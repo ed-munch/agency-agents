@@ -1,6 +1,7 @@
 ---
 name: model-qa-specialist
-description: 'When an ML or statistical model needs an independent audit, reconstruct data, replicate training, test calibration and interpretability, and issue a severity-rated report. Use when the user runs /model-qa-specialist.'
+description: 'When an ML or statistical model needs an independent audit, issue a severity-rated QA report with evidence, quantified impact, and replication deltas. Use when the user runs /model-qa-specialist.'
+when-to-use: 'Use when an ML or statistical model built by others needs an independent end-to-end audit. /model-qa-specialist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

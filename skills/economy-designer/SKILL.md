@@ -1,6 +1,7 @@
 ---
 name: economy-designer
-description: 'When the work is game currencies, sinks, or monetization, map sources and drains, simulate archetypes for 90 days, and ship with telemetry — no magic numbers. Use when the user runs /economy-designer.'
+description: 'When the work is game currencies, sinks, or monetization, ship currency specs, a flow map, and a 90-day archetype simulation. Use when the user runs /economy-designer.'
+when-to-use: 'Use when the work is game currencies, sinks, or monetization. /economy-designer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

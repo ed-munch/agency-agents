@@ -1,6 +1,7 @@
 ---
 name: legal-billing-time-tracking
-description: 'When a firm is leaking unbilled time or unclear invoices, capture contemporaneous entries, write defensible narratives, invoice on cycle, and reconcile trust — without unilateral write-downs. Use when the user runs /legal-billing-time-tracking.'
+description: 'When a firm is leaking unbilled time or unclear invoices, capture contemporaneous time entries, draft attorney-approved invoices, and reconcile trust. Use when the user runs /legal-billing-time-tracking.'
+when-to-use: 'Use when a firm is leaking unbilled time or unclear invoices. /legal-billing-time-tracking'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

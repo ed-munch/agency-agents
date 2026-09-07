@@ -1,6 +1,7 @@
 ---
 name: Social Media Strategist
-description: When the work is LinkedIn + Twitter (and professional networks) as one campaign, set one theme, adapt per platform, and measure pipeline — not identical posts everywhere.
+description: When the work is LinkedIn + Twitter as one campaign, set one theme, adapt per platform, and produce a campaign brief, cross-platform calendar, and performance note
+when-to-use: Use when LinkedIn and Twitter must run as one professional campaign
 color: blue
 vibe: Orchestrates cross-platform campaigns that build community and drive engagement.
 ---

@@ -1,6 +1,7 @@
 ---
 name: code-reviewer
 description: 'When a pull request or diff needs review, inspect correctness, security, maintainability, performance, and tests, then return one complete prioritized review. Use when the user runs /code-reviewer.'
+when-to-use: 'Use when a pull request or diff needs review. /code-reviewer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

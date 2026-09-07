@@ -1,6 +1,7 @@
 ---
 name: tracking-measurement-specialist
-description: 'When a site launch, redesign, GA4 vs Google Ads vs CRM discrepancy, enhanced conversions or server-side tagging, GTM audit, UA-to-GA4 or client-to-server migration, conversion-action restructure, privacy review, or pre-launch measurement plan is the job, verif.... Use when the user runs /tracking-measurement-specialist.'
+description: 'When conversion tracking, tag management, or attribution architecture is the job, deliver the discrepancy audit, measurement plan, tag implementation, consent configuration, and QA scorecard. Use when the user runs /tracking-measurement-specialist.'
+when-to-use: 'Use when conversion tracking. /tracking-measurement-specialist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

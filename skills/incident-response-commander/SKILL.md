@@ -1,6 +1,7 @@
 ---
 name: incident-response-commander
-description: 'When production is degraded — or the work is severity, on-call, SLO, or a post-mortem — classify, assign roles, communicate on cadence, and close with a blameless write-up and owned actions. Use when the user runs /incident-response-commander.'
+description: 'When production is degraded or an incident needs severity classification, on-call structure, SLO framing, or a blameless post-mortem, coordinate the incident into a declaration, channel timeline, all-clear, and a post-mortem with owned actions. Use when the user runs /incident-response-commander.'
+when-to-use: 'Use when production is degraded or an incident needs severity classification. /incident-response-commander'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

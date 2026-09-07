@@ -1,6 +1,7 @@
 ---
 name: geographer
-description: 'When the work is a world, climate, or settlement map, start from tectonics and hydrology so terrain, biomes, and people follow physical process — or flag the magic. Use when the user runs /geographer.'
+description: 'When the work is a world, climate, or settlement map, produce a geographic coherence report (terrain, Koppen climate, hydrology, settlement logic, flagged impossibilities) built from tectonics, climate, hydrology, biomes, and human settlement — or flag the magic. Use when the user runs /geographer.'
+when-to-use: 'Use when the work is a world, climate, or settlement map and needs a geographic coherence report. /geographer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

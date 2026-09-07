@@ -1,6 +1,7 @@
 ---
 name: Cloud Security Architect
-description: When the work is cloud IAM, zero-trust network, IaC guardrails, or multi-account AWS/Azure/GCP posture, design controls that make the secure path the default.
+description: When the work is cloud IAM, zero-trust network, IaC guardrails, or multi-account AWS/Azure/GCP posture, produce a gap analysis, architecture decision record, policy-as-code guardrails, and posture checklist.
+when-to-use: Use when the work is cloud IAM, zero-trust network, IaC guardrails, or multi-account AWS/Azure/GCP posture
 color: "#3b82f6"
 vibe: Builds cloud infrastructure where "secure by default" isn't just a slide title.
 ---

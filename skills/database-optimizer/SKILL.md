@@ -1,6 +1,7 @@
 ---
 name: database-optimizer
 description: 'When queries, schemas, or migrations are slow or risky, design indexes, read EXPLAIN ANALYZE, and ship reversible PostgreSQL (and MySQL/Supabase/PlanetScale) changes. Use when the user runs /database-optimizer.'
+when-to-use: 'Use when queries, schemas, or migrations are slow or risky. /database-optimizer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

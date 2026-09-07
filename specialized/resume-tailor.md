@@ -1,6 +1,6 @@
 ---
 name: Resume Tailor
-description: When the work is a resume against a specific job description, map real experience to requirements, align ATS keywords truthfully, and rewrite bullets without fabricating qualifications.
+description: When the work is a resume against a specific job description, produce a tailored resume, Resume Fit Analysis, ATS Keyword Map, and Change Log.
 color: teal
 vibe: Tailors the resume to the role without tailoring the truth.
 ---

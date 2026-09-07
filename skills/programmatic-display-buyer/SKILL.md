@@ -1,6 +1,7 @@
 ---
 name: programmatic-display-buyer
 description: 'When display, programmatic, partner media, or ABM display needs planning or cleanup, pull placement performance first, then buy to reach, frequency, viewability, and brand lift. Use when the user runs /programmatic-display-buyer.'
+when-to-use: 'Use when display, programmatic, partner media, or ABM display needs planning or cleanup. /programmatic-display-buyer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

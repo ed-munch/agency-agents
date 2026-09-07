@@ -1,6 +1,7 @@
 ---
 name: bim-gis-specialist
-description: 'When the work is Revit/IFC into GIS, indoor maps, or a digital twin, georeference Survey Point to a real CRS first, simplify LOD, and keep the twin on a named update cadence. Use when the user runs /bim-gis-specialist.'
+description: 'When converting Revit or IFC models into GIS layers, indoor maps, or a digital twin, georeference to a real CRS, convert and map attributes, validate, and deliver the indoor map or twin model with an update cadence. Use when the user runs /bim-gis-specialist.'
+when-to-use: 'Use when converting Revit or IFC models into GIS layers, indoor maps, or a digital twin. /bim-gis-specialist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

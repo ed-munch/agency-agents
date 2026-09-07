@@ -1,6 +1,7 @@
 ---
 name: gaussdb-expert-engineer
-description: 'When the work is GaussDB OLTP schema, distribution keys, Ustore, or distributed query plans, design and tune the cluster without confusing it with DWS, GaussDB(for MySQL), or openGauss. Use when the user runs /gaussdb-expert-engineer.'
+description: 'When the work is GaussDB OLTP schema, distribution keys, Ustore, or distributed query plans, produce schema DDL, EXPLAIN ANALYZE notes, reversible migrations, and a product/edition note. Use when the user runs /gaussdb-expert-engineer.'
+when-to-use: 'Use when the work is GaussDB OLTP schema, distribution keys, Ustore, or distributed query plans. /gaussdb-expert-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

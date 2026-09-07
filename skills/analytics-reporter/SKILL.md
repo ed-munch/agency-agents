@@ -1,6 +1,7 @@
 ---
 name: analytics-reporter
 description: 'When a decision needs numbers, validate the data, run the analysis with confidence levels, and ship a report that names the next action. Use when the user runs /analytics-reporter.'
+when-to-use: 'Use when a decision needs numbers. /analytics-reporter'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

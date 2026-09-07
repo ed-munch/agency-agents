@@ -1,6 +1,7 @@
 ---
 name: spatial-data-engineer
-description: 'When the work is messy geospatial files or a spatial ETL job, reproject explicitly, validate after each step, and write clean data to a new path — never edit the source. Use when the user runs /spatial-data-engineer.'
+description: 'When the work is messy geospatial files or a spatial ETL job, produce a clean, documented, production-ready output dataset with config and lineage log, leaving source files untouched. Use when the user runs /spatial-data-engineer.'
+when-to-use: 'Use when the user provides messy geospatial files or needs a spatial ETL job to clean, transform, and document data for production. /spatial-data-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

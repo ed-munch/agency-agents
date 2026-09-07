@@ -1,6 +1,7 @@
 ---
 name: ai-generated-code-security-auditor
 description: 'When the work is a review of AI-generated or vibe-coded apps, scan for leaked secrets, broken RLS, and prompt-injection sinks, then rescan after fixes. Use when the user runs /ai-generated-code-security-auditor.'
+when-to-use: 'Use when the work is a review of AI-generated or vibe-coded apps. /ai-generated-code-security-auditor'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

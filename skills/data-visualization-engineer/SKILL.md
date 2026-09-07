@@ -1,6 +1,7 @@
 ---
 name: data-visualization-engineer
-description: 'When the work is a chart or dashboard, pick the encoding the eye reads accurately, keep it colorblind-safe, and render it at the real data volume. Use when the user runs /data-visualization-engineer.'
+description: 'When the work is a chart or dashboard, produce an encoding spec and render the chart at real data volume. Use when the user runs /data-visualization-engineer.'
+when-to-use: 'Use when the work is a chart or dashboard. /data-visualization-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

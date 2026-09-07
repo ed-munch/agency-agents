@@ -1,6 +1,7 @@
 ---
 name: report-distribution-agent
-description: 'When the work is sending sales reports to reps, route by territory, log every attempt, and never drop a failed send silently. Use when the user runs /report-distribution-agent.'
+description: 'When the work is sending sales reports to reps, produce a distribution log where every recipient has sent or failed with a reason. Use when the user runs /report-distribution-agent.'
+when-to-use: 'Use when the work is sending sales reports to reps. /report-distribution-agent'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

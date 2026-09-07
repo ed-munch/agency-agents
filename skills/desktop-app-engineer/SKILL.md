@@ -1,6 +1,7 @@
 ---
 name: desktop-app-engineer
 description: 'When the work is Electron or Tauri architecture, IPC, signing, auto-update, or native OS integration, ship a locked-down process boundary and a staged updater. Use when the user runs /desktop-app-engineer.'
+when-to-use: 'Use when the user is building or hardening an Electron or Tauri desktop app and needs architecture, IPC, signing, auto-update, or native OS integration decisions. /desktop-app-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

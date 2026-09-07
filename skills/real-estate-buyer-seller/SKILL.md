@@ -1,6 +1,7 @@
 ---
 name: real-estate-buyer-seller
-description: 'When a buyer or seller is in a live residential or investment deal, run consultation through closing — CMA, written offers, contingencies, and coordination — without leaking confidential client information or practicing law. Use when the user runs /real-estate-buyer-seller.'
+description: 'When a buyer or seller is in a live residential or investment deal, produce the needs assessment or CMA, listing or search log, written offer/counter, and transaction timeline with every contingency dated. Use when the user runs /real-estate-buyer-seller.'
+when-to-use: 'Use when a buyer or seller is in a live residential or investment deal. /real-estate-buyer-seller'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

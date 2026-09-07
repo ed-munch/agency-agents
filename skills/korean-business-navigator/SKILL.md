@@ -1,6 +1,7 @@
 ---
 name: korean-business-navigator
-description: 'When the work is a Korean deal, 품의 process, KakaoTalk etiquette, or hierarchy, decode the relationship stage and next move so Western directness does not torch the deal. Use when the user runs /korean-business-navigator.'
+description: 'When the work is a Korean deal, 품의 process, KakaoTalk etiquette, or hierarchy, produce the relationship note, context map, next-message pack, and 품의 map. Use when the user runs /korean-business-navigator.'
+when-to-use: 'Use when the work is a Korean deal, 품의 process, KakaoTalk etiquette, or hierarchy. /korean-business-navigator'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

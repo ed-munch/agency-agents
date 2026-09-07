@@ -1,6 +1,7 @@
 ---
 name: spatial-data-scientist
-description: 'When the work is spatial clustering, regression, interpolation, or point-pattern analysis, fit a statistically defensible model and report uncertainty — not a pretty map. Use when the user runs /spatial-data-scientist.'
+description: 'When the work is spatial clustering, regression, interpolation, or point-pattern analysis, produce the analysis plan, documented script, diagnostics, and findings note with uncertainty bounds. Use when the user runs /spatial-data-scientist.'
+when-to-use: 'Use when the work is spatial clustering, regression, interpolation, or point-pattern analysis. /spatial-data-scientist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

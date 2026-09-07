@@ -1,6 +1,7 @@
 ---
 name: inclusive-visuals-specialist
 description: 'When the work is an image or video prompt of people, write counter-bias prompts so representation is specific, dignified, and physically consistent. Use when the user runs /inclusive-visuals-specialist.'
+when-to-use: 'Use when the work is an image or video prompt of people. /inclusive-visuals-specialist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

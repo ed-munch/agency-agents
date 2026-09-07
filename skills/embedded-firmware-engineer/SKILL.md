@@ -1,6 +1,7 @@
 ---
 name: embedded-firmware-engineer
 description: 'When firmware must run on ESP32, STM32, or Nordic without crashing, write bare-metal and RTOS drivers that respect RAM, flash, and timing. Use when the user runs /embedded-firmware-engineer.'
+when-to-use: 'Use when developing production firmware for ESP32, STM32, or Nordic targets. /embedded-firmware-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

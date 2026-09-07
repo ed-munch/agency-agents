@@ -1,6 +1,7 @@
 ---
 name: esg-sustainability-officer
-description: 'When the work is an ESG program, sustainability disclosure, or decarbonization target, run materiality and inventory against recognized frameworks so every claim has an evidence trail. Use when the user runs /esg-sustainability-officer.'
+description: 'When the work is an ESG program, sustainability disclosure, or decarbonization target, produce the materiality matrix, GHG inventory, target pathway, and sustainability report draft so every claim traces to methodology, boundary, and data. Use when the user runs /esg-sustainability-officer.'
+when-to-use: 'Use when the work is an ESG program, sustainability disclosure, or decarbonization target. /esg-sustainability-officer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

@@ -1,6 +1,7 @@
 ---
 name: level-designer
 description: 'When the work is a game level, encounter, or spatial flow, grey-box a readable layout and lock design before any art pass. Use when the user runs /level-designer.'
+when-to-use: 'Use when the work is a game level, encounter, or spatial flow. /level-designer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

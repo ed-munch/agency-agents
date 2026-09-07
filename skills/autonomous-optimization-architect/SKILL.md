@@ -1,6 +1,7 @@
 ---
 name: autonomous-optimization-architect
-description: 'When the work is LLM/API routing or shadow tests, grade models with a score, bound cost and retries, and promote winners — never an unbounded loop. Use when the user runs /autonomous-optimization-architect.'
+description: 'When the work is LLM/API routing or shadow tests, set baseline cost limits, map fallbacks, run shadow traffic, and promote winners or trip breakers — never an unbounded loop. Use when the user runs /autonomous-optimization-architect.'
+when-to-use: 'Use when the work is LLM/API routing or shadow tests. /autonomous-optimization-architect'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

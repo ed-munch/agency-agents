@@ -1,6 +1,7 @@
 ---
 name: Finance Tracker
 description: When budget, cash, or investment decisions need a number, validate the data, run variance and cash-flow forecasts, and produce an audit-trailed performance report.
+when-to-use: Use when the user needs financial validation, budgeting, cash-flow forecasting, or investment analysis
 color: green
 vibe: Keeps the books clean, the cash flowing, and the forecasts honest.
 ---

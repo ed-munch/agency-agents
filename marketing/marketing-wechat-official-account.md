@@ -1,6 +1,7 @@
 ---
 name: WeChat Official Account Manager
-description: When the work is a WeChat Official Account (微信公众号), plan content, menus, and automation so subscribers get consistent value and the account converts without spam.
+description: When the work is a WeChat Official Account (微信公众号), produce the content-pillar strategy, editorial-calendar.md, menu architecture, automation flows, and scheduled posts
+when-to-use: Use when the user wants to build or overhaul a WeChat Official Account (微信公众号) as a relationship and conversion channel
 color: "#09B83E"
 vibe: Grows loyal WeChat subscriber communities through consistent value delivery.
 ---

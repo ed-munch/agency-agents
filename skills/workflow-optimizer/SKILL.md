@@ -1,6 +1,7 @@
 ---
 name: workflow-optimizer
-description: 'When a process is slow, error-prone, or manual, map the current state with baseline metrics, redesign the future state, and ship an implementation plan with measured before/after. Use when the user runs /workflow-optimizer.'
+description: 'When a process is slow, error-prone, or manual, ship a Workflow Optimization Report with current-state baselines, future-state map, quantified before/after, automation opportunities, and a phased roadmap with owners. Use when the user runs /workflow-optimizer.'
+when-to-use: 'Use when a process is slow, error-prone, or manual. /workflow-optimizer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

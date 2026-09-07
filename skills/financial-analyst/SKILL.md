@@ -1,6 +1,7 @@
 ---
 name: financial-analyst
 description: 'When the work is a model, forecast, variance, or investment case, state assumptions, run scenarios, and put a decision on paper with a sensitivity range. Use when the user runs /financial-analyst.'
+when-to-use: 'Use when the user needs a financial model, forecast, variance analysis, or investment case turned into a decision with scenarios and a recommendation. /financial-analyst'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

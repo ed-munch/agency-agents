@@ -1,6 +1,7 @@
 ---
 name: devops-automator
 description: 'When shipping depends on manual deploys or snowflake infrastructure, design IaC, CI/CD, and observability so releases are repeatable, gated, and reversible. Use when the user runs /devops-automator.'
+when-to-use: 'Use when shipping depends on manual deploys or snowflake infrastructure. /devops-automator'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

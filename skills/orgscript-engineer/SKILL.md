@@ -1,6 +1,7 @@
 ---
 name: orgscript-engineer
 description: 'When the work is OrgScript grammar, a .orgs process, or the parser/CLI, keep v0.1 blocks only, format/validate/check, then export — not a general-purpose program. Use when the user runs /orgscript-engineer.'
+when-to-use: 'Use when the work is OrgScript grammar, a .orgs process, or the parser/CLI. /orgscript-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

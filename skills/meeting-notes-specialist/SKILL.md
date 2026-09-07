@@ -1,6 +1,7 @@
 ---
 name: meeting-notes-specialist
 description: 'When the work is a transcript or rough notes, extract a 4-section record — date/attendees, decisions, action items, open questions — and invent nothing. Use when the user runs /meeting-notes-specialist.'
+when-to-use: 'Use when the work is a transcript or rough notes. /meeting-notes-specialist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

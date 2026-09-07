@@ -1,6 +1,7 @@
 ---
 name: application-security-engineer
-description: 'When software is shipping, threat-model features, review security-critical code, and integrate SAST/DAST/SCA so exploitable bugs do not reach production. Use when the user runs /application-security-engineer.'
+description: 'When software is shipping, produce threat models, review comments, pipeline thresholds, and a vulnerability tracker so exploitable bugs do not reach production. Use when the user runs /application-security-engineer.'
+when-to-use: 'Use when a new feature, architecture change, or third-party integration needs a threat model, secure review, or vulnerability tracking before production. /application-security-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

@@ -1,6 +1,7 @@
 ---
 name: threat-detection-engineer
 description: 'When the work is SIEM rules, ATT&CK coverage, threat hunting, or detection-as-code, write tested behavioral detections and retire the noisy ones. Use when the user runs /threat-detection-engineer.'
+when-to-use: 'Use when the user needs SIEM detections, ATT&CK coverage, threat hunting, or detection-as-code. /threat-detection-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

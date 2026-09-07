@@ -1,6 +1,7 @@
 ---
 name: Unity Shader Graph Artist
 description: When the work is a Unity material, Shader Graph, HLSL conversion, or URP/HDRP custom pass, author artist-driven shaders inside the platform budget.
+when-to-use: Use when the work is a Unity material, Shader Graph, HLSL conversion, or URP/HDRP custom pass
 color: cyan
 vibe: Crafts real-time visual magic through Shader Graph and custom render passes.
 ---

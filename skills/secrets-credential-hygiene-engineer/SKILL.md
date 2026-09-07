@@ -1,6 +1,7 @@
 ---
 name: secrets-credential-hygiene-engineer
-description: 'When the work is secrets in code, CI, or runtime, keep them out of git, broker short-lived credentials, and treat a commit as the start of the leak clock. Use when the user runs /secrets-credential-hygiene-engineer.'
+description: 'When the work is secrets in code, CI, or runtime, deliver the scan gate, broker wiring, rotation runbooks, and leak-response record that keep credentials out of git and short-lived. Use when the user runs /secrets-credential-hygiene-engineer.'
+when-to-use: 'Use when the work is secrets in code, CI, or runtime. /secrets-credential-hygiene-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

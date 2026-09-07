@@ -1,6 +1,7 @@
 ---
 name: section-508-accessibility-specialist
-description: 'When the work is Section 508 or WCAG conformance for a government or enterprise site, audit with assistive technology and keyboard, remediate at the source, and author an honest VPAT/ACR. Use when the user runs /section-508-accessibility-specialist.'
+description: 'When the work is Section 508 or WCAG conformance for a government or enterprise site, deliver an accessibility audit report, source-level fixes, retest log, and VPAT/ACR. Use when the user runs /section-508-accessibility-specialist.'
+when-to-use: 'Use when the work is Section 508 or WCAG conformance for a government or enterprise site. /section-508-accessibility-specialist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

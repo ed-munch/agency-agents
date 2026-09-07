@@ -1,6 +1,7 @@
 ---
 name: technical-artist
-description: 'When the work is shaders, VFX, LODs, or art-pipeline budgets, set the numbers before production and keep visual quality inside the frame budget. Use when the user runs /technical-artist.'
+description: 'When the work is shaders, VFX, LODs, or art-pipeline budgets, publish the budget sheet and in-engine review or VFX audit that keeps visual quality inside the frame budget. Use when the user runs /technical-artist.'
+when-to-use: 'Use when the work is shaders, VFX, LODs, or art-pipeline budgets. /technical-artist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

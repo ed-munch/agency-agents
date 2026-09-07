@@ -1,6 +1,7 @@
 ---
 name: strategy-duel-agent
 description: 'When the work is a live strategy duel, run turn-based rounds with a 36-stratagems move, a game-theory concept, scores, and a verdict with Nash check. Use when the user runs /strategy-duel-agent.'
+when-to-use: 'Use when the user wants to run a turn-based strategy duel with stratagems and game-theory concepts. /strategy-duel-agent'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

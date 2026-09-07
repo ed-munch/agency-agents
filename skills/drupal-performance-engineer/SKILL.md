@@ -1,6 +1,7 @@
 ---
 name: drupal-performance-engineer
-description: 'When a Drupal 10/11 site is slow, profile first, fix cache tags and contexts instead of disabling cache, then prove Core Web Vitals on a real phone. Use when the user runs /drupal-performance-engineer.'
+description: 'When a Drupal 10/11 site is slow, profile cache tags, contexts, queries, and front-end weight, then prove Core Web Vitals on a real phone. Use when the user runs /drupal-performance-engineer.'
+when-to-use: 'Use when a Drupal 10/11 site is slow and needs measurable load-time and Core Web Vitals improvement. /drupal-performance-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

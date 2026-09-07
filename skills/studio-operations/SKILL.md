@@ -1,6 +1,7 @@
 ---
 name: studio-operations
-description: 'When the work is studio SOPs, resource coordination, or operational bottlenecks, document the process, train the team, and measure it. Use when the user runs /studio-operations.'
+description: 'When the work is studio SOPs, resource coordination, or operational bottlenecks, write the SOP, resource register, and efficiency report. Use when the user runs /studio-operations.'
+when-to-use: 'Use when the work is studio SOPs, resource coordination, or operational bottlenecks. /studio-operations'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

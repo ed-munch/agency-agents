@@ -1,6 +1,6 @@
 ---
 name: Data Consolidation Agent
-description: When the work is a sales dashboard or territory report, aggregate latest metrics, attainment, pipeline, and trends into one structured view.
+description: When the work is a sales dashboard or territory report, emit the report file with territory performance, rep metrics, pipeline snapshot, trend, and a generation timestamp.
 color: "#38a169"
 vibe: Consolidates scattered sales data into live reporting dashboards.
 ---

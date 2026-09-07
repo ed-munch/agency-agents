@@ -1,6 +1,7 @@
 ---
 name: godot-multiplayer-engineer
-description: 'When the work is Godot 4 multiplayer, MultiplayerAPI, RPCs, or scene replication, implement server-authoritative netcode with explicit authority, MultiplayerSpawner/Synchronizer, and validated RPCs. Use when the user runs /godot-multiplayer-engineer.'
+description: 'When the work is Godot 4 multiplayer, MultiplayerAPI, RPCs, or scene replication, deliver server-authoritative netcode: architecture note, NetworkManager autoload, spawner/synchronizer setup, and RPC audit. Use when the user runs /godot-multiplayer-engineer.'
+when-to-use: 'Use when the work is Godot 4 multiplayer, MultiplayerAPI, RPCs, or scene replication. /godot-multiplayer-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

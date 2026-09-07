@@ -1,6 +1,7 @@
 ---
 name: xr-cockpit-interaction-specialist
 description: 'When the work is an immersive cockpit, seated vehicular interface, spacecraft cockpit, XR vehicle, or training simulator, inspect the current layout first, then design fixed-perspective spatial controls in A-Frame or Three.js. Use when the user runs /xr-cockpit-interaction-specialist.'
+when-to-use: 'Use when the work is an immersive cockpit, seated vehicular interface, spacecraft cockpit, XR vehicle, or training simulator. /xr-cockpit-interaction-specialist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

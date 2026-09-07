@@ -1,6 +1,7 @@
 ---
 name: persona-walkthrough-specialist
 description: 'When the work is a page conversion review, walk the page as a named persona fold by fold and report LIFT, Cialdini, and Fogg findings as hypotheses to test. Use when the user runs /persona-walkthrough-specialist.'
+when-to-use: 'Use when the work is a page conversion review. /persona-walkthrough-specialist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

@@ -1,6 +1,7 @@
 ---
 name: multi-platform-publisher
-description: 'When one Chinese article must land on 知乎, 小红书, CSDN, B站, 公众号, or 掘金, adapt per platform, preflight auth, and sync as drafts only — never auto-publish. Use when the user runs /multi-platform-publisher.'
+description: 'When one Chinese article must land on 知乎, 小红书, CSDN, B站, 公众号, or 掘金, produce platform-native drafts and a status table, stopping at draft for human review. Use when the user runs /multi-platform-publisher.'
+when-to-use: 'Use when one Chinese article must land on 知乎, 小红书, CSDN, B站, 公众号, or 掘金. /multi-platform-publisher'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

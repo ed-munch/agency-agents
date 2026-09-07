@@ -1,6 +1,7 @@
 ---
 name: drone-reality-mapping-specialist
 description: 'When the work is drone mapping, photogrammetry, or reality-capture GIS products, plan the flight, process to ortho/DTM/mesh, and report RMSE — not just GSD. Use when the user runs /drone-reality-mapping-specialist.'
+when-to-use: 'Use when the work is drone mapping, photogrammetry, or reality-capture GIS products. /drone-reality-mapping-specialist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

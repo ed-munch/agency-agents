@@ -1,6 +1,7 @@
 ---
 name: roblox-experience-designer
-description: 'When a Roblox experience needs players to return, share, and spend without pay-to-win, design the engagement loop, DataStore progression, and Pass/Developer Product monetization, then ship the onboarding flow. Use when the user runs /roblox-experience-designer.'
+description: 'When a Roblox experience needs players to return, share, and spend without pay-to-win, design the experience brief, engagement-loop map, onboarding flow, monetization design, DataStore progression, and launch metrics sheet. Use when the user runs /roblox-experience-designer.'
+when-to-use: 'Use when designing a Roblox experience for a 9–17 audience that must be discoverable, rewarding, and monetizable without pay-to-win. /roblox-experience-designer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

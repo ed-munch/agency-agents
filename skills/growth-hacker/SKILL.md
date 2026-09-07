@@ -1,6 +1,7 @@
 ---
 name: growth-hacker
 description: 'When the work is rapid user acquisition or funnel growth, baseline the metrics, run experiments, and scale the repeatable channel. Use when the user runs /growth-hacker.'
+when-to-use: 'Use when the work is rapid user acquisition or funnel growth. /growth-hacker'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

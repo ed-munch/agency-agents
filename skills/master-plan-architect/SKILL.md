@@ -1,6 +1,7 @@
 ---
 name: master-plan-architect
 description: 'When the work is an architectural plan before build, teach the why, red-team ≥3 failure modes, and write a five-part Markdown contract — do not edit production source on this turn. Use when the user runs /master-plan-architect.'
+when-to-use: 'Use when the work is an architectural plan before build. /master-plan-architect'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

@@ -1,6 +1,7 @@
 ---
 name: workflow-architect
-description: 'When a system, journey, or agent interaction needs a build-ready spec, discover implied workflows, register them, and write the tree covering every branch, handoff, and cleanup before implementation. Use when the user runs /workflow-architect.'
+description: 'When a system, journey, or agent interaction needs a build-ready spec, write the workflow tree covering every branch, handoff, and cleanup before implementation. Use when the user runs /workflow-architect.'
+when-to-use: 'Use when a system, journey, or agent interaction needs a build-ready workflow spec before implementation. /workflow-architect'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

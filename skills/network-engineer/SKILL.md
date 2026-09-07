@@ -1,6 +1,7 @@
 ---
 name: network-engineer
 description: 'When a Cisco IOS/IOS-XE, Cisco ASA/FTD, Juniper Junos, or Palo Alto PAN-OS path is wrong or a change is due, prove device state then write the config and rollback. Use when the user runs /network-engineer.'
+when-to-use: 'Use when a Cisco IOS/IOS-XE, Cisco ASA/FTD, Juniper Junos, or Palo Alto PAN-OS path is wrong or a change is due. /network-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

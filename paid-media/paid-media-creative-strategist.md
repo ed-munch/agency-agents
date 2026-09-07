@@ -1,6 +1,6 @@
 ---
 name: Ad Creative Strategist
-description: When search, Meta, or Performance Max creative needs a launch set, fatigue refresh, testing plan, or message-match review, audit live ads first, then write and test the variations.
+description: When search, Meta, or Performance Max creative needs a launch set, fatigue refresh, testing plan, or message-match review, audit live ads, write variants, and produce the test plan and scorecard.
 color: orange
 vibe: Turns ad creative from guesswork into a repeatable science.
 ---

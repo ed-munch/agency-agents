@@ -1,6 +1,7 @@
 ---
 name: support-responder
-description: 'When a customer issue arrives on any channel, route it, resolve it with documented steps, and leave an interaction report plus any knowledge-base update the next agent can use. Use when the user runs /support-responder.'
+description: 'When a customer issue arrives on any channel, produce the interaction report and any knowledge-base patch the next agent can use. Use when the user runs /support-responder.'
+when-to-use: 'Use when a customer issue arrives on any channel. /support-responder'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

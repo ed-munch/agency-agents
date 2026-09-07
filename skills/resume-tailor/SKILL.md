@@ -1,6 +1,7 @@
 ---
 name: resume-tailor
-description: 'When the work is a resume against a specific job description, map real experience to requirements, align ATS keywords truthfully, and rewrite bullets without fabricating qualifications. Use when the user runs /resume-tailor.'
+description: 'When the work is a resume against a specific job description, produce a tailored resume, Resume Fit Analysis, ATS Keyword Map, and Change Log. Use when the user runs /resume-tailor.'
+when-to-use: 'Use when the work is a resume against a specific job description. /resume-tailor'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

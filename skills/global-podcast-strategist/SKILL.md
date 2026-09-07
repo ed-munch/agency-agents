@@ -1,6 +1,7 @@
 ---
 name: global-podcast-strategist
 description: 'When the work is a podcast''s positioning, episode engine, or monetization, build a listener-first show bible and a cadence that compounds on Spotify, Apple, and YouTube. Use when the user runs /global-podcast-strategist.'
+when-to-use: 'Use when the work is a podcast''s positioning, episode engine, or monetization. /global-podcast-strategist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

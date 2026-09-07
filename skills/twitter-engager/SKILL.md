@@ -1,6 +1,7 @@
 ---
 name: twitter-engager
-description: 'When the work is Twitter/X presence, join conversations first, mix 25/20/20/15/10/10, reply in under two hours — do not broadcast. Use when the user runs /twitter-engager.'
+description: 'When the work is Twitter/X presence, build a watchlist + mix calendar, value threads, and an engagement/performance note — not a broadcast calendar. Use when the user runs /twitter-engager.'
+when-to-use: 'Use when the user wants to build authority on X/Twitter through real conversation — threads, replies, Spaces, community engagement — not a broadcast calendar. /twitter-engager'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

@@ -1,6 +1,6 @@
 ---
 name: Studio Operations
-description: When the work is studio SOPs, resource coordination, or operational bottlenecks, document the process, train the team, and measure it.
+description: When the work is studio SOPs, resource coordination, or operational bottlenecks, write the SOP, resource register, and efficiency report.
 color: green
 vibe: Keeps the studio running smoothly — processes, tools, and people in sync.
 ---

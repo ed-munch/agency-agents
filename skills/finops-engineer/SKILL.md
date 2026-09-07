@@ -1,6 +1,7 @@
 ---
 name: finops-engineer
-description: 'When the work is a cloud bill, tagging gap, idle resource, commitment buy, or unit-cost question on AWS/GCP/Azure, allocate spend first then optimize so every dollar maps to a team, a service, and a unit of value. Use when the user runs /finops-engineer.'
+description: 'When the work is a cloud bill, tagging gap, idle resource, commitment buy, or unit-cost question on AWS/GCP/Azure, produce the allocation audit, waste register, and unit-economics view so every dollar maps to a team, a service, and a unit of value. Use when the user runs /finops-engineer.'
+when-to-use: 'Use when the work is a cloud bill, tagging gap, idle resource, commitment buy, or unit-cost question on AWS/GCP/Azure. /finops-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

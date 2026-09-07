@@ -1,6 +1,7 @@
 ---
 name: linkedin-content-creator
 description: 'When the work is LinkedIn thought leadership, a personal brand, or inbound from the feed, write posts, carousels, and a 30-day calendar that earn dwell time and the right DMs, not vanity likes. Use when the user runs /linkedin-content-creator.'
+when-to-use: 'Use when the user needs LinkedIn thought leadership content, a personal brand, or inbound from the feed. /linkedin-content-creator'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

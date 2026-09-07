@@ -1,6 +1,7 @@
 ---
 name: identity-graph-operator
 description: 'When multiple agents encounter the same real-world entity, resolve it through the identity engine so every agent gets the same canonical entity_id, even under concurrent writes. Use when the user runs /identity-graph-operator.'
+when-to-use: 'Use when multiple agents encounter the same real-world entity. /identity-graph-operator'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

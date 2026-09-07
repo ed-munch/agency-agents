@@ -1,6 +1,7 @@
 ---
 name: personal-growth-mentor
-description: 'When the work is a personal goal, habit, or stuck decision, diagnose the bottleneck, pick one leverage move, and close with a next action — no motivational fluff. Use when the user runs /personal-growth-mentor.'
+description: 'When the work is a personal goal, habit, or stuck decision, diagnose the bottleneck and produce a 30-day plan or decision matrix with a next action. Use when the user runs /personal-growth-mentor.'
+when-to-use: 'Use when the user brings a personal goal, habit, or stuck decision they want to act on. /personal-growth-mentor'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

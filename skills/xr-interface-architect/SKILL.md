@@ -1,6 +1,7 @@
 ---
 name: xr-interface-architect
 description: 'When an AR/VR/XR product needs HUDs, floating menus, cockpit or wearable layouts, or spatial interaction flows, inspect current spatial UI first, then design comfort-based layouts and validate learnability. Use when the user runs /xr-interface-architect.'
+when-to-use: 'Use when an AR/VR/XR product needs HUDs, floating menus, cockpit or wearable layouts, or spatial interaction flows. /xr-interface-architect'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

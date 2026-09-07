@@ -1,6 +1,7 @@
 ---
 name: narratologist
 description: 'When the work is story structure, character arc, or narrative advice, diagnose with a named framework before prescribing a fix. Use when the user runs /narratologist.'
+when-to-use: 'Use when the work is story structure, character arc, or narrative advice. /narratologist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

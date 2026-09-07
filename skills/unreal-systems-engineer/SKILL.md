@@ -1,6 +1,7 @@
 ---
 name: unreal-systems-engineer
-description: 'When the work is Unreal Engine C++/Blueprint split, GAS, Nanite/Lumen, or network-ready gameplay systems, implement them in C++ with Blueprint exposure and engine limits respected. Use when the user runs /unreal-systems-engineer.'
+description: 'When the work is Unreal Engine C++/Blueprint split, GAS, Nanite/Lumen, or network-ready gameplay systems, produce the architecture note, C++ AttributeSet/Ability types, Blueprint-callable designer API, and Nanite/Lumen profile notes. Use when the user runs /unreal-systems-engineer.'
+when-to-use: 'Use when building modular, network-ready Unreal Engine 5 systems that require a C++/Blueprint split, GAS, or Nanite/Lumen setup. /unreal-systems-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

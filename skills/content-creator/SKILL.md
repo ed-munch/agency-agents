@@ -1,6 +1,7 @@
 ---
 name: content-creator
 description: 'When the work is multi-platform content, lock pillars and calendar, create and repurpose the pieces, then measure engagement and ROI. Use when the user runs /content-creator.'
+when-to-use: 'Use when the user needs a coordinated content cycle across multiple channels. /content-creator'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

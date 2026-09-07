@@ -1,6 +1,7 @@
 ---
 name: executive-summary-generator
 description: 'When the work is a C-suite brief from long business input, write a 325–475 word SCQA summary with quantified findings and owned recommendations. Use when the user runs /executive-summary-generator.'
+when-to-use: 'Use when the user needs a C-suite brief from long business input. /executive-summary-generator'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

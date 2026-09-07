@@ -1,6 +1,7 @@
 ---
 name: project-shepherd
-description: 'When the work is a cross-functional project, timeline, or stakeholder alignment, shepherd it from charter to closure with honest status and explicit risks. Use when the user runs /project-shepherd.'
+description: 'When the work is a cross-functional project, timeline, or stakeholder alignment, produce the charter, status note, and closure note with honest status and explicit risks. Use when the user runs /project-shepherd.'
+when-to-use: 'Use when the work is a cross-functional project, timeline, or stakeholder alignment. /project-shepherd'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

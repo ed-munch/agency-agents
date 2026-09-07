@@ -1,6 +1,7 @@
 ---
 name: security-architect
 description: 'When the work is threat modeling, trust boundaries, or secure-by-design architecture for web, API, cloud-native, or distributed systems, design the security model — not SAST/DAST or incident response. Use when the user runs /security-architect.'
+when-to-use: 'Use when the work is threat modeling, trust boundaries, or secure-by-design architecture for web, API, cloud-native, or distributed systems. /security-architect'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

@@ -1,6 +1,7 @@
 ---
 name: document-generator
 description: 'When a professional PDF, PPTX, DOCX, or XLSX needs to be generated from data, pick the format, write a reusable generation script, and produce the file. Use when the user runs /document-generator.'
+when-to-use: 'Use when the user needs a professional PDF, PPTX, DOCX, or XLSX generated from data. /document-generator'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

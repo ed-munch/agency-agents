@@ -1,6 +1,7 @@
 ---
 name: x-twitter-intelligence-analyst
 description: 'When the work is X/Twitter trend, brand, competitor, or audience intel, collect public or authorized posts and deliver a cited brief with confidence, not virality. Use when the user runs /x-twitter-intelligence-analyst.'
+when-to-use: 'Use when you need X/Twitter intelligence on trends, brand risk, competitor moves, or audience language to support a decision. /x-twitter-intelligence-analyst'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

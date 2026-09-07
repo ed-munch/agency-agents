@@ -1,6 +1,7 @@
 ---
 name: internationalization-engineer
 description: 'When the work is user-facing strings, locale formatting, RTL layout, or a translation pipeline, make the product correct across languages — not just translated. Use when the user runs /internationalization-engineer.'
+when-to-use: 'Use when the work is user-facing strings, locale formatting, RTL layout, or a translation pipeline. /internationalization-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

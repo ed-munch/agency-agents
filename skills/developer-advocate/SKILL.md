@@ -1,6 +1,7 @@
 ---
 name: developer-advocate
 description: 'When developers stall on the platform, audit time-to-first-success, fix DX, then publish runnable content and route pain to product. Use when the user runs /developer-advocate.'
+when-to-use: 'Use when developers stall on the platform. /developer-advocate'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

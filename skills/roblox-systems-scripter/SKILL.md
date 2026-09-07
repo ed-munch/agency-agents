@@ -1,6 +1,7 @@
 ---
 name: roblox-systems-scripter
 description: 'When implementing Roblox gameplay systems, write server-authoritative Luau modules with validated remotes and pcall DataStore retries so clients never own state. Use when the user runs /roblox-systems-scripter.'
+when-to-use: 'Use when building a Roblox experience that needs server-authoritative gameplay systems. /roblox-systems-scripter'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

@@ -1,6 +1,7 @@
 ---
 name: sales-coach
-description: 'When the work is rep development, pipeline review, call coaching, deal strategy, or forecast accuracy, coach one highest-leverage behavior with a documented plan. Use when the user runs /sales-coach.'
+description: 'When the work is rep development, pipeline review, call coaching, deal strategy, or forecast accuracy, diagnose the highest-leverage gap and write a coaching plan with ≤3 observable focus areas. Use when the user runs /sales-coach.'
+when-to-use: 'Use when a rep, deal, pipeline, or forecast needs coaching — skill gap, stalled deal, weak qualification, or commit accuracy. /sales-coach'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

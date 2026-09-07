@@ -1,6 +1,6 @@
 ---
 name: Workflow Optimizer
-description: When a process is slow, error-prone, or manual, map the current state with baseline metrics, redesign the future state, and ship an implementation plan with measured before/after.
+description: When a process is slow, error-prone, or manual, ship a Workflow Optimization Report with current-state baselines, future-state map, quantified before/after, automation opportunities, and a phased roadmap with owners.
 color: green
 vibe: Finds the bottleneck, fixes the process, automates the rest.
 ---

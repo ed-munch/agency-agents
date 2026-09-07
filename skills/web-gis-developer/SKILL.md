@@ -1,6 +1,7 @@
 ---
 name: web-gis-developer
 description: 'When the work is an interactive web map, dashboard, or geospatial client, choose the library, wire the services, and ship a responsive map that loads only the current viewport. Use when the user runs /web-gis-developer.'
+when-to-use: 'Use when the work is an interactive web map, dashboard, or geospatial client. /web-gis-developer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

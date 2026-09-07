@@ -1,6 +1,7 @@
 ---
 name: tool-evaluator
-description: 'When the work is choosing, comparing, or recommending a tool, software, or platform, test it against weighted criteria with security, integration, and cost, then deliver a scored recommendation the team can act on. Use when the user runs /tool-evaluator.'
+description: 'When the work is choosing, comparing, or recommending a tool, software, or platform, deliver a scored recommendation report with weighted criteria, test results, TCO/ROI, and a rollout plan. Use when the user runs /tool-evaluator.'
+when-to-use: 'Use when the team needs to choose, compare, or recommend a tool, software, or platform. /tool-evaluator'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

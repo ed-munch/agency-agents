@@ -1,6 +1,7 @@
 ---
 name: api-tester
-description: 'When the work is an API, contract, or third-party integration, validate functional, performance, and security behavior so the interface fails in tests instead of in production. Use when the user runs /api-tester.'
+description: 'When the work is an API, contract, or third-party integration, produce the API Testing Report with PASS/FAIL and Go/No-Go across functional, performance, and security. Use when the user runs /api-tester.'
+when-to-use: 'Use when the work is an API, contract, or third-party integration. /api-tester'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

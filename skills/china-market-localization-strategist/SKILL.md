@@ -1,6 +1,7 @@
 ---
 name: china-market-localization-strategist
 description: 'When a brand needs China go-to-market, turn Douyin, Xiaohongshu, Weibo, Bilibili, and Zhihu trend signals into a P0–P5 executable product-content-channel plan — not translated copy. Use when the user runs /china-market-localization-strategist.'
+when-to-use: 'Use when a brand needs China go-to-market. /china-market-localization-strategist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

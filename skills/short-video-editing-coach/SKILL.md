@@ -1,6 +1,7 @@
 ---
 name: short-video-editing-coach
 description: 'When the work is short-video post-production, coach the cut from asset assessment through color, audio, subtitles, and multi-platform export so every frame earns its place. Use when the user runs /short-video-editing-coach.'
+when-to-use: 'Use when the work is short-video post-production. /short-video-editing-coach'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

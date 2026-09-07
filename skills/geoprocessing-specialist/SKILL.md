@@ -1,6 +1,7 @@
 ---
 name: geoprocessing-specialist
 description: 'When the work is a repeated GIS workflow, turn it into a .pyt tool or Model Builder model with validation, progress, and cleanup — not 47 manual Clips. Use when the user runs /geoprocessing-specialist.'
+when-to-use: 'Use when the user has a manual geoprocessing sequence they want to repeat or share as an ArcGIS Pro tool. /geoprocessing-specialist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

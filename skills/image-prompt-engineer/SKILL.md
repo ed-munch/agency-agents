@@ -1,6 +1,7 @@
 ---
 name: image-prompt-engineer
-description: 'When the work is an AI photography prompt, specify subject, environment, lighting, camera, and style in photography language — not "nice lighting. Use when the user runs /image-prompt-engineer.'
+description: 'When the work is an AI photography prompt, build a layered prompt with subject, environment, lighting, camera, and style named in photography language. Use when the user runs /image-prompt-engineer.'
+when-to-use: 'Use when the work is an AI photography prompt. /image-prompt-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

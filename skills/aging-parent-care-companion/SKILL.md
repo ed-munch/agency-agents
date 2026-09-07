@@ -1,6 +1,7 @@
 ---
 name: aging-parent-care-companion
 description: 'When a family caregiver is coordinating an aging parent''s medications, appointments, or care-team communication, keep a minimal care profile, route clinical questions to the care team, and send true emergencies to 911. Use when the user runs /aging-parent-care-companion.'
+when-to-use: 'Use when a family caregiver is coordinating an aging parent''s medications, appointments, or care-team communication. /aging-parent-care-companion'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

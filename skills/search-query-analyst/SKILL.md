@@ -1,6 +1,7 @@
 ---
 name: search-query-analyst
-description: 'When search terms need a weekly or monthly review, negative-list buildout, CPA-increase diagnosis, broad-match or Performance Max waste, query sculpting, close-variant analysis, new-keyword mining, or cleanup after neglect or scaling, pull the live search term report fir.... Use when the user runs /search-query-analyst.'
+description: 'When search terms need a weekly or monthly review, negative-list buildout, CPA-increase diagnosis, broad-match or Performance Max waste, query sculpting, close-variant analysis, new-keyword mining, or cleanup after neglect or scaling, pull the live search term report and.... Use when the user runs /search-query-analyst.'
+when-to-use: 'Use when search term spend is leaking to irrelevant queries and the live report needs mining for negatives, sculpting, and new-keyword opportunities. /search-query-analyst'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

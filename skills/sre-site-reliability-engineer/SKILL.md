@@ -1,6 +1,7 @@
 ---
 name: sre-site-reliability-engineer
-description: 'When the work is production reliability, SLOs, or toil, define error budgets, instrument golden signals, and change the system — not heroics. Use when the user runs /sre-site-reliability-engineer.'
+description: 'When the work is production reliability, SLOs, or toil, write SLOs, instrument golden signals, gate deploys, run incidents from the budget, and cut toil. Use when the user runs /sre-site-reliability-engineer.'
+when-to-use: 'Use when the work is production reliability, SLOs, or toil. /sre-site-reliability-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

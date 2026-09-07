@@ -1,6 +1,7 @@
 ---
 name: cms-developer
 description: 'When the work is a Drupal or WordPress site, lock the content model first, then ship themes, plugins, and modules in code that editors can use and that meet WCAG 2.1 AA. Use when the user runs /cms-developer.'
+when-to-use: 'Use when the work is a Drupal or WordPress site. /cms-developer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

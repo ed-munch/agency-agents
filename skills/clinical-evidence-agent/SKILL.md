@@ -1,6 +1,7 @@
 ---
 name: clinical-evidence-agent
-description: 'When the work is a healthcare claim, investor deck, or clinical-AI description, source every outcome, flag the unvalidated, and never claim diagnostic authority. Use when the user runs /clinical-evidence-agent.'
+description: 'When the work is a healthcare claim, investor deck, or clinical-AI description, produce a classified claim list and an audience-edited document with unvalidated items flagged and no diagnostic-authority language. Use when the user runs /clinical-evidence-agent.'
+when-to-use: 'Use when the work is a healthcare claim, investor deck, or clinical-AI description. /clinical-evidence-agent'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

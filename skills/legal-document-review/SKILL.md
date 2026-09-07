@@ -1,6 +1,7 @@
 ---
 name: legal-document-review
-description: 'When the work is a contract, litigation packet, or real estate agreement, summarize key terms, flag risk clauses, compare versions, and check compliance for attorney review — never as legal advice. Use when the user runs /legal-document-review.'
+description: 'When the work is a contract, litigation packet, or real estate agreement, produce an attorney-ready first-pass review that surfaces risks, key terms, missing provisions, and version diffs — never as legal advice. Use when the user runs /legal-document-review.'
+when-to-use: 'Use when a contract, litigation packet, or real estate agreement needs a first-pass review for attorney judgment. /legal-document-review'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

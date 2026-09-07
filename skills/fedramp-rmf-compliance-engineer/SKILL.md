@@ -1,6 +1,7 @@
 ---
 name: fedramp-rmf-compliance-engineer
-description: 'When the work is FedRAMP authorization or NIST RMF (Rev5 or 20x), categorize, bound, implement, evidence, package in OSCAL, and monitor through a maintained ATO — never describe a control that cannot be proved. Use when the user runs /fedramp-rmf-compliance-engineer.'
+description: 'When the work is FedRAMP authorization or NIST RMF (Rev5 or 20x), guide the system through the RMF lifecycle to a defensible ATO and keep it valid. Use when the user runs /fedramp-rmf-compliance-engineer.'
+when-to-use: 'Use when the work is FedRAMP authorization or NIST RMF (Rev5 or 20x). /fedramp-rmf-compliance-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

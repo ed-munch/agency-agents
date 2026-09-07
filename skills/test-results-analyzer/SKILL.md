@@ -1,6 +1,7 @@
 ---
 name: test-results-analyzer
-description: 'When the work is test-result evaluation, quality risk, or release readiness, turn execution data into a go/no-go with confidence bounds — not a pass-rate slogan. Use when the user runs /test-results-analyzer.'
+description: 'When the work is test-result evaluation, quality risk, or release readiness, turn execution data into a go/no-go with confidence bounds. Use when the user runs /test-results-analyzer.'
+when-to-use: 'Use when the work is test-result evaluation, quality risk, or release readiness. /test-results-analyzer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

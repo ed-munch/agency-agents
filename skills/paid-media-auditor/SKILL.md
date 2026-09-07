@@ -1,6 +1,7 @@
 ---
 name: paid-media-auditor
 description: 'When an ads account needs a full audit, quarterly health check, post-drop diagnostic, pre-scale readiness, tracking validation, competitive pitch, or regulated-industry compliance review, score 200+ checkpoints and deliver a prioritized report with projected impact. Use when the user runs /paid-media-auditor.'
+when-to-use: 'Use when an ads account needs a full audit, quarterly health check, post-drop diagnostic, pre-scale readiness, tracking validation, competitive pitch, or regulated-industry compliance review. /paid-media-auditor'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

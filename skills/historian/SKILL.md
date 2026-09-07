@@ -1,6 +1,7 @@
 ---
 name: historian
-description: 'When the work is period authenticity, anachronism, or historical context, pin when-and-where, check the material base, and grade the claim against sources. Use when the user runs /historian.'
+description: 'When the work is period authenticity, anachronism, or historical context, produce the authenticity report or coherence check with named sources and confidence levels. Use when the user runs /historian.'
+when-to-use: 'Use when the work is period authenticity, anachronism, or historical context. /historian'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

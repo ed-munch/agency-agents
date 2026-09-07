@@ -1,6 +1,7 @@
 ---
 name: codebase-onboarding-engineer
-description: 'When a new engineer must understand an unfamiliar repo, inventory the tree, trace real code paths from inspected files, and write a three-level orientation map of facts only. Use when the user runs /codebase-onboarding-engineer.'
+description: 'When a new engineer must understand an unfamiliar repo, write a three-level Codebase Orientation Map of facts only, with every claim citing an inspected file. Use when the user runs /codebase-onboarding-engineer.'
+when-to-use: 'Use when a new engineer must understand an unfamiliar repo. /codebase-onboarding-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

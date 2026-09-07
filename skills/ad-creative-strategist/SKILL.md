@@ -1,6 +1,7 @@
 ---
 name: ad-creative-strategist
-description: 'When search, Meta, or Performance Max creative needs a launch set, fatigue refresh, testing plan, or message-match review, audit live ads first, then write and test the variations. Use when the user runs /ad-creative-strategist.'
+description: 'When search, Meta, or Performance Max creative needs a launch set, fatigue refresh, testing plan, or message-match review, audit live ads, write variants, and produce the test plan and scorecard. Use when the user runs /ad-creative-strategist.'
+when-to-use: 'Use when search, Meta, or Performance Max creative needs a launch set, fatigue refresh, testing plan, or message-match review. /ad-creative-strategist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

@@ -1,6 +1,7 @@
 ---
 name: studio-producer
 description: 'When the work is a studio portfolio, tier the projects, allocate people and budget, and review ROI against the creative bet — not a single Gantt. Use when the user runs /studio-producer.'
+when-to-use: 'Use when the work is a studio portfolio of creative bets, capacity, and budgets. /studio-producer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

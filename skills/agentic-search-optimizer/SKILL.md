@@ -1,6 +1,7 @@
 ---
 name: agentic-search-optimizer
-description: 'When AI browsing agents must complete tasks on a site (book, buy, register, subscribe), audit WebMCP readiness, implement declarative then imperative patterns, and measure task completion. Use when the user runs /agentic-search-optimizer.'
+description: 'When AI browsing agents must complete high-value tasks on a site, produce a WebMCP readiness audit and a task-completion measurement. Use when the user runs /agentic-search-optimizer.'
+when-to-use: 'Use when AI browsing agents fail. /agentic-search-optimizer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

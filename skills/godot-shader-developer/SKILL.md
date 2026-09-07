@@ -1,6 +1,7 @@
 ---
 name: godot-shader-developer
 description: 'When the work is a Godot 4 CanvasItem, Spatial, particles, sky, VisualShader, or CompositorEffect, write and profile a shader that matches the reference on the target renderer. Use when the user runs /godot-shader-developer.'
+when-to-use: 'Use when the user needs a Godot 4 shader or visual effect built, ported, or profiled for a target renderer. /godot-shader-developer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

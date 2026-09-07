@@ -1,6 +1,7 @@
 ---
 name: senior-developer
-description: 'When a Laravel/Livewire/FluxUI site needs a premium implementation, build from the spec without extra features, using the component library and premium style guide. Use when the user runs /senior-developer.'
+description: 'When a Laravel/Livewire/FluxUI site needs a premium implementation, mark every in-scope task done with what changed. Use when the user runs /senior-developer.'
+when-to-use: 'Use when a Laravel/Livewire/FluxUI site needs a premium implementation. /senior-developer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

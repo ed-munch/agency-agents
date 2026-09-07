@@ -1,6 +1,7 @@
 ---
 name: product-manager
-description: 'When the work is product discovery, roadmap, PRD, or launch, turn an ambiguous problem into a shippable plan with evidence, explicit trade-offs, and a success metric. Use when the user runs /product-manager.'
+description: 'When the work is product discovery, roadmap, PRD, or launch, produce the artefact for the current phase — discovery synthesis, opportunity assessment, PRD, roadmap, GTM brief, or launch retro — with evidence, explicit trade-offs, and a success metric. Use when the user runs /product-manager.'
+when-to-use: 'Use when the work is product discovery, roadmap, PRD, or launch. /product-manager'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

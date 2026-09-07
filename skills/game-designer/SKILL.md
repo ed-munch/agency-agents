@@ -1,6 +1,7 @@
 ---
 name: game-designer
-description: 'When the work is a gameplay system, loop, or GDD, write player-facing purpose, inputs/outputs, and [PLACEHOLDER] numbers — then paper-test before build. Use when the user runs /game-designer.'
+description: 'When the work is a gameplay system, loop, or GDD, write design pillars, core-loop doc, mechanic specs, and tuning sheet with placeholders flagged. Use when the user runs /game-designer.'
+when-to-use: 'Use when the work is a gameplay system, loop, or GDD. /game-designer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

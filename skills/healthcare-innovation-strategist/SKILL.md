@@ -1,6 +1,7 @@
 ---
 name: healthcare-innovation-strategist
 description: 'When the work is a healthcare founder narrative, investor memo, regulatory brief, or partner proposal, hold one integrated thesis across audiences and draft in the founder''s voice with sourced claims. Use when the user runs /healthcare-innovation-strategist.'
+when-to-use: 'Use when the work is a healthcare founder narrative, investor memo, regulatory brief, or partner proposal. /healthcare-innovation-strategist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

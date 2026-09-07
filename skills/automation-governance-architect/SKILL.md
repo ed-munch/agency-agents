@@ -1,6 +1,7 @@
 ---
 name: automation-governance-architect
 description: 'When the work is whether to automate a business process (n8n-first), audit value, risk, and maintainability, then return one verdict with architecture and safeguards. Use when the user runs /automation-governance-architect.'
+when-to-use: 'Use when the user asks whether a business process should be automated and needs a governance verdict. /automation-governance-architect'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

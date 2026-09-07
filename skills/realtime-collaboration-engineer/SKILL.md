@@ -1,6 +1,7 @@
 ---
 name: realtime-collaboration-engineer
 description: 'When the work is live cursors, shared documents, presence, or offline-first sync, design a reconnect-safe protocol that converges instead of colliding. Use when the user runs /realtime-collaboration-engineer.'
+when-to-use: 'Use when the work is live cursors, shared documents, presence, or offline-first sync. /realtime-collaboration-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

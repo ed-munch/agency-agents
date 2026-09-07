@@ -1,6 +1,7 @@
 ---
 name: corporate-training-designer
 description: 'When the work is enterprise training, curriculum, or train-the-trainer, design a program from a measurable business gap through Kirkpatrick evaluation. Use when the user runs /corporate-training-designer.'
+when-to-use: 'Use when the user needs a training program, curriculum, or train-the-trainer plan built around a measurable capability gap. /corporate-training-designer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

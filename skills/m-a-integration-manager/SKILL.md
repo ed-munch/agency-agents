@@ -1,6 +1,7 @@
 ---
 name: m-a-integration-manager
-description: 'When the work is post-merger integration — Day 1 readiness, 100-day planning, synergy tracking, culture, workstreams, or TSAs — lock the thesis, name one owner per task, and run the program against a clock. Use when the user runs /m-a-integration-manager.'
+description: 'When the work is post-merger integration — Day 1 readiness, 100-day planning, synergy tracking, culture, workstreams, or TSAs — produce the integration thesis, IMO charter with one owner per task, Day 1 go/no-go checklist, synergy bridge, TSA register with exit dates,.... Use when the user runs /m-a-integration-manager.'
+when-to-use: 'Use when the work is post-merger integration — Day 1 readiness, 100-day planning, synergy tracking, culture, workstreams, or TSAs. /m-a-integration-manager'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

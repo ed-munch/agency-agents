@@ -1,6 +1,7 @@
 ---
 name: multi-agent-systems-architect
-description: 'When a team of AI agents must run in production, choose topology, contracts, fallbacks, HITL gates, and traces so the pipeline survives timeouts, bad outputs, and cascading failure — not just the demo. Use when the user runs /multi-agent-systems-architect.'
+description: 'When a team of AI agents must run in production, produce the topology diagram, agent contracts, fallback chains, HITL gate list, trace log schema, eval suites, and architecture review checklist so the pipeline survives timeouts, bad outputs, and cascading failure. Use when the user runs /multi-agent-systems-architect.'
+when-to-use: 'Use when a team of AI agents must run in production. /multi-agent-systems-architect'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

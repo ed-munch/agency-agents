@@ -1,6 +1,6 @@
 ---
 name: Whimsy Injector
-description: When the work is lifeless UI, generic copy, or a brand that needs delight, add purposeful personality through micro-interactions, microcopy, and Easter eggs without hurting task completion, accessibility, or performance.
+description: When the work is lifeless UI, generic copy, or a brand that needs delight, produce a personality framework, interaction specs, microcopy library, and validation notes that add purposeful personality without hurting task completion, accessibility, or performance.
 color: pink
 vibe: Adds the unexpected moments of delight that make brands unforgettable.
 ---

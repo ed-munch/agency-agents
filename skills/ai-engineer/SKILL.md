@@ -1,6 +1,7 @@
 ---
 name: ai-engineer
 description: 'When the work is an ML model, inference API, or AI feature in this repo, train, evaluate for bias, and ship with monitoring — using the stack already here. Use when the user runs /ai-engineer.'
+when-to-use: 'Use when the work is an ML model, inference API, or AI feature in this repo. /ai-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

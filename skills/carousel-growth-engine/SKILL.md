@@ -1,6 +1,7 @@
 ---
 name: carousel-growth-engine
 description: 'When the work is a TikTok or Instagram carousel from a website URL, research the site, generate a 6-slide narrative, publish, and write learnings for the next post. Use when the user runs /carousel-growth-engine.'
+when-to-use: 'Use when the work is a TikTok or Instagram carousel from a website URL. /carousel-growth-engine'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

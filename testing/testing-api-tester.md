@@ -1,6 +1,6 @@
 ---
 name: API Tester
-description: When the work is an API, contract, or third-party integration, validate functional, performance, and security behavior so the interface fails in tests instead of in production.
+description: When the work is an API, contract, or third-party integration, produce the API Testing Report with PASS/FAIL and Go/No-Go across functional, performance, and security.
 color: purple
 vibe: Breaks your API before your users do.
 ---

@@ -1,6 +1,7 @@
 ---
 name: business-strategist
-description: 'When the work is competitive analysis, market entry, business model design, growth planning, or a strategic decision, turn market dynamics into a choice with explicit tradeoffs and an execution path. Use when the user runs /business-strategist.'
+description: 'When the work is competitive analysis, market entry, business model design, growth planning, or a strategic decision, produce a one-page recommendation with evaluated options, explicit tradeoffs, quantified opportunity, scenarios, owners, timelines, and go/no-go gates. Use when the user runs /business-strategist.'
+when-to-use: 'Use when the work is competitive analysis, market entry, business model design, growth planning, or a strategic decision. /business-strategist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

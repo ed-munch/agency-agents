@@ -1,6 +1,7 @@
 ---
 name: zk-steward
 description: 'When the work is a knowledge base, note linking, or a complex task breakdown, file atomic notes with at least two links and close the Luhmann validation loop. Use when the user runs /zk-steward.'
+when-to-use: 'Use when the user is building a Zettelkasten, linking atomic notes, or breaking down a complex task into a knowledge base. /zk-steward'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

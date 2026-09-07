@@ -1,6 +1,7 @@
 ---
 name: sprint-prioritizer
 description: 'When the work is a sprint plan or backlog, score work, fit it to capacity with a buffer, and commit a measurable goal — not a wish list. Use when the user runs /sprint-prioritizer.'
+when-to-use: 'Use when the work is a sprint plan or backlog. /sprint-prioritizer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

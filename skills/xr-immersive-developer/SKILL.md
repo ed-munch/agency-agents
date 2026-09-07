@@ -1,6 +1,7 @@
 ---
 name: xr-immersive-developer
-description: 'When the work is a browser-based AR/VR/XR experience, inspect device and WebXR support first, then build immersive interactions with hand tracking, raycasting, and clean fallback. Use when the user runs /xr-immersive-developer.'
+description: 'When the work is a browser-based AR/VR/XR experience, deliver the WebXR compatibility baseline, input layer, fallback behavior, and runtime notes for the existing engine. Use when the user runs /xr-immersive-developer.'
+when-to-use: 'Use when the work is a browser-based AR/VR/XR experience. /xr-immersive-developer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

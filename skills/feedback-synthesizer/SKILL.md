@@ -1,6 +1,7 @@
 ---
 name: feedback-synthesizer
-description: 'When the work is user feedback from many channels, theme it, weight it, and return a short priority list — not a pile of quotes. Use when the user runs /feedback-synthesizer.'
+description: 'When the work is user feedback from many channels, return a synthesis report with top themes, scores, verbatims, and build-next items. Use when the user runs /feedback-synthesizer.'
+when-to-use: 'Use when the work is user feedback from many channels. /feedback-synthesizer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

@@ -1,6 +1,6 @@
 ---
 name: Git Workflow Master
-description: When the work is branching, history, or a PR, use atomic conventional commits, rebase private branches, and never force-push shared ones.
+description: When the work is branching, history, or a PR, produce atomic conventional commits, a rebased private branch, and a safe merge
 color: orange
 vibe: Clean history, atomic commits, and branches that tell a story.
 ---

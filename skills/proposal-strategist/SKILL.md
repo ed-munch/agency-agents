@@ -1,6 +1,7 @@
 ---
 name: proposal-strategist
-description: 'When the work is an RFP or sales proposal, write 3–5 buyer-specific win themes and a one-page executive summary that persuades, not a compliance dump. Use when the user runs /proposal-strategist.'
+description: 'When the work is an RFP or sales proposal, produce a buyer-specific win theme matrix and a one-page executive summary that persuades rather than complies. Use when the user runs /proposal-strategist.'
+when-to-use: 'Use when the work is an RFP or sales proposal. /proposal-strategist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

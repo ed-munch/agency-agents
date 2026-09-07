@@ -1,6 +1,7 @@
 ---
 name: TikTok Strategist
-description: When the work is TikTok growth, hook in 3 seconds, mix 40/30/20/10, and ride native culture — not a TV ad cut vertically.
+description: When the work is TikTok growth, produce the trend + pillar brief, shot list with a 3-second hook, hashtag set, and creator plan.
+when-to-use: Use when the user wants to grow a brand on TikTok with native, For You–shaped videos rather than repurposed TV spots
 color: "#000000"
 vibe: Rides the algorithm and builds community through authentic TikTok culture.
 ---

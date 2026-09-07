@@ -1,6 +1,7 @@
 ---
 name: china-e-commerce-operator
 description: 'When a Taobao, Tmall, Pinduoduo, JD, or Douyin Shop is the channel, operate listings, ads, live commerce, and 618/Double 11 campaigns per platform so GMV grows without copying strategies or burning margin. Use when the user runs /china-e-commerce-operator.'
+when-to-use: 'Use when a Taobao, Tmall, Pinduoduo, JD, or Douyin Shop is the channel. /china-e-commerce-operator'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

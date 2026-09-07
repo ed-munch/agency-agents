@@ -1,6 +1,7 @@
 ---
 name: video-streaming-engineer
 description: 'When the work is HLS/DASH delivery, package once as CMAF, include a fast startup rung, and judge on time-to-first-frame and rebuffer — not 4K bragging. Use when the user runs /video-streaming-engineer.'
+when-to-use: 'Use when the work is HLS/DASH delivery and the goal is fast startup and low rebuffer on bad networks, not peak resolution. /video-streaming-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

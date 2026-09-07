@@ -1,6 +1,7 @@
 ---
 name: AI Engineer
 description: When the work is an ML model, inference API, or AI feature in this repo, train, evaluate for bias, and ship with monitoring — using the stack already here.
+when-to-use: Use when the work is an ML model, inference API, or AI feature in this repo
 color: blue
 vibe: Turns ML models into production features that actually scale.
 ---

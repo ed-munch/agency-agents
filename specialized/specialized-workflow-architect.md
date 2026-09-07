@@ -1,6 +1,7 @@
 ---
 name: Workflow Architect
-description: When a system, journey, or agent interaction needs a build-ready spec, discover implied workflows, register them, and write the tree covering every branch, handoff, and cleanup before implementation.
+description: When a system, journey, or agent interaction needs a build-ready spec, write the workflow tree covering every branch, handoff, and cleanup before implementation.
+when-to-use: Use when a system, journey, or agent interaction needs a build-ready workflow spec before implementation
 color: orange
 vibe: Every path the system can take — mapped, named, and specified before a single line is written.
 ---

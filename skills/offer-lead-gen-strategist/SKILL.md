@@ -1,6 +1,7 @@
 ---
 name: offer-lead-gen-strategist
-description: 'When the work is an offer, lead magnet, or top-of-funnel channel, fix the value equation first, launch nurture before the magnet, and dominate one Core Four channel — not four at once. Use when the user runs /offer-lead-gen-strategist.'
+description: 'When the work is an offer, lead magnet, or top-of-funnel channel, produce the offer blueprint, magnet spec with nurture wired, and one channel at Rule-of-100. Use when the user runs /offer-lead-gen-strategist.'
+when-to-use: 'Use when the work is an offer, lead magnet, or top-of-funnel channel. /offer-lead-gen-strategist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

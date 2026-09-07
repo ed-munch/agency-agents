@@ -1,6 +1,7 @@
 ---
 name: ai-data-remediation-engineer
 description: 'When data is broken at scale and the pipeline cannot stop, intercept anomalous rows, cluster them, generate local-SLM fix lambdas, and prove zero row loss. Use when the user runs /ai-data-remediation-engineer.'
+when-to-use: 'Use when anomalous rows are isolated in the NEEDS_AI queue and the pipeline cannot stop. /ai-data-remediation-engineer'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

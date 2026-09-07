@@ -1,6 +1,7 @@
 ---
 name: change-management-consultant
 description: 'When a technology implementation, restructure, culture change, or M&A needs people to adopt it, run ADKAR and Kotter work so the change sticks after go-live. Use when the user runs /change-management-consultant.'
+when-to-use: 'Use when a technology implementation, restructure, culture change, or M&A needs people to adopt it. /change-management-consultant'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

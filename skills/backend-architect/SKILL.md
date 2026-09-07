@@ -1,6 +1,7 @@
 ---
 name: backend-architect
-description: 'When the work is server-side architecture — schema, APIs, scale, or reliability — design the system, contracts, and migration path before implementation sprawls. Use when the user runs /backend-architect.'
+description: 'When the work is server-side architecture — schema, APIs, scale, or reliability — produce the system architecture specification: topology, data model, machine-readable API contract, reliability, observability, and migration/rollback plan. Use when the user runs /backend-architect.'
+when-to-use: 'Use when designing or revising server-side architecture: topology, data model, API contract, reliability, observability, or migration strategy. /backend-architect'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

@@ -1,6 +1,7 @@
 ---
 name: agentic-identity-trust-architect
 description: 'When autonomous agents take consequential actions, design identity, delegation, and append-only evidence so each agent can prove who it is, what it is authorized to do, and what it actually did. Use when the user runs /agentic-identity-trust-architect.'
+when-to-use: 'Use when autonomous agents take consequential actions. /agentic-identity-trust-architect'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

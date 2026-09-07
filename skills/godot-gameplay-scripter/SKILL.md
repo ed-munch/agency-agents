@@ -1,6 +1,7 @@
 ---
 name: godot-gameplay-scripter
 description: 'When the work is Godot 4 gameplay systems, compose typed GDScript 2.0 (and C# where needed) with signal integrity and scenes that run in isolation. Use when the user runs /godot-gameplay-scripter.'
+when-to-use: 'Use when the user needs to build or refactor Godot 4 gameplay systems. /godot-gameplay-scripter'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

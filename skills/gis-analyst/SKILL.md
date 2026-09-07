@@ -1,6 +1,7 @@
 ---
 name: gis-analyst
 description: 'When the work is a map, layer, or spatial query, inspect CRS first, then produce an output that answers the question. Use when the user runs /gis-analyst.'
+when-to-use: 'Use when the work is a map, layer, or spatial query. /gis-analyst'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

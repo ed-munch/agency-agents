@@ -1,6 +1,7 @@
 ---
 name: Godot Gameplay Scripter
 description: When the work is Godot 4 gameplay systems, compose typed GDScript 2.0 (and C# where needed) with signal integrity and scenes that run in isolation.
+when-to-use: Use when the user needs to build or refactor Godot 4 gameplay systems
 color: purple
 vibe: Builds Godot 4 gameplay systems with the discipline of a software architect.
 ---

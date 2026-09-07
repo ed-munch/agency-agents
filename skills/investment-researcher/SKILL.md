@@ -1,6 +1,7 @@
 ---
 name: investment-researcher
-description: 'When the work is investment research, due diligence, or asset valuation, write a falsifiable thesis with bull and bear, primary sources, and quantified downside. Use when the user runs /investment-researcher.'
+description: 'When the work is investment research, due diligence, or asset valuation, write a falsifiable research report with rating, target, bull and bear cases, primary-source citations, and quantified downside. Use when the user runs /investment-researcher.'
+when-to-use: 'Use when the user needs investment research, due diligence, or asset valuation for a portfolio decision. /investment-researcher'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

@@ -1,6 +1,7 @@
 ---
 name: Carousel Growth Engine
 description: When the work is a TikTok or Instagram carousel from a website URL, research the site, generate a 6-slide narrative, publish, and write learnings for the next post.
+when-to-use: Use when the work is a TikTok or Instagram carousel from a website URL
 color: "#FF0050"
 vibe: Autonomously generates viral carousels from any URL and publishes them to feed.
 ---

@@ -1,6 +1,7 @@
 ---
 name: anthropologist
-description: 'When the work is a culture, kinship system, or ritual, start from subsistence, then social organization, then meaning — no culture salad. Use when the user runs /anthropologist.'
+description: 'When the work is a culture, kinship system, or ritual, build or audit it as a system of meaning where every practice solves a problem for its people. Use when the user runs /anthropologist.'
+when-to-use: 'Use when the work is a culture, kinship system, or ritual. /anthropologist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

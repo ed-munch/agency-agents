@@ -1,6 +1,7 @@
 ---
 name: Experiment Tracker
 description: When the work is an A/B test, feature experiment, or hypothesis, design it with sample size and guardrails, then analyze to a written go/no-go.
+when-to-use: Use when the user needs to design, run, or analyze an A/B test, feature experiment, or hypothesis
 color: purple
 vibe: Designs experiments, tracks results, and lets the data decide.
 ---

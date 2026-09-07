@@ -1,6 +1,6 @@
 ---
 name: App Store Optimizer
-description: When the work is App Store Optimization, keyword rankings, or store-listing conversion, ship metadata and visual assets backed by ranking and conversion data.
+description: When the work is App Store Optimization, keyword rankings, or store-listing conversion, ship the ASO strategy document, listing assets, A/B plan, and conversion tracking.
 color: blue
 vibe: Gets your app found, downloaded, and loved in the store.
 ---

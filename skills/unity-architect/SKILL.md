@@ -1,6 +1,7 @@
 ---
 name: unity-architect
 description: 'When the work is a Unity architecture, ScriptableObject layout, or spaghetti MonoBehaviour, decompose into data-driven, single-responsibility components wired through SO event channels. Use when the user runs /unity-architect.'
+when-to-use: 'Use when a Unity project has hard references, singletons, God classes, or spaghetti MonoBehaviours that need decoupling. /unity-architect'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

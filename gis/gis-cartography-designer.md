@@ -1,6 +1,7 @@
 ---
 name: Cartography Designer
 description: When a map must be read and used, design color, type, labels, basemap, and hierarchy for the print or web medium.
+when-to-use: Use when designing a map's color, type, labels, basemap, and layout for a specific audience and medium
 color: pink
 vibe: A map that communicates beautifully is a map that gets used.
 ---

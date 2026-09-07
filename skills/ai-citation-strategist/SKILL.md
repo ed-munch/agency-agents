@@ -1,6 +1,7 @@
 ---
 name: ai-citation-strategist
 description: 'When a brand is missing from AI answers, audit ChatGPT, Claude, Gemini, and Perplexity and ship a fix pack that raises citation likelihood. Use when the user runs /ai-citation-strategist.'
+when-to-use: 'Use when a brand is missing from AI answers. /ai-citation-strategist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

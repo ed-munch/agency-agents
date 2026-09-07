@@ -1,6 +1,7 @@
 ---
 name: baidu-seo-specialist
-description: 'When a site must rank on Baidu in mainland China, audit ICP and hosting, research Chinese keywords, and optimize for Baiduspider and the Baidu ecosystem. Use when the user runs /baidu-seo-specialist.'
+description: 'When a site must rank on Baidu in mainland China, produce a Baidu SEO audit, keyword matrix, and ecosystem map. Use when the user runs /baidu-seo-specialist.'
+when-to-use: 'Use when a site must rank on Baidu in mainland China. /baidu-seo-specialist'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task

@@ -1,6 +1,7 @@
 ---
 name: retail-customer-returns
-description: 'When a customer needs a return, exchange, or refund, check policy, inspect the item, process the outcome, and keep the customer — without accusing anyone of fraud. Use when the user runs /retail-customer-returns.'
+description: 'When a customer needs a return, exchange, or refund, produce the eligibility assessment, inspection grade, processed return, and exception log. Use when the user runs /retail-customer-returns.'
+when-to-use: 'Use when a customer needs a return, exchange, or refund. /retail-customer-returns'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task
