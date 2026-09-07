@@ -12,7 +12,7 @@ candidates := slugs pertinents pour TASK
 |c|==0 → pick 1 + "closest: /slug (no clean match)"
 |c|==1 → that slug
 |c|>=2 → un `load-specialist.py` plein par candidat ; jobs différents ET les deux ont ## Method
-         → ASK (wait nr64, pas de spawn) ; sinon CLOSEST
+         → ASK (wait user, pas de spawn) ; sinon CLOSEST
 ```
 
 Sans `## Method` (vu dans le stdout) → CLOSEST. ASK pending → pas de spawn.
@@ -21,7 +21,7 @@ Sans `## Method` (vu dans le stdout) → CLOSEST. ASK pending → pas de spawn.
 
 `python3 integrations/grok/load-specialist.py <slug>` from the plugin root — un appel par slug, stdout = IDENTITY+METHOD.  
 Exit 2 `LOC_PLUGIN_MISSING` · 3 `LOC_SLUG_UNKNOWN` · 4 `LOC_SKILL_UNREADABLE`.  
-`LOC_ASK` : 3–5 slugs **déjà** dossiers `skills/<slug>/` ; wait nr64 ; pas de spawn.
+`LOC_ASK` : 3–5 slugs **déjà** dossiers `skills/<slug>/` ; wait user ; pas de spawn.
 
 ## Prompt + label
 
