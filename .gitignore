@@ -7,7 +7,7 @@
 # Thumbnails
 Thumbs.db
 
-# Editor directories and files
+# Editor
 .vscode/
 .idea/
 *.swp
@@ -19,15 +19,7 @@ Thumbs.db
 *.sublime-project
 *.sublime-workspace
 
-# Node.js (if adding web tools later)
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-package-lock.json
-yarn.lock
-
-# Python (if adding scripts)
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
@@ -38,54 +30,15 @@ venv/
 ENV/
 .venv
 
-# Logs
+# Logs / temp
 *.log
 logs/
-
-# Temporary files
 *.tmp
 *.temp
 .cache/
 
-# Testing
-coverage/
-.nyc_output/
-*.lcov
-
-# Build outputs
-dist/
-build/
-*.egg-info/
-
-# Personal notes and scratch files
+# Personal notes
 scratch/
 notes/
 TODO.md
 NOTES.md
-
-# Generated integration files — run scripts/convert.sh to regenerate locally
-# The scripts/ and integrations/*/README.md files ARE committed; only generated
-# agent/skill files are excluded.
-integrations/antigravity/agency-*/
-integrations/gemini-cli/skills/
-integrations/gemini-cli/gemini-extension.json
-integrations/gemini-cli/agents
-integrations/opencode/agents/
-integrations/cursor/rules/
-integrations/aider/CONVENTIONS.md
-integrations/windsurf/.windsurfrules
-integrations/openclaw/*
-integrations/qwen/agents/
-integrations/kimi/*/
-!integrations/openclaw/README.md
-!integrations/kimi/README.md
-integrations/codex/agents/*
-integrations/osaurus/agency-*/
-integrations/hermes/agency-agents-router/
-integrations/vibe/agents/
-integrations/vibe/prompts/
-integrations/zcode/agents/
-graphify-out/
-
-# Generated Grok mirror (committed copy lives in skills/)
-integrations/grok/skills/
