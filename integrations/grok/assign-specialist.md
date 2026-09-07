@@ -1,7 +1,7 @@
-# spawn
+# assign-specialist
 
 Invariant : chaque agent / subagent a un specialist `agency-agents`. Pas de helper générique.  
-Canal : `prompt` (`spawn_subagent` n’a pas de champ `persona`). Slice mécanique : `slice.py`.
+Canal : `prompt` (`spawn_subagent` n’a pas de champ `persona`). `load-specialist.py`.
 
 ## Pick
 
@@ -11,27 +11,27 @@ Matching = jugement parent. Slug `agency` interdit. Catalog hors enfant.
 candidates := slugs pertinents pour TASK
 |c|==0 → pick 1 + "closest: /slug (no clean match)"
 |c|==1 → that slug
-|c|>=2 → un `slice.py` plein par candidat ; jobs différents ET les deux ont ## Method
+|c|>=2 → un `load-specialist.py` plein par candidat ; jobs différents ET les deux ont ## Method
          → ASK (wait nr64, pas de spawn) ; sinon CLOSEST
 ```
 
 Sans `## Method` (vu dans le stdout) → CLOSEST. ASK pending → pas de spawn.
 
-## Locate + slice
+## Load specialist
 
-`python3 integrations/grok/slice.py <slug>` from the plugin root — un appel par slug, stdout = IDENTITY+METHOD.  
+`python3 integrations/grok/load-specialist.py <slug>` from the plugin root — un appel par slug, stdout = IDENTITY+METHOD.  
 Exit 2 `LOC_PLUGIN_MISSING` · 3 `LOC_SLUG_UNKNOWN` · 4 `LOC_SKILL_UNREADABLE`.  
 `LOC_ASK` : 3–5 slugs **déjà** dossiers `skills/<slug>/` ; wait nr64 ; pas de spawn.
 
 ## Prompt + label
 
 ```
-PROMPT := stdout de slice.py (gagnant) + TASK
+PROMPT := stdout de load-specialist.py (gagnant) + TASK
 description := "[" slug "]" SP rest     # rest = tâche courte, sans le slug
 annonce    := "persona: /" slug
 ```
 
-Les trois slugs identiques. Interdit : `slug: rest`, bullets à la place du slice, IDENTITY sans METHOD.
+Les trois slugs identiques. Interdit : `slug: rest`, bullets à la place de la METHOD, IDENTITY sans METHOD.
 
 ## Overlay
 
@@ -41,7 +41,7 @@ Méthode : Agency gagne vs persona bundlée (`[writer]`, …). Une METHOD. Pas d
 ## Happy path
 
 1. Candidates  
-2. `slice.py` sur le ou les deux meilleurs  
+2. `load-specialist.py` sur le ou les deux meilleurs  
 3. ASK / CLOSEST ; annonce dès le gagnant  
 4. PROMPT = stdout gagnant + TASK ; `description`  
 5. `spawn_subagent`  

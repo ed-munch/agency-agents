@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Locate + slice a specialist SKILL.md. Contract: spawn.md
+"""Load a specialist SKILL.md. Contract: assign-specialist.md
 
 Usage:
-  slice.py <slug>    IDENTITY + METHOD on stdout
+  load-specialist.py <slug>    IDENTITY + METHOD on stdout
 
 Exit: 0 ok, 2 LOC_PLUGIN_MISSING, 3 LOC_SLUG_UNKNOWN, 4 LOC_SKILL_UNREADABLE
 """
@@ -119,7 +119,7 @@ def load(slug: str) -> tuple[int, Path | None, str]:
 def main(argv: list[str]) -> int:
     args = argv[1:]
     if len(args) != 1 or not args[0] or "/" in args[0]:
-        sys.stderr.write("usage: slice.py <slug>\n")
+        sys.stderr.write("usage: load-specialist.py <slug>\n")
         return 2
     slug = args[0]
     code, _path, text = load(slug)

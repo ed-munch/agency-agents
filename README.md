@@ -25,7 +25,7 @@ grok plugin install /path/to/agency-agents --trust
 
 Reload plugins or start a new session. Then `/agency` or `/frontend-developer`.
 
-Spawn a specialist on a subagent: [`integrations/grok/spawn.md`](integrations/grok/spawn.md) + `python3 integrations/grok/slice.py <slug>`.
+Assign a specialist on a subagent: [`integrations/grok/assign-specialist.md`](integrations/grok/assign-specialist.md) + `python3 integrations/grok/load-specialist.py <slug>`.
 
 ## License
 

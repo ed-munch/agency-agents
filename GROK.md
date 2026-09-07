@@ -22,11 +22,11 @@ Specialists are slash-only. `/agency` is the catalog.
 | `/agency` | Roster. Auto-invoked when the user asks for a specialist. |
 | `/<slug>` | Full method for that turn. |
 
-## Spawn
+## Assign a specialist
 
 Every agent/subagent gets one specialist. No generic helper.
 
-- Protocol: `integrations/grok/spawn.md`
-- Slice: `python3 integrations/grok/slice.py <slug>` from the plugin root
+- Protocol: `integrations/grok/assign-specialist.md`
+- Load: `python3 integrations/grok/load-specialist.py <slug>` from the plugin root
 
 Stdout is IDENTITY + METHOD (`persona: /slug`, then Mission / Rules / Method / Done when).

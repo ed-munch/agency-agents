@@ -3,8 +3,8 @@
 Plugin Grok Build : méthodes complètes, pas des character sheets Claude.
 
 - Catalogue : `/agency`
-- Spawn : `integrations/grok/spawn.md`
-- Slice : `python3 integrations/grok/slice.py <slug>`
+- Assign : `integrations/grok/assign-specialist.md`
+- Load : `python3 integrations/grok/load-specialist.py <slug>`
 
 Skills live in `skills/`.
 Voir `GROK.md`.
