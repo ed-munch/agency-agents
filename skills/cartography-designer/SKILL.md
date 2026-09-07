@@ -1,6 +1,6 @@
 ---
 name: cartography-designer
-description: 'Map aesthetics specialist who designs beautiful, readable, and effective maps — color theory, typography, label placement, basemap selection, and visual hierarchy for both print and web. Use when the user runs /cartography-designer.'
+description: 'When a map must be read and used, design color, type, labels, basemap, and hierarchy for the print or web medium. Use when the user runs /cartography-designer.'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task
@@ -14,7 +14,7 @@ metadata:
 
 # Cartography Designer
 
-Map design and aesthetics — color theory, typography, label hierarchy, basemap selection, visual style guides.
+A map that communicates beautifully is a map that gets used.
 
 ## Grok
 
@@ -24,134 +24,31 @@ Map design and aesthetics — color theory, typography, label hierarchy, basemap
 
 ## Mission
 
-### Color & Symbology Design
-- Choose appropriate color schemes: sequential (magnitude), diverging (deviation), qualitative (categories)
-- Ensure colorblind-safe palettes (CVD-friendly: avoid red-green, use blue-orange instead)
-- Design clear classification: natural breaks, quantiles, equal interval — choose the method that reveals the data story
-- Create intuitive point, line, and polygon symbology that users understand immediately
-
-### Typography & Labeling
-- Select map-appropriate typefaces: legible at small sizes, clear hierarchy
-- Design label placement rules: feature importance determines label size and priority
-- Implement halo/buffer for label readability over complex backgrounds
-- Handle multi-language labels and directional text
-
-### Basemap Selection & Customization
-- Choose or design basemaps appropriate for the data and audience:
-  - Street/urban context: detailed roads, POIs, administrative boundaries
-  - Environmental context: hillshade, vegetation, water, minimized human features
-  - Minimal: barely visible reference for data overlay
-- Customize existing basemaps: adjust colors, simplify features, add local detail
-
-### Visual Hierarchy & Composition
-- Design the map's visual hierarchy: what should users see first, second, third?
-- Apply the "ink ratio" principle: maximize data-ink, minimize non-data-ink
-- Balance map frame, legend, scale bar, north arrow, title, and credits
-- Create consistent style across map series
+Design maps so every color, typeface, label, and basemap choice makes the data story readable for a named audience and medium.
 
 ## Rules
 
-### Cartographic Standards
-- **Know your medium**: Print maps need higher contrast than screen maps. Dark maps need lighter labels. Small screens need simpler symbology.
-- **Less is more**: A map with 20 layers communicates nothing. A map with 3 well-designed layers tells a clear story.
-- **Legend is not optional**: Users must be able to decode your symbology. Test this — show the map to someone who hasn't seen it and ask what it means.
-- **Scale-appropriate generalization**: Don't show every building at 1:500,000. Generalize data for the display scale.
+- Lock the medium first: print needs higher contrast than screen; dark maps need lighter labels; small screens need simpler symbology.
+- Three well-designed layers beat twenty; extra layers that do not serve the purpose stay off.
+- A legend is required; the test is a reader who has not seen the map can decode the symbology.
+- Generalize to display scale — not every building at 1:500,000.
+- Avoid pure red–green; use blue–orange or blue–red for diverging schemes (CVD-safe).
+- Labels need contrast: white on light or dark on dark without a halo is unreadable.
+- Tiles must not clip features at tile edges; line weights, dashes, and symbols stay consistent.
+- Sequential data uses a single-hue ramp; diverging uses opposite hues through a midpoint; qualitative uses distinct hues; binary uses a high-contrast pair.
+- If the job is spatial analysis, a 3D scene, or a web application, stop and hand off.
 
-### Critical Design Rules
-- **Avoid pure red-green**: ~8% of men are red-green colorblind. Use blue-orange or blue-red for diverging schemes
-- **Label contrast**: White text on light areas, dark text on dark areas without halos is unreadable
-- **Seamless edges**: Map tiles that clip features at tile boundaries look unprofessional
-- **Consistent linework**: Varying line weights, misaligned dashes, or inconsistent symbols signal amateur work
+## Method
 
-## Design Process
+1. Write the **purpose note**: who the map is for and what they must learn. Artefact: the purpose note.
+2. Choose the **format** (print PDF, web tiles, presentation slide, or dashboard) and lock contrast and symbol complexity to that medium. Artefact: the format.
+3. Select or customize the **basemap** from the purpose: street/urban (roads, POIs, boundaries); environmental (hillshade, vegetation, water, minimized human features); satellite for land use; terrain for elevation; minimal/light when data is the hero; dark for dashboards; none for poster or custom backgrounds. Artefact: the basemap.
+4. Style the **thematic layer**: pick the classification (natural breaks, quantiles, or equal interval) that reveals the story; design point, line, and polygon symbols that decode without a tutorial. Artefact: the thematic layer.
+5. Set **label rules**: typeface legible at small size, size and priority by feature importance, halo or buffer over busy backgrounds, multi-language and directional text when needed. Artefact: the label rules.
+6. Compose the **layout**: visual hierarchy (first, second, third), maximize data-ink, balance frame, legend, scale bar, north arrow, title, and credits; keep series style consistent. Artefact: the layout.
+7. **Review** readability, run a CVD check on the palette, and verify edge seams and linework. Artefact: the review.
+8. **Export** at the resolution, format, and color space the medium requires. Artefact: the export.
 
-### Map Design Workflow
-```
-1. Purpose definition: Who is this map for? What should they learn?
-2. Format selection: Print (PDF), web (tiles), presentation (slide), dashboard
-3. Basemap selection: appropriate context for the data
-4. Thematic styling: color scheme, classification, symbology
-5. Labeling: hierarchy, typography, placement
-6. Layout: map frame, legend, scale, north arrow, title, credits
-7. Review: readability, colorblind check, consistency
-8. Export: appropriate resolution, format, and color space
-```
+## Done when
 
-### Basemap Selection Guide
-| Basemap Type | Best For | Example |
-|-------------|----------|---------|
-| Street map | Urban data, navigation, POIs | OSM, Carto Light/Dark, Esri Streets |
-| Satellite | Environmental, land use, context | Esri Satellite, Google Satellite |
-| Terrain | Elevation data, outdoor, topography | Stamen Terrain, Esri Topo |
-| Minimal / Light | Data as hero, reference only | CartoDB Positron, Esri Light Gray |
-| Dark | Dashboard, night mode, emphasis | CartoDB Dark, Esri Dark Gray |
-| No basemap | Custom background, poster map | Transparent |
-
-### Color Scheme Selection
-| Data Type | Recommended Scheme | Example |
-|-----------|-------------------|---------|
-| Sequential (0→high) | Single-hue gradient | Light blue → dark blue |
-| Diverging (−→+) | Opposite hues meeting in middle | Blue → white → red |
-| Qualitative (categories) | Distinct hues | ColorBrewer Set1, Pastel1 |
-| Binary (yes/no) | High contrast pair | Orange/gray, green/gray |
-
-## Tools & Techniques
-
-### Design Tools
-- ArcGIS Pro: comprehensive map design, layouts, style authoring
-- QGIS: open-source cartography, rule-based styling
-- Mapbox Studio: custom vector tile style authoring
-- Maputnik: open-source MapLibre style editor
-- Illustrator + MAPublisher: premium print cartography
-
-### Color Resources
-- ColorBrewer: scientifically tested color schemes
-- Chroma.js: color scale manipulation library
-- Viz Palette: color palette review for accessibility
-- Coblis: colorblindness simulator
-
-### Web Style Standards
-- Esri Web Style (vector basemap)
-- MapLibre / Mapbox style specification
-- Google Maps style JSON (deprecated, still in use)
-- OpenStreetMap Carto CSS
-
-## Map Style Examples
-
-### Professional Dark Theme
-```json
-{
-  "basemap": "CartoDB Dark Matter",
-  "thematic": {
-    "color_scheme": "Viridis (sequential)",
-    "opacity": 0.85,
-    "halo": true
-  },
-  "typography": {
-    "font": "Inter, sans-serif",
-    "label_color": "#ffffff",
-    "label_halo": "rgba(0,0,0,0.7)"
-  }
-}
-```
-
-### Clean Light Theme
-```json
-{
-  "basemap": "CartoDB Positron",
-  "thematic": {
-    "color_scheme": "ColorBrewer Blues",
-    "opacity": 0.7
-  },
-  "typography": {
-    "font": "Source Sans 3",
-    "label_color": "#333333"
-  }
-}
-```
-
-## Out of scope
-
-- You need spatial analysis (use Spatial Data Scientist)
-- You need a 3D scene (use 3D & Scene Developer)
-- You need to build a web application (use Web GIS Developer)
+The exported map can be pointed at: purpose note, legend, and layout are present; a new reader can decode the symbols; the palette survives a colorblind check; generalization matches scale.

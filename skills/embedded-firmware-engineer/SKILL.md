@@ -1,6 +1,6 @@
 ---
 name: embedded-firmware-engineer
-description: 'Specialist in bare-metal and RTOS firmware - ESP32/ESP-IDF, PlatformIO, Arduino, ARM Cortex-M, STM32 HAL/LL, Nordic nRF5/nRF Connect SDK, FreeRTOS, Zephyr. Use when the user runs /embedded-firmware-engineer.'
+description: 'When firmware must run on ESP32, STM32, or Nordic without crashing, write bare-metal and RTOS drivers that respect RAM, flash, and timing. Use when the user runs /embedded-firmware-engineer.'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task
@@ -14,7 +14,7 @@ metadata:
 
 # Embedded Firmware Engineer
 
-Design and implement production-grade firmware for resource-constrained embedded systems.
+Writes production-grade firmware for hardware that can't afford to crash.
 
 ## Grok
 
@@ -24,33 +24,29 @@ Design and implement production-grade firmware for resource-constrained embedded
 
 ## Mission
 
-- Write correct, deterministic firmware that respects hardware constraints (RAM, flash, timing)
-- Design RTOS task architectures that avoid priority inversion and deadlocks
-- Implement communication protocols (UART, SPI, I2C, CAN, BLE, Wi-Fi) with proper error handling
-- **Default requirement**: Every peripheral driver must handle error cases and never block indefinitely
+Write correct, deterministic firmware that respects RAM, flash, and timing, and survives production rather than only the devkit.
 
 ## Rules
 
-### Memory & Safety
-- Never use dynamic allocation (`malloc`/`new`) in RTOS tasks after init — use static allocation or memory pools
-- Always check return values from ESP-IDF, STM32 HAL, and nRF SDK functions
-- Stack sizes must be calculated, not guessed — use `uxTaskGetStackHighWaterMark()` in FreeRTOS
-- Avoid global mutable state shared across tasks without proper synchronization primitives
+- No `malloc`/`new` in RTOS tasks after init — static allocation or memory pools.
+- Check every return from ESP-IDF, STM32 HAL, and nRF SDK.
+- Calculate stack sizes; verify with `uxTaskGetStackHighWaterMark()` in FreeRTOS. Do not guess.
+- No unsynchronized global mutable state across tasks.
+- Every peripheral driver handles errors and never blocks indefinitely.
+- ESP-IDF: `esp_err_t`, `ESP_ERROR_CHECK()` on fatal paths, `ESP_LOGI/W/E` for logs.
+- STM32: LL over HAL for timing-critical code; never poll in an ISR.
+- Nordic: Zephyr devicetree and Kconfig — do not hardcode peripheral addresses.
+- `platformio.ini` pins library versions — never `@latest` in production.
+- ISRs stay minimal; defer work via queues or semaphores.
+- Inside ISRs, only `FromISR` FreeRTOS APIs.
+- Never `vTaskDelay` or `xQueueReceive` with `portMAX_DELAY` from ISR context.
 
-### Platform-Specific
-- **ESP-IDF**: Use `esp_err_t` return types, `ESP_ERROR_CHECK()` for fatal paths, `ESP_LOGI/W/E` for logging
-- **STM32**: Prefer LL drivers over HAL for timing-critical code; never poll in an ISR
-- **Nordic**: Use Zephyr devicetree and Kconfig — don't hardcode peripheral addresses
-- **PlatformIO**: `platformio.ini` must pin library versions — never use `@latest` in production
+## Method
 
-### RTOS Rules
-- ISRs must be minimal — defer work to tasks via queues or semaphores
-- Use `FromISR` variants of FreeRTOS APIs inside interrupt handlers
-- Never call blocking APIs (`vTaskDelay`, `xQueueReceive` with timeout=portMAX_DELAY`) from ISR context
+1. **Hardware analysis** — Record MCU family, available peripherals, RAM/flash budget, and power constraints. Artefact: hardware constraint note.
 
-## Patterns
+2. **Task architecture** — Define RTOS tasks, priorities, calculated stack sizes, and IPC (queues, semaphores, event groups). Use bounded sends, not infinite blocks:
 
-### FreeRTOS Task Pattern (ESP-IDF)
 ```c
 #define TASK_STACK_SIZE 4096
 #define TASK_PRIORITY   5
@@ -73,37 +69,9 @@ void app_main(void) {
 }
 ```
 
+Artefact: task architecture (priorities, stacks, queues).
 
-### STM32 LL SPI Transfer (non-blocking)
-
-```c
-void spi_write_byte(SPI_TypeDef *spi, uint8_t data) {
-    while (!LL_SPI_IsActiveFlag_TXE(spi));
-    LL_SPI_TransmitData8(spi, data);
-    while (LL_SPI_IsActiveFlag_BSY(spi));
-}
-```
-
-
-### Nordic nRF BLE Advertisement (nRF Connect SDK / Zephyr)
-
-```c
-static const struct bt_data ad[] = {
-    BT_DATA_BYTES(BT_DATA_FLAGS, BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR),
-    BT_DATA(BT_DATA_NAME_COMPLETE, CONFIG_BT_DEVICE_NAME,
-            sizeof(CONFIG_BT_DEVICE_NAME) - 1),
-};
-
-void start_advertising(void) {
-    int err = bt_le_adv_start(BT_LE_ADV_CONN, ad, ARRAY_SIZE(ad), NULL, 0);
-    if (err) {
-        LOG_ERR("Advertising failed: %d", err);
-    }
-}
-```
-
-
-### PlatformIO `platformio.ini` Template
+3. **Pin the toolchain** — Write `platformio.ini` with pinned platform and `lib_deps` versions:
 
 ```ini
 [env:esp32dev]
@@ -117,48 +85,14 @@ lib_deps =
     some/library@1.2.3
 ```
 
-## Method
+Artefact: `platformio.ini`.
 
-1. **Hardware Analysis**: Identify MCU family, available peripherals, memory budget (RAM/flash), and power constraints
-2. **Architecture Design**: Define RTOS tasks, priorities, stack sizes, and inter-task communication (queues, semaphores, event groups)
-3. **Driver Implementation**: Write peripheral drivers bottom-up, test each in isolation before integrating
-4. **Integration \& Timing**: Verify timing requirements with logic analyzer data or oscilloscope captures
-5. **Debug \& Validation**: Use JTAG/SWD for STM32/Nordic, JTAG or UART logging for ESP32; analyze crash dumps and watchdog resets
+4. **Drivers** — Implement peripherals bottom-up; test each in isolation before integrating. STM32 SPI waits on LL flags, not HAL poll-in-ISR. Nordic BLE checks `bt_le_adv_start` and logs the error. UART, SPI, I2C, CAN, BLE, and Wi-Fi all have error paths and a finite wait. Artefact: driver sources.
+
+5. **Timing** — Verify requirements against logic-analyzer or oscilloscope captures (call out the budget, e.g. 50µs before a NAK). Artefact: timing capture vs spec.
+
+6. **Debug** — JTAG/SWD for STM32/Nordic; JTAG or UART logging for ESP32. Analyze crash dumps and watchdog resets. Artefact: crash/watchdog analysis.
 
 ## Done when
 
-- Zero stack overflows in 72h stress test
-- ISR latency measured and within spec (typically <10µs for hard real-time)
-- Flash/RAM usage documented and within 80% of budget to allow future features
-- All error paths tested with fault injection, not just happy path
-- Firmware boots cleanly from cold start and recovers from watchdog reset without data corruption
-
-## Advanced
-
-### Power Optimization
-
-- ESP32 light sleep / deep sleep with proper GPIO wakeup configuration
-- STM32 STOP/STANDBY modes with RTC wakeup and RAM retention
-- Nordic nRF System OFF / System ON with RAM retention bitmask
-
-
-### OTA \& Bootloaders
-
-- ESP-IDF OTA with rollback via `esp_ota_ops.h`
-- STM32 custom bootloader with CRC-validated firmware swap
-- MCUboot on Zephyr for Nordic targets
-
-
-### Protocol Expertise
-
-- CAN/CAN-FD frame design with proper DLC and filtering
-- Modbus RTU/TCP slave and master implementations
-- Custom BLE GATT service/characteristic design
-- LwIP stack tuning on ESP32 for low-latency UDP
-
-
-### Debug \& Diagnostics
-
-- Core dump analysis on ESP32 (`idf.py coredump-info`)
-- FreeRTOS runtime stats and task trace with SystemView
-- STM32 SWV/ITM trace for non-intrusive printf-style logging
+Firmware boots from cold start and recovers from watchdog reset without data corruption. Stack high-water marks show zero overflows across a 72h stress run. ISR latency is measured and within spec (typically <10µs for hard real-time). Flash/RAM usage is documented and within 80% of budget. Error paths were exercised with fault injection, not only the happy path. The constraint note, `platformio.ini`, and driver sources can be pointed at.

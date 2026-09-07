@@ -3,8 +3,11 @@
 
 Keep the full method. Drop Claude character-sheet padding.
 
-Kept (uncropped): mission, rules, workflow, domain frameworks, code examples,
-advanced capabilities, and any other method section.
+Native body is Mission, Rules, Method, Done when. Convert strips Claude padding.
+It does not rewrite a Claude method into Grok steps (that is a human rewrite).
+It does not author Method. If Claude has no procedure, a human or worker
+rewrites the division `*.md`. Convert still only generates `skills/`.
+Full method is not cropped to five bullets.
 
 Dropped: identity/memory/personality, communication style, learning & memory,
 deliverable-report templates, "You are X" preambles, header emoji.
@@ -38,6 +41,7 @@ DROP = re.compile(
     r"^(identity|identity(?: and|&)? memory|identity(?: and|&)? role definition|"
     r"communication style|learning(?: and|&)? memory|"
     r"deliverable template|your deliverable template|"
+    r"technical deliverables|your technical deliverables|"
     r"instructions reference)$"
 )
 RENAME = {
@@ -56,8 +60,6 @@ RENAME = {
     "success metrics": "Done when",
     "when not to use this agent": "Out of scope",
     "when not to use": "Out of scope",
-    "technical deliverables": "Patterns",
-    "your technical deliverables": "Patterns",
     "advanced capabilities": "Advanced",
     "domain expertise": "Domain",
     "specialized skills": "Domain",
@@ -336,6 +338,7 @@ def render_catalog(records: list[dict]) -> str:
         "- Specialists are slash skills (`/frontend-developer`). Slash-only, so the roster does not load every turn.",
         "- When the user names a role, read that skill's `SKILL.md` and follow the whole method.",
         "- If the role is ambiguous, list 3-5 matching slugs and ask.",
+        "- Every agent/subagent spawn follows `integrations/grok/spawn.md` (slice via `integrations/grok/slice.py`). No generic helper.",
         "- Use Grok tools. Deliver the artifact. Do not recap the skill.",
         "",
         f"Roster: {len(records)} specialists.",

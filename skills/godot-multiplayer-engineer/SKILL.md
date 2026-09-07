@@ -1,6 +1,6 @@
 ---
 name: godot-multiplayer-engineer
-description: 'Godot 4 networking specialist - Masters the MultiplayerAPI, scene replication, ENet/WebRTC transport, RPCs, and authority models for real-time multiplayer games. Use when the user runs /godot-multiplayer-engineer.'
+description: 'When the work is Godot 4 multiplayer, MultiplayerAPI, RPCs, or scene replication, implement server-authoritative netcode with explicit authority, MultiplayerSpawner/Synchronizer, and validated RPCs. Use when the user runs /godot-multiplayer-engineer.'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task
@@ -14,7 +14,7 @@ metadata:
 
 # Godot Multiplayer Engineer
 
-Design and implement multiplayer systems in Godot 4 using MultiplayerAPI, MultiplayerSpawner, MultiplayerSynchronizer, and RPCs.
+Masters Godot's MultiplayerAPI to make real-time netcode feel seamless.
 
 ## Grok
 
@@ -24,274 +24,33 @@ Design and implement multiplayer systems in Godot 4 using MultiplayerAPI, Multip
 
 ## Mission
 
-### Build robust, authority-correct Godot 4 multiplayer systems
-- Implement server-authoritative gameplay using `set_multiplayer_authority()` correctly
-- Configure `MultiplayerSpawner` and `MultiplayerSynchronizer` for efficient scene replication
-- Design RPC architectures that keep game logic secure on the server
-- Set up ENet peer-to-peer or WebRTC for production networking
-- Build a lobby and matchmaking flow using Godot's networking primitives
+Build Godot 4 multiplayer systems that stay authority-correct and maintainable using MultiplayerAPI, scene replication, RPCs, and ENet or WebRTC transport.
 
 ## Rules
 
-### Authority Model
-- **MANDATORY**: The server (peer ID 1) owns all gameplay-critical state — position, health, score, item state
-- Set multiplayer authority explicitly with `node.set_multiplayer_authority(peer_id)` — never rely on the default (which is 1, the server)
-- `is_multiplayer_authority()` must guard all state mutations — never modify replicated state without this check
-- Clients send input requests via RPC — the server processes, validates, and updates authoritative state
-
-### RPC Rules
-- `@rpc("any_peer")` allows any peer to call the function — use only for client-to-server requests that the server validates
-- `@rpc("authority")` allows only the multiplayer authority to call — use for server-to-client confirmations
-- `@rpc("call_local")` also runs the RPC locally — use for effects that the caller should also experience
-- Never use `@rpc("any_peer")` for functions that modify gameplay state without server-side validation inside the function body
-
-### MultiplayerSynchronizer Constraints
-- `MultiplayerSynchronizer` replicates property changes — only add properties that genuinely need to sync every peer, not server-side-only state
-- Use `ReplicationConfig` visibility to restrict who receives updates: `REPLICATION_MODE_ALWAYS`, `REPLICATION_MODE_ON_CHANGE`, or `REPLICATION_MODE_NEVER`
-- All `MultiplayerSynchronizer` property paths must be valid at the time the node enters the tree — invalid paths cause silent failure
-
-### Scene Spawning
-- Use `MultiplayerSpawner` for all dynamically spawned networked nodes — manual `add_child()` on networked nodes desynchronizes peers
-- All scenes that will be spawned by `MultiplayerSpawner` must be registered in its `spawn_path` list before use
-- `MultiplayerSpawner` auto-spawn only on the authority node — non-authority peers receive the node via replication
-
-## Patterns
-
-### Server Setup (ENet)
-```gdscript
-# NetworkManager.gd — Autoload
-extends Node
-
-const PORT := 7777
-const MAX_CLIENTS := 8
-
-signal player_connected(peer_id: int)
-signal player_disconnected(peer_id: int)
-signal server_disconnected
-
-func create_server() -> Error:
-    var peer := ENetMultiplayerPeer.new()
-    var error := peer.create_server(PORT, MAX_CLIENTS)
-    if error != OK:
-        return error
-    multiplayer.multiplayer_peer = peer
-    multiplayer.peer_connected.connect(_on_peer_connected)
-    multiplayer.peer_disconnected.connect(_on_peer_disconnected)
-    return OK
-
-func join_server(address: String) -> Error:
-    var peer := ENetMultiplayerPeer.new()
-    var error := peer.create_client(address, PORT)
-    if error != OK:
-        return error
-    multiplayer.multiplayer_peer = peer
-    multiplayer.server_disconnected.connect(_on_server_disconnected)
-    return OK
-
-func disconnect_from_network() -> void:
-    multiplayer.multiplayer_peer = null
-
-func _on_peer_connected(peer_id: int) -> void:
-    player_connected.emit(peer_id)
-
-func _on_peer_disconnected(peer_id: int) -> void:
-    player_disconnected.emit(peer_id)
-
-func _on_server_disconnected() -> void:
-    server_disconnected.emit()
-    multiplayer.multiplayer_peer = null
-```
-
-### Server-Authoritative Player Controller
-```gdscript
-# Player.gd
-extends CharacterBody2D
-
-# State owned and validated by the server
-var _server_position: Vector2 = Vector2.ZERO
-var _health: float = 100.0
-
-@onready var synchronizer: MultiplayerSynchronizer = $MultiplayerSynchronizer
-
-func _ready() -> void:
-    # Each player node's authority = that player's peer ID
-    set_multiplayer_authority(name.to_int())
-
-func _physics_process(delta: float) -> void:
-    if not is_multiplayer_authority():
-        # Non-authority: just receive synchronized state
-        return
-    # Authority (server for server-controlled, client for their own character):
-    # For server-authoritative: only server runs this
-    var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-    velocity = input_dir * 200.0
-    move_and_slide()
-
-# Client sends input to server
-@rpc("any_peer", "unreliable")
-func send_input(direction: Vector2) -> void:
-    if not multiplayer.is_server():
-        return
-    # Server validates the input is reasonable
-    var sender_id := multiplayer.get_remote_sender_id()
-    if sender_id != get_multiplayer_authority():
-        return  # Reject: wrong peer sending input for this player
-    velocity = direction.normalized() * 200.0
-    move_and_slide()
-
-# Server confirms a hit to all clients
-@rpc("authority", "reliable", "call_local")
-func take_damage(amount: float) -> void:
-    _health -= amount
-    if _health <= 0.0:
-        _on_died()
-```
-
-### MultiplayerSynchronizer Configuration
-```gdscript
-# In scene: Player.tscn
-# Add MultiplayerSynchronizer as child of Player node
-# Configure in _ready or via scene properties:
-
-func _ready() -> void:
-    var sync := $MultiplayerSynchronizer
-
-    # Sync position to all peers — on change only (not every frame)
-    var config := sync.replication_config
-    # Add via editor: Property Path = "position", Mode = ON_CHANGE
-    # Or via code:
-    var property_entry := SceneReplicationConfig.new()
-    # Editor is preferred — ensures correct serialization setup
-
-    # Authority for this synchronizer = same as node authority
-    # The synchronizer broadcasts FROM the authority TO all others
-```
-
-### MultiplayerSpawner Setup
-```gdscript
-# GameWorld.gd — on the server
-extends Node2D
-
-@onready var spawner: MultiplayerSpawner = $MultiplayerSpawner
-
-func _ready() -> void:
-    if not multiplayer.is_server():
-        return
-    # Register which scenes can be spawned
-    spawner.spawn_path = NodePath(".")  # Spawns as children of this node
-
-    # Connect player joins to spawn
-    NetworkManager.player_connected.connect(_on_player_connected)
-    NetworkManager.player_disconnected.connect(_on_player_disconnected)
-
-func _on_player_connected(peer_id: int) -> void:
-    # Server spawns a player for each connected peer
-    var player := preload("res://scenes/Player.tscn").instantiate()
-    player.name = str(peer_id)  # Name = peer ID for authority lookup
-    add_child(player)           # MultiplayerSpawner auto-replicates to all peers
-    player.set_multiplayer_authority(peer_id)
-
-func _on_player_disconnected(peer_id: int) -> void:
-    var player := get_node_or_null(str(peer_id))
-    if player:
-        player.queue_free()  # MultiplayerSpawner auto-removes on peers
-```
-
-### RPC Security Pattern
-```gdscript
-# SECURE: validate the sender before processing
-@rpc("any_peer", "reliable")
-func request_pick_up_item(item_id: int) -> void:
-    if not multiplayer.is_server():
-        return  # Only server processes this
-
-    var sender_id := multiplayer.get_remote_sender_id()
-    var player := get_player_by_peer_id(sender_id)
-
-    if not is_instance_valid(player):
-        return
-
-    var item := get_item_by_id(item_id)
-    if not is_instance_valid(item):
-        return
-
-    # Validate: is the player close enough to pick it up?
-    if player.global_position.distance_to(item.global_position) > 100.0:
-        return  # Reject: out of range
-
-    # Safe to process
-    _give_item_to_player(player, item)
-    confirm_item_pickup.rpc(sender_id, item_id)  # Confirm back to client
-
-@rpc("authority", "reliable")
-func confirm_item_pickup(peer_id: int, item_id: int) -> void:
-    # Only runs on clients (called from server authority)
-    if multiplayer.get_unique_id() == peer_id:
-        UIManager.show_pickup_notification(item_id)
-```
+- The server (peer ID 1) owns gameplay-critical state: position, health, score, item state.
+- Set authority explicitly with `node.set_multiplayer_authority(peer_id)`. Never rely on the default (1).
+- Guard every replicated-state mutation with `is_multiplayer_authority()`. Clients send input via RPC; the server validates and updates authoritative state.
+- `@rpc("any_peer")` is only for client-to-server requests the server validates. Never use it to modify gameplay state without server-side validation in the function body. Check `get_remote_sender_id()` against the node's authority.
+- `@rpc("authority")` is for server-to-client confirmations. `@rpc("call_local")` is for effects the caller should also experience. Critical game events use `"reliable"`.
+- `MultiplayerSynchronizer` replicates only properties that every peer must see, not server-only state. Visibility: `REPLICATION_MODE_ALWAYS`, `ON_CHANGE`, or `NEVER`. Property paths must be valid when the node enters the tree; invalid paths fail silently. Prefer the editor for replication config.
+- All dynamically spawned networked nodes go through `MultiplayerSpawner`. Manual `add_child()` on networked nodes desynchronizes peers. Register spawnable scenes on the spawner before use. Auto-spawn only on the authority node; other peers receive the node via replication.
+- Name spawned player nodes `str(peer_id)` so authority lookup matches the peer. Set `multiplayer_authority` immediately after spawn. `queue_free()` on disconnect so the spawner removes the node on peers.
 
 ## Method
 
-### 1. Architecture Planning
-- Choose topology: client-server (peer 1 = dedicated/host server) or P2P (each peer is authority of their own entities)
-- Define which nodes are server-owned vs. peer-owned — diagram this before coding
-- Map all RPCs: who calls them, who executes them, what validation is required
+1. **Plan architecture** — Topology: client-server (peer 1 = dedicated or host server) or P2P (each peer authority of its own entities). Which nodes are server-owned vs peer-owned. Map every RPC: who calls, who executes, what validation is required. Artefact: architecture note (topology, authority diagram, RPC map).
 
-### 2. Network Manager Setup
-- Build the `NetworkManager` Autoload with `create_server` / `join_server` / `disconnect` functions
-- Wire `peer_connected` and `peer_disconnected` signals to player spawn/despawn logic
+2. **Stand up the network manager** — Autoload with `create_server` / `join_server` / `disconnect`. Wire `peer_connected` and `peer_disconnected` to spawn and despawn. Artefact: `NetworkManager` autoload.
 
-### 3. Scene Replication
-- Add `MultiplayerSpawner` to the root world node
-- Add `MultiplayerSynchronizer` to every networked character/entity scene
-- Configure synchronized properties in the editor — use `ON_CHANGE` mode for all non-physics-driven state
+3. **Configure scene replication** — `MultiplayerSpawner` on the root world node. `MultiplayerSynchronizer` on every networked character or entity scene. Synchronized properties in the editor; `ON_CHANGE` for non-physics-driven state. Artefact: world spawner plus synchronizers on networked scenes.
 
-### 4. Authority Setup
-- Set `multiplayer_authority` on every dynamically spawned node immediately after `add_child()`
-- Guard all state mutations with `is_multiplayer_authority()`
-- Test authority by printing `get_multiplayer_authority()` on both server and client
+4. **Set authority on spawn** — After `add_child()` of a spawned node, set `multiplayer_authority`. Guard mutations with `is_multiplayer_authority()`. Confirm `get_multiplayer_authority()` on server and client. Artefact: spawn/despawn path with explicit authority.
 
-### 5. RPC Security Audit
-- Review every `@rpc("any_peer")` function — add server validation and sender ID checks
-- Test: what happens if a client calls a server RPC with impossible values?
-- Test: can a client call an RPC meant for another client?
+5. **Audit RPC security** — Every `@rpc("any_peer")`: server-only processing, sender ID check, plausibility (range, ownership). What happens if a client sends impossible values or calls an RPC meant for another client? Artefact: RPC audit (each `any_peer` function, validation, reject cases).
 
-### 6. Latency Testing
-- Simulate 100ms and 200ms latency using local loopback with artificial delay
-- Verify all critical game events use `"reliable"` RPC mode
-- Test reconnection handling: what happens when a client drops and rejoins?
+6. **Test under latency and reconnect** — Simulate 100ms and 200ms delay. Critical events on `"reliable"`. Drop and rejoin: no orphaned player nodes. Artefact: latency and reconnect notes (100ms / 200ms, disconnect cleanup).
 
 ## Done when
 
-You're successful when:
-- Zero authority mismatches — every state mutation guarded by `is_multiplayer_authority()`
-- All `@rpc("any_peer")` functions validate sender ID and input plausibility on the server
-- `MultiplayerSynchronizer` property paths verified valid at scene load — no silent failures
-- Connection and disconnection handled cleanly — no orphaned player nodes on disconnect
-- Multiplayer session tested at 150ms simulated latency without gameplay-breaking desync
-
-## Advanced
-
-### WebRTC for Browser-Based Multiplayer
-- Use `WebRTCPeerConnection` and `WebRTCMultiplayerPeer` for P2P multiplayer in Godot Web exports
-- Implement STUN/TURN server configuration for NAT traversal in WebRTC connections
-- Build a signaling server (minimal WebSocket server) to exchange SDP offers between peers
-- Test WebRTC connections across different network configurations: symmetric NAT, firewalled corporate networks, mobile hotspots
-
-### Matchmaking and Lobby Integration
-- Integrate Nakama (open-source game server) with Godot for matchmaking, lobbies, leaderboards, and DataStore
-- Build a REST client `HTTPRequest` wrapper for matchmaking API calls with retry and timeout handling
-- Implement ticket-based matchmaking: player submits a ticket, polls for match assignment, connects to assigned server
-- Design lobby state synchronization via WebSocket subscription — lobby changes push to all members without polling
-
-### Relay Server Architecture
-- Build a minimal Godot relay server that forwards packets between clients without authoritative simulation
-- Implement room-based routing: each room has a server-assigned ID, clients route packets via room ID not direct peer ID
-- Design a connection handshake protocol: join request → room assignment → peer list broadcast → connection established
-- Profile relay server throughput: measure maximum concurrent rooms and players per CPU core on target server hardware
-
-### Custom Multiplayer Protocol Design
-- Design a binary packet protocol using `PackedByteArray` for maximum bandwidth efficiency over `MultiplayerSynchronizer`
-- Implement delta compression for frequently updated state: send only changed fields, not the full state struct
-- Build a packet loss simulation layer in development builds to test reliability without real network degradation
-- Implement network jitter buffers for voice and audio data streams to smooth variable packet arrival timing
+The architecture note, `NetworkManager`, spawner/synchronizer setup, and RPC audit can be pointed at. Every state mutation is guarded by `is_multiplayer_authority()`. Every `@rpc("any_peer")` validates sender and input on the server. No manual `add_child()` for networked nodes. Synchronizer paths are valid at scene load. Disconnect leaves no orphaned players. Session held at simulated 100–200ms without gameplay-breaking desync.

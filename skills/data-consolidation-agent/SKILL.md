@@ -1,6 +1,6 @@
 ---
 name: data-consolidation-agent
-description: 'AI agent that consolidates extracted sales data into live reporting dashboards with territory, rep, and pipeline summaries. Use when the user runs /data-consolidation-agent.'
+description: 'When the work is a sales dashboard or territory report, aggregate latest metrics, attainment, pipeline, and trends into one structured view. Use when the user runs /data-consolidation-agent.'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task
@@ -24,41 +24,26 @@ Consolidates scattered sales data into live reporting dashboards.
 
 ## Mission
 
-Aggregate and consolidate sales metrics from all territories, representatives, and time periods into structured reports and dashboard views. Provide territory summaries, rep performance rankings, pipeline snapshots, trend analysis, and top performer highlights.
+Consolidate sales metrics from territories, reps, and time periods into dashboard and territory reports that match the source data.
 
 ## Rules
 
-1. **Always use latest data**: queries pull the most recent metric_date per type
-2. **Calculate attainment accurately**: revenue / quota * 100, handle division by zero
-3. **Aggregate by territory**: group metrics for regional visibility
-4. **Include pipeline data**: merge lead pipeline with sales metrics for full picture
-5. **Support multiple views**: MTD, YTD, Year End summaries available on demand
-
-## Patterns
-
-### Dashboard Report
-- Territory performance summary (YTD/MTD revenue, attainment, rep count)
-- Individual rep performance with latest metrics
-- Pipeline snapshot by stage (count, value, weighted value)
-- Trend data over trailing 6 months
-- Top 5 performers by YTD revenue
-
-### Territory Report
-- Territory-specific deep dive
-- All reps within territory with their metrics
-- Recent metric history (last 50 entries)
+- Queries use the most recent `metric_date` per type. Do not mix stale rows with current ones.
+- Attainment = revenue / quota × 100. Guard division by zero.
+- Aggregate by territory. Include pipeline (lead count, value, weighted value) with sales metrics.
+- Support MTD, YTD, and Year End when asked.
+- Detail and summary must reconcile. Do not invent numbers or a dashboard product. Use the sales store the workspace already has.
 
 ## Method
 
-1. Receive request for dashboard or territory report
-2. Execute parallel queries for all data dimensions
-3. Aggregate and calculate derived metrics
-4. Structure response in dashboard-friendly JSON
-5. Include generation timestamp for staleness detection
+1. **Take the request** — Dashboard (all territories) or one territory deep dive. Note the view (MTD / YTD / Year End). Artefact: request line (view + scope).
+
+2. **Pull source rows** — Latest metrics per type, then pipeline by stage, then trailing history (6 months for dashboard; last 50 metric entries for a territory). One dimension after another so joins stay auditable. Artefact: extracted tables.
+
+3. **Derive** — Attainment per rep and territory; rep count; pipeline totals; rankings. Top 5 performers by YTD revenue on the dashboard view. Artefact: calculated fields on those tables.
+
+4. **Emit the report** — Dashboard: territory performance (YTD/MTD revenue, attainment, rep count); individual reps with latest metrics; pipeline snapshot by stage; 6-month trend; top 5 YTD. Territory: that region's reps, their metrics, recent history. JSON (or the report format the workspace already uses) plus a generation timestamp for staleness. Artefact: dashboard or territory report file.
 
 ## Done when
 
-- Dashboard loads in < 1 second
-- Reports refresh automatically every 60 seconds
-- All active territories and reps represented
-- Zero data inconsistencies between detail and summary views
+The report is in the workspace and can be pointed at. Timestamp is present. Summary totals match the detail rows. Not a slide of "insights" without the numbers.

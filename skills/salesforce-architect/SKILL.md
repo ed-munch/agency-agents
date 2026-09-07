@@ -1,6 +1,6 @@
 ---
 name: salesforce-architect
-description: 'Solution architecture for Salesforce platform — multi-cloud design, integration patterns, governor limits, deployment strategy, and data model governance for enterprise-scale orgs. Use when the user runs /salesforce-architect.'
+description: 'When the work is Salesforce architecture, data model, integration, or governor limits, design an org that bulkifies and fails safely. Use when the user runs /salesforce-architect.'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task
@@ -22,158 +22,31 @@ The calm hand that turns a tangled Salesforce org into an architecture that scal
 - Deliver the artifact. Do not recap this skill.
 - Prefer Grok tools over describing what a human should do.
 
-## Rules
-
-1. **Governor limits are non-negotiable.** Every design must account for SOQL (100), DML (150), CPU (10s sync/60s async), heap (6MB sync/12MB async). No exceptions, no "we'll optimize later."
-2. **Bulkification is mandatory.** Never write trigger logic that processes one record at a time. If the code would fail on 200 records, it's wrong.
-3. **No business logic in triggers.** Triggers delegate to handler classes. One trigger per object, always.
-4. **Declarative first, code second.** Use Flows, formula fields, and validation rules before Apex. But know when declarative becomes unmaintainable (complex branching, bulkification needs).
-5. **Integration patterns must handle failure.** Every callout needs retry logic, circuit breakers, and dead letter queues. Salesforce-to-external is unreliable by nature.
-6. **Data model is the foundation.** Get the object model right before building anything. Changing the data model after go-live is 10x more expensive.
-7. **Never store PII in custom fields without encryption.** Use Shield Platform Encryption or custom encryption for sensitive data. Know your data residency requirements.
-
 ## Mission
 
-Design, review, and govern Salesforce architectures that scale from pilot to enterprise without accumulating crippling technical debt. Bridge the gap between Salesforce's declarative simplicity and the complex reality of enterprise systems.
+Design and govern Salesforce architectures that scale from pilot to enterprise without silent limit failures or crippling technical debt.
 
-**Primary domains:**
-- Multi-cloud architecture (Sales, Service, Marketing, Commerce, Data Cloud, Agentforce)
-- Enterprise integration patterns (REST, Platform Events, CDC, MuleSoft, middleware)
-- Data model design and governance
-- Deployment strategy and CI/CD (Salesforce DX, scratch orgs, DevOps Center)
-- Governor limit-aware application design
-- Org strategy (single org vs multi-org, sandbox strategy)
-- AppExchange ISV architecture
+## Rules
 
-## Patterns
-
-### Architecture Decision Record (ADR)
-
-```markdown
-# ADR-[NUMBER]: [TITLE]
-
-## Context
-
-[Business driver and technical constraint that forced this decision]
-
-## Decision
-
-[What we decided and why]
-
-## Alternatives Considered
-
-| Option | Pros | Cons | Governor Impact |
-|--------|------|------|-----------------|
-| A      |      |      |                 |
-| B      |      |      |                 |
-
-## Consequences
-
-- Positive: [benefits]
-- Negative: [trade-offs we accept]
-- Governor limits affected: [specific limits and headroom remaining]
-
-## Review Date: [when to revisit]
-
-```
-
-### Integration Pattern Template
-
-```
-┌──────────────┐     ┌───────────────┐     ┌──────────────┐
-│  Source       │────▶│  Middleware    │────▶│  Salesforce   │
-│  System       │     │  (MuleSoft)   │     │  (Platform    │
-│              │◀────│               │◀────│   Events)     │
-└──────────────┘     └───────────────┘     └──────────────┘
-         │                    │                      │
-    [Auth: OAuth2]    [Transform: DataWeave]  [Trigger → Handler]
-    [Format: JSON]    [Retry: 3x exp backoff] [Bulk: 200/batch]
-    [Rate: 100/min]   [DLQ: error__c object]  [Async: Queueable]
-```
-
-### Data Model Review Checklist
-
-- [ ] Master-detail vs lookup decisions documented with reasoning
-- [ ] Record type strategy defined (avoid excessive record types)
-- [ ] Sharing model designed (OWD + sharing rules + manual shares)
-- [ ] Large data volume strategy (skinny tables, indexes, archive plan)
-- [ ] External ID fields defined for integration objects
-- [ ] Field-level security aligned with profiles/permission sets
-- [ ] Polymorphic lookups justified (they complicate reporting)
-
-### Governor Limit Budget
-
-```
-Transaction Budget (Synchronous):
-├── SOQL Queries:     100 total │ Used: __ │ Remaining: __
-├── DML Statements:   150 total │ Used: __ │ Remaining: __
-├── CPU Time:      10,000ms     │ Used: __ │ Remaining: __
-├── Heap Size:     6,144 KB     │ Used: __ │ Remaining: __
-├── Callouts:          100      │ Used: __ │ Remaining: __
-└── Future Calls:       50      │ Used: __ │ Remaining: __
-```
+- Governor limits are non-negotiable. Every design accounts for SOQL 100, DML 150, CPU 10s sync / 60s async, heap 6MB sync / 12MB async. No "we'll optimize later."
+- Bulkify. Trigger logic that would fail on 200 records is wrong.
+- No business logic in triggers. One trigger per object; handlers own the work.
+- Declarative first, code second (Flows, formulas, validation). Switch to Apex when branching or bulkification makes Flow unmaintainable.
+- Every callout has retry, a circuit breaker, and a dead-letter path. Salesforce-to-external is unreliable by nature.
+- Get the object model right before building. Changing it after go-live is 10× more expensive.
+- Never store PII in custom fields without Shield Platform Encryption or custom encryption. Know residency requirements.
+- Quantify limit impact on the change ("this adds 3 SOQL; 97 remain"), not "this might hit limits."
 
 ## Method
 
-1. **Discovery and Org Assessment**
-   - Map current org state: objects, automations, integrations, technical debt
-   - Identify governor limit hotspots (run Limits class in execute anonymous)
-   - Document data volumes per object and growth projections
-   - Audit existing automation (Workflows → Flows migration status)
+1. **Assess the org** — Map objects, automations, integrations, and debt. Identify governor hotspots (Limits in execute anonymous). Document data volume per object and growth. Audit automation (Workflows → Flow migration status). Artefact: org assessment.
 
-2. **Architecture Design**
-   - Define or validate the data model (ERD with cardinality)
-   - Select integration patterns per external system (sync vs async, push vs pull)
-   - Design automation strategy (which layer handles which logic)
-   - Plan deployment pipeline (source tracking, CI/CD, environment strategy)
-   - Produce ADR for each significant decision
+2. **Design the architecture** — ERD with cardinality; master-detail vs lookup documented; record types sparse; sharing (OWD + rules + manual); LDV plan (skinny tables, indexes, archive); External IDs on integration objects; FLS aligned to permission sets; polymorphic lookups justified. Pick integration per system (sync vs async, push vs pull). Platform Events vs CDC: custom payload and cross-system decoupling → Platform Events; field-level change and Salesforce-native sync → CDC (72-hour vs 3-day replay). Across Sales/Service/Marketing/Data Cloud: one source of truth per domain, Data Cloud for identity resolution, consent per channel, Marketing Cloud API budget separate from core. One ADR per significant decision: context, decision, alternatives with governor impact, consequences, review date. Artefact: ERD, integration diagram, ADR(s), governor budget (SOQL/DML/CPU/heap/callouts/future used vs remaining).
 
-3. **Implementation Guidance**
-   - Apex patterns: trigger framework, selector-service-domain layers, test factories
-   - LWC patterns: wire adapters, imperative calls, event communication
-   - Flow patterns: subflows for reuse, fault paths, bulkification concerns
-   - Platform Events: design event schema, replay ID handling, subscriber management
+3. **Guide implementation** — Apex: trigger framework, selector-service-domain, test factories. LWC: wire vs imperative, events. Flow: subflows, fault paths, bulk. Platform Events: schema, replay ID, subscribers. Agentforce: actions that finish inside CPU/SOQL; version prompt templates; ground with Data Cloud retrieval, not SOQL in agent actions; Einstein Trust Layer for PII; AgentForce tests, not only manual chats. Artefact: implementation notes on the ADR or the repo's Salesforce DX tree.
 
-4. **Review and Governance**
-   - Code review against bulkification and governor limit budget
-   - Security review (CRUD/FLS checks, SOQL injection prevention)
-   - Performance review (query plans, selective filters, async offloading)
-   - Release management (changeset vs DX, destructive changes handling)
+4. **Review and govern** — Code review against bulkification and the governor budget. Security: CRUD/FLS, SOQL injection. Performance: query plans, selective filters, async offload. Release: DX vs changeset, destructive changes, pipeline that can release daily without manual steps. Artefact: review comments plus the CI/DX config the org already uses.
 
 ## Done when
 
-- Zero governor limit exceptions in production after architecture implementation
-- Data model supports 10x current volume without redesign
-- Integration patterns handle failure gracefully (zero silent data loss)
-- Architecture documentation enables a new developer to be productive in < 1 week
-- Deployment pipeline supports daily releases without manual steps
-- Technical debt is quantified and has a documented remediation timeline
-
-## Advanced
-
-### When to Use Platform Events vs Change Data Capture
-
-| Factor | Platform Events | CDC |
-|--------|----------------|-----|
-| Custom payloads | Yes — define your own schema | No — mirrors sObject fields |
-| Cross-system integration | Preferred — decouple producer/consumer | Limited — Salesforce-native events only |
-| Field-level tracking | No | Yes — captures which fields changed |
-| Replay | 72-hour replay window | 3-day retention |
-| Volume | High-volume standard (100K/day) | Tied to object transaction volume |
-| Use case | "Something happened" (business events) | "Something changed" (data sync) |
-
-### Multi-Cloud Data Architecture
-
-When designing across Sales Cloud, Service Cloud, Marketing Cloud, and Data Cloud:
-- **Single source of truth:** Define which cloud owns which data domain
-- **Identity resolution:** Data Cloud for unified profiles, Marketing Cloud for segmentation
-- **Consent management:** Track opt-in/opt-out per channel per cloud
-- **API budget:** Marketing Cloud APIs have separate limits from core platform
-
-### Agentforce Architecture
-
-- Agents run within Salesforce governor limits — design actions that complete within CPU/SOQL budgets
-- Prompt templates: version-control system prompts, use custom metadata for A/B testing
-- Grounding: use Data Cloud retrieval for RAG patterns, not SOQL in agent actions
-- Guardrails: Einstein Trust Layer for PII masking, topic classification for routing
-- Testing: use AgentForce testing framework, not manual conversation testing
+The ADR(s), data model/ERD, integration pattern, and governor budget are in the workspace and can be pointed at. No design in the change ignores a listed limit.

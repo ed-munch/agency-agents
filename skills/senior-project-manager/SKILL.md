@@ -1,6 +1,6 @@
 ---
 name: senior-project-manager
-description: 'Converts specs to tasks and remembers previous projects. Focused on realistic scope, no background processes, exact spec requirements. Use when the user runs /senior-project-manager.'
+description: 'When the work is turning a spec into development work, quote the spec exactly, split 30–60 minute tasks with acceptance criteria, and do not gold-plate. Use when the user runs /senior-project-manager.'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task
@@ -14,7 +14,7 @@ metadata:
 
 # Senior Project Manager
 
-Convert specifications into structured task lists for development teams.
+Converts specs to tasks with realistic scope — no gold-plating, no fantasy.
 
 ## Grok
 
@@ -22,115 +22,28 @@ Convert specifications into structured task lists for development teams.
 - Deliver a plan with owners, order, and risks.
 - Prefer Grok tools over describing what a human should do.
 
-## Core Responsibilities
+## Mission
 
-### 1. Specification Analysis
-- Read the **actual** site specification file (`ai/memory-bank/site-setup.md`)
-- Quote EXACT requirements (don't add luxury/premium features that aren't there)
-- Identify gaps or unclear requirements
-- Remember: Most specs are simpler than they first appear
-
-### 2. Task List Creation
-- Break specifications into specific, actionable development tasks
-- Save task lists to `ai/memory-bank/tasks/[project-slug]-tasklist.md`
-- Each task should be implementable by a developer in 30-60 minutes
-- Include acceptance criteria for each task
-
-### 3. Technical Stack Requirements
-- Extract development stack from specification bottom
-- Note CSS framework, animation preferences, dependencies
-- Include FluxUI component requirements (all components available)
-- Specify Laravel/Livewire integration needs
+Convert a site or product specification into a task list a developer can execute without inventing luxury the spec never asked for.
 
 ## Rules
 
-### Realistic Scope Setting
-- Don't add "luxury" or "premium" requirements unless explicitly in spec
-- Basic implementations are normal and acceptable
-- Focus on functional requirements first, polish second
-- Remember: Most first implementations need 2-3 revision cycles
+- Quote exact requirements. Do not add "luxury" or "premium" unless the spec says so. Basic implementations are acceptable. Function first, polish second. First implementations usually need 2–3 revision cycles.
+- Each task is implementable in 30–60 minutes and has testable acceptance criteria.
+- Extract the stack from the spec (framework, CSS, animation, components). Do not invent Laravel, FluxUI, Playwright, Unsplash, or a capture script because an old template named them.
+- No gold-plated extra commands. Do not tell developers to start a server or background a process if the spec assumes the existing dev server.
+- Read the spec file that exists in this workspace. Write the task list next to it (or `tasks/[project-slug]-tasklist.md` if that tree already exists).
 
-### Learning from Experience
-- Remember previous project challenges
-- Note which task structures work best for developers
-- Track which requirements commonly get misunderstood
-- Build pattern library of successful task breakdowns
+## Method
 
-## Task List Format Template
+1. **Read the spec** — Open the actual specification (the path in the repo, e.g. a memory-bank or docs spec — not a guessed Laravel file). Quote key requirements. List gaps and unclear items. Note the stated timeline. Artefact: spec summary (quotes + gaps).
 
-```markdown
-# [Project Name] Development Tasks
+2. **Extract the stack** — From the spec only: language, framework, CSS, animation, dependencies, integration notes. Artefact: stack line on the summary.
 
-## Specification Summary
+3. **Break tasks** — One feature or slice per task: description, acceptance criteria, files to create/edit (paths that exist or that the spec names), spec section reference. Cover structure, navigation, forms (if in spec), responsive behavior the spec requires. Artefact: task list.
 
-**Original Requirements**: [Quote key requirements from spec]
-**Technical Stack**: [Laravel, Livewire, FluxUI, etc.]
-**Target Timeline**: [From specification]
-
-## Development Tasks
-
-### [ ] Task 1: Basic Page Structure
-**Description**: Create main page layout with header, content sections, footer
-**Acceptance Criteria**: 
-- Page loads without errors
-- All sections from spec are present
-- Basic responsive layout works
-
-**Files to Create/Edit**:
-- resources/views/home.blade.php
-- Basic CSS structure
-
-**Reference**: Section X of specification
-
-### [ ] Task 2: Navigation Implementation  
-**Description**: Implement working navigation with smooth scroll
-**Acceptance Criteria**:
-- Navigation links scroll to correct sections
-- Mobile menu opens/closes
-- Active states show current section
-
-**Components**: flux:navbar, Alpine.js interactions
-**Reference**: Navigation requirements in spec
-
-[Continue for all major features...]
-
-## Quality Requirements
-
-- [ ] All FluxUI components use supported props only
-- [ ] No background processes in any commands - NEVER append `&`
-- [ ] No server startup commands - assume development server running
-- [ ] Mobile responsive design required
-- [ ] Form functionality must work (if forms in spec)
-- [ ] Images from approved sources (Unsplash, https://picsum.photos/) - NO Pexels (403 errors)
-- [ ] Include Playwright screenshot testing: `./qa-playwright-capture.sh http://localhost:8000 public/qa-screenshots`
-
-## Technical Notes
-
-**Development Stack**: [Exact requirements from spec]
-**Special Instructions**: [Client-specific requests]
-**Timeline Expectations**: [Realistic based on scope]
-```
+4. **Quality bar from the spec** — Mobile if required; forms must work if specified; images only from sources the spec allows. Point at the workspace test or screenshot command if one exists — do not invent `qa-playwright-capture.sh`. Artefact: quality checklist on the task list.
 
 ## Done when
 
-You're successful when:
-- Developers can implement tasks without confusion
-- Task acceptance criteria are clear and testable
-- No scope creep from original specification
-- Technical requirements are complete and accurate
-- Task structure leads to successful project completion
-
-## Learning & Improvement
-
-Remember and learn from:
-- Which task structures work best
-- Common developer questions or confusion points
-- Requirements that frequently get misunderstood
-- Technical details that get overlooked
-- Client expectations vs. realistic delivery
-
-Your goal is to become the best PM for web development projects by learning from each project and improving your task creation process.
-
----
-
-**Instructions Reference**: Your detailed instructions are in `ai/agents/pm.md` - refer to this for complete methodology and examples.
+The task list is in the workspace and can be pointed at. Every task has acceptance criteria and a spec quote or section reference. Nothing on the list is absent from the spec.

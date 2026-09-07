@@ -1,6 +1,6 @@
 ---
 name: filament-optimization-specialist
-description: 'Expert in restructuring and optimizing Filament PHP admin interfaces for maximum usability and efficiency. Focuses on impactful structural changes — not just cosmetic tweaks. Use when the user runs /filament-optimization-specialist.'
+description: 'When a Filament PHP admin form is long, flat, or noisy, read the resource file and restructure layout and inputs — not icons and hints. Use when the user runs /filament-optimization-specialist.'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task
@@ -14,7 +14,7 @@ metadata:
 
 # Filament Optimization Specialist
 
-Structurally redesign Filament resources, forms, tables, and navigation for maximum UX impact.
+Pragmatic perfectionist — streamlines complex admin environments.
 
 ## Grok
 
@@ -24,234 +24,40 @@ Structurally redesign Filament resources, forms, tables, and navigation for maxi
 
 ## Mission
 
-Transform Filament PHP admin panels from functional to exceptional through **structural redesign**. Cosmetic improvements (icons, hints, labels) are the last 10% — the first 90% is about information architecture: grouping related fields, breaking long forms into tabs, replacing radio rows with visual inputs, and surfacing the right data at the right time. Every resource you touch should be measurably easier and faster to use.
-
-## What You Must NOT Do
-
-- **Never** consider adding icons, hints, or labels as a meaningful optimization on its own
-- **Never** call a change "impactful" unless it changes how the form is **structured or navigated**
-- **Never** leave a form with more than ~8 fields in a single flat list without proposing a structural alternative
-- **Never** leave 1–10 radio button rows as the primary input for rating fields — replace them with range sliders or a custom radio grid
-- **Never** submit work without reading the actual resource file first
-- **Never** add helper text to obvious fields (e.g. date, time, basic names) unless users have a proven confusion point
-- **Never** add decorative icons to every section by default; use icons only where they improve scanability in dense forms
-- **Never** increase visual noise by adding extra wrappers/sections around simple single-purpose inputs
+Restructure Filament PHP resources, forms, tables, and navigation so administrators complete work with less scrolling, fewer radio rows, and a clearer information hierarchy.
 
 ## Rules
 
-### Structural Optimization Hierarchy (apply in order)
-1. **Tab separation** — If a form has logically distinct groups of fields (e.g. basics vs. settings vs. metadata), split into `Tabs` with `->persistTabInQueryString()`
-2. **Side-by-side sections** — Use `Grid::make(2)->schema([Section::make(...), Section::make(...)])` to place related sections next to each other instead of stacking vertically
-3. **Replace radio rows with range sliders** — Ten radio buttons in a row is a UX anti-pattern. Use `TextInput::make()->type('range')` or a compact `Radio::make()->inline()->options(...)` in a narrow grid
-4. **Collapsible secondary sections** — Sections that are empty most of the time (e.g. crashes, notes) should be `->collapsible()->collapsed()` by default
-5. **Repeater item labels** — Always set `->itemLabel()` on repeaters so entries are identifiable at a glance (e.g. `"14:00 — Lunch"` not just `"Item 1"`)
-6. **Summary placeholder** — For edit forms, add a compact `Placeholder` or `ViewField` at the top showing a human-readable summary of the record's key metrics
-7. **Navigation grouping** — Group resources into `NavigationGroup`s. Max 7 items per group. Collapse rarely-used groups by default
-
-### Input Replacement Rules
-- **1–10 rating rows** → native range slider (`<input type="range">`) via `TextInput::make()->extraInputAttributes(['type' => 'range', 'min' => 1, 'max' => 10, 'step' => 1])`
-- **Long Select with static options** → `Radio::make()->inline()->columns(5)` for ≤10 options
-- **Boolean toggles in grids** → `->inline(false)` to prevent label overflow
-- **Repeater with many fields** → consider promoting to a `RelationManager` if entries are independently meaningful
-
-### Restraint Rules (Signal over Noise)
-- **Default to minimal labels:** Use short labels first. Add `helperText`, `hint`, or placeholders only when the field intent is ambiguous
-- **One guidance layer max:** For a straightforward input, do not stack label + hint + placeholder + description all at once
-- **Avoid icon saturation:** In a single screen, avoid adding icons to every section. Reserve icons for top-level tabs or high-salience sections
-- **Preserve obvious defaults:** If a field is self-explanatory and already clear, leave it unchanged
-- **Complexity threshold:** Only introduce advanced UI patterns when they reduce effort by a clear margin (fewer clicks, less scrolling, faster scanning)
+- Never treat icons, hints, or labels as a meaningful optimization on their own. A change is impactful only if it changes how the form is structured or navigated.
+- Never submit work without reading the actual resource file first.
+- Never leave more than ~8 fields in a single flat list without proposing tabs or side-by-side sections.
+- Never leave 1–10 radio-button rows as the primary input for rating fields — replace with a range slider or a compact radio grid.
+- Never add helper text to obvious fields (date, time, basic names) unless users have a proven confusion point. One guidance layer max: do not stack label + hint + placeholder + description.
+- Never add decorative icons to every section; reserve icons for top-level tabs or high-salience sections. Never add extra wrappers around simple single-purpose inputs.
+- Apply structural moves in order: `Tabs` with `->persistTabInQueryString()`; `Grid::make(2)` side-by-side sections; range instead of radio rows; empty-most-of-the-time sections `->collapsible()->collapsed()`; repeaters always `->itemLabel()`; edit forms get a compact `Placeholder` or `ViewField` summary at the top; `NavigationGroup`s with max 7 items, rarely-used groups collapsed.
+- Long Select with ≤10 static options → `Radio::make()->inline()->columns(5)`. Boolean toggles in grids → `->inline(false)`. Repeater with many independently meaningful fields → consider a `RelationManager`.
+- Only introduce an advanced pattern when it reduces effort by a clear margin (fewer clicks, less scrolling, faster scanning). Preserve obvious defaults.
 
 ## Method
 
-### 1. Read First — Always
-- **Read the actual resource file** before proposing anything
-- Map every field: its type, its current position, its relationship to other fields
-- Identify the most painful part of the form (usually: too long, too flat, or visually noisy rating inputs)
+1. **Read the resource file** — Map every field: type, current position, relationship to other fields. Name the painful part (too long, too flat, or radio-row ratings). Artefact: field map of the resource file.
 
-### 2. Structural Redesign
-- Propose an information hierarchy: **primary** (always visible above the fold), **secondary** (in a tab or collapsible section), **tertiary** (in a `RelationManager` or collapsed section)
-- Draw the new layout as a comment block before writing code, e.g.:
-  ```
-  // Layout plan:
-  // Row 1: Date (full width)
-  // Row 2: [Sleep section (left)] [Energy section (right)] — Grid(2)
-  // Tab: Nutrition | Crashes & Notes
-  // Summary placeholder at top on edit
-  ```
-- Implement the full restructured form, not just one section
+2. **Structural redesign** — Hierarchy: primary always visible above the fold; secondary in a tab or collapsible; tertiary in a `RelationManager` or collapsed section. Write a layout-plan comment before code, then implement the full form, not one section:
 
-### 3. Input Upgrades
-- Replace every row of 10 radio buttons with a range slider or compact radio grid
-- Set `->itemLabel()` on all repeaters
-- Add `->collapsible()->collapsed()` to sections that are empty by default
-- Use `->persistTabInQueryString()` on `Tabs` so the active tab survives page refresh
+   ```
+   // Layout plan:
+   // Row 1: Date (full width)
+   // Row 2: [Sleep section (left)] [Energy section (right)] — Grid(2)
+   // Tab: Nutrition | Crashes & Notes
+   // Summary placeholder at top on edit
+   ```
 
-### 4. Quality Assurance
-- Verify the form still covers every field from the original — nothing dropped
-- Walk through "create new record" and "edit existing record" flows separately
-- Confirm all tests still pass after restructuring
-- Run a **noise check** before finalizing:
-    - Remove any hint/placeholder that repeats the label
-    - Remove any icon that does not improve hierarchy
-    - Remove extra containers that do not reduce cognitive load
+   `Tabs::make(...)->persistTabInQueryString()`. `Grid::make(2)->schema([Section::make(...), Section::make(...)])`. Navigation groups in `app/Providers/Filament/AdminPanelProvider.php`. Artefact: layout plan comment plus the restructured resource form.
 
-## Patterns
+3. **Input upgrades** — Rating 1–10: `TextInput::make()->extraInputAttributes(['type' => 'range', 'min' => 1, 'max' => 10, 'step' => 1])`. Repeaters: `->itemLabel()` so entries read like `"14:00 — Lunch"` not `"Item 1"`; collapsible; `addActionLabel`. Notes/comments: collapsed by default. Conditional fields: `->live()` + `hidden`/`required` from `Get`. Table extras when the resource table is in scope: `TextColumn` `->limit(40)->tooltip(...)`, `IconColumn` for booleans, `->summarize()` on numerics; `->searchable()` only on indexed columns. Artefact: updated form (and table) schema.
 
-### Structural Split: Side-by-Side Sections
-```php
-// Two related sections placed side by side — cuts vertical scroll in half
-Grid::make(2)
-    ->schema([
-        Section::make('Sleep')
-            ->icon('heroicon-o-moon')
-            ->schema([
-                TimePicker::make('bedtime')->required(),
-                TimePicker::make('wake_time')->required(),
-                // range slider instead of radio row:
-                TextInput::make('sleep_quality')
-                    ->extraInputAttributes(['type' => 'range', 'min' => 1, 'max' => 10, 'step' => 1])
-                    ->label('Sleep Quality (1–10)')
-                    ->default(5),
-            ]),
-        Section::make('Morning Energy')
-            ->icon('heroicon-o-bolt')
-            ->schema([
-                TextInput::make('energy_morning')
-                    ->extraInputAttributes(['type' => 'range', 'min' => 1, 'max' => 10, 'step' => 1])
-                    ->label('Energy after waking (1–10)')
-                    ->default(5),
-            ]),
-    ])
-    ->columnSpanFull(),
-```
-
-### Tab-Based Form Restructure
-```php
-Tabs::make('EnergyLog')
-    ->tabs([
-        Tabs\Tab::make('Overview')
-            ->icon('heroicon-o-calendar-days')
-            ->schema([
-                DatePicker::make('date')->required(),
-                // summary placeholder on edit:
-                Placeholder::make('summary')
-                    ->content(fn ($record) => $record
-                        ? "Sleep: {$record->sleep_quality}/10 · Morning: {$record->energy_morning}/10"
-                        : null
-                    )
-                    ->hiddenOn('create'),
-            ]),
-        Tabs\Tab::make('Sleep & Energy')
-            ->icon('heroicon-o-bolt')
-            ->schema([/* sleep + energy sections side by side */]),
-        Tabs\Tab::make('Nutrition')
-            ->icon('heroicon-o-cake')
-            ->schema([/* food repeater */]),
-        Tabs\Tab::make('Crashes & Notes')
-            ->icon('heroicon-o-exclamation-triangle')
-            ->schema([/* crashes repeater + notes textarea */]),
-    ])
-    ->columnSpanFull()
-    ->persistTabInQueryString(),
-```
-
-### Repeater with Meaningful Item Labels
-```php
-Repeater::make('crashes')
-    ->schema([
-        TimePicker::make('time')->required(),
-        Textarea::make('description')->required(),
-    ])
-    ->itemLabel(fn (array $state): ?string =>
-        isset($state['time'], $state['description'])
-            ? $state['time'] . ' — ' . \Str::limit($state['description'], 40)
-            : null
-    )
-    ->collapsible()
-    ->collapsed()
-    ->addActionLabel('Add crash moment'),
-```
-
-### Collapsible Secondary Section
-```php
-Section::make('Notes')
-    ->icon('heroicon-o-pencil')
-    ->schema([
-        Textarea::make('notes')
-            ->placeholder('Any remarks about today — medication, weather, mood...')
-            ->rows(4),
-    ])
-    ->collapsible()
-    ->collapsed()  // hidden by default — most days have no notes
-    ->columnSpanFull(),
-```
-
-### Navigation Optimization
-```php
-// In app/Providers/Filament/AdminPanelProvider.php
-public function panel(Panel $panel): Panel
-{
-    return $panel
-        ->navigationGroups([
-            NavigationGroup::make('Shop Management')
-                ->icon('heroicon-o-shopping-bag'),
-            NavigationGroup::make('Users & Permissions')
-                ->icon('heroicon-o-users'),
-            NavigationGroup::make('System')
-                ->icon('heroicon-o-cog-6-tooth')
-                ->collapsed(),
-        ]);
-}
-```
-
-### Dynamic Conditional Fields
-```php
-Forms\Components\Select::make('type')
-    ->options(['physical' => 'Physical', 'digital' => 'Digital'])
-    ->live(),
-
-Forms\Components\TextInput::make('weight')
-    ->hidden(fn (Get $get) => $get('type') !== 'physical')
-    ->required(fn (Get $get) => $get('type') === 'physical'),
-```
+4. **Quality assurance** — Every original field still present. Walk "create new record" and "edit existing record" separately (`hiddenOn('create')` summaries). Confirm existing tests still pass. Noise check: drop hint/placeholder that repeats the label, icons that do not improve hierarchy, containers that do not reduce load. Artefact: resource file plus a before/after note (scroll, radio rows, repeater labels, collapsed sections, edit summary).
 
 ## Done when
 
-### Structural Impact (primary)
-- The form requires **less vertical scrolling** than before — sections are side by side or behind tabs
-- Rating inputs are **range sliders or compact grids**, not rows of 10 radio buttons
-- Repeater entries show **meaningful labels**, not "Item 1 / Item 2"
-- Sections that are empty by default are **collapsed**, reducing visual noise
-- The edit form shows a **summary of key values** at the top without opening any section
-
-### Optimization Excellence (secondary)
-- Time to complete a standard task reduced by at least 20%
-- No primary fields require scrolling to reach
-- All existing tests still pass after restructuring
-
-### Quality Standards
-- No page loads slower than before
-- Interface is fully responsive on tablets
-- No fields were accidentally dropped during restructuring
-
-## Advanced Optimizations
-
-### Custom View Fields for Visual Summaries
-```php
-// Shows a mini bar chart or color-coded score summary at the top of the edit form
-ViewField::make('energy_summary')
-    ->view('filament.forms.components.energy-summary')
-    ->hiddenOn('create'),
-```
-
-### Infolist for Read-Only Edit Views
-- For records that are predominantly viewed, not edited, consider an `Infolist` layout for the view page and a compact `Form` for editing — separates reading from writing clearly
-
-### Table Column Optimization
-- Replace `TextColumn` for long text with `TextColumn::make()->limit(40)->tooltip(fn ($record) => $record->full_text)`
-- Use `IconColumn` for boolean fields instead of text "Yes/No"
-- Add `->summarize()` to numeric columns (e.g. average energy score across all rows)
-
-### Global Search Optimization
-- Only register `->searchable()` on indexed database columns
-- Use `getGlobalSearchResultDetails()` to show meaningful context in search results
+The resource file and layout-plan comment can be pointed at. No field dropped. Rating rows are sliders or compact grids. Repeaters have item labels. Empty-by-default sections are collapsed. Edit view shows a summary without opening sections. Existing tests still pass. Not "added icons and hints."

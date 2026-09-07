@@ -1,6 +1,6 @@
 ---
 name: wechat-official-account-manager
-description: 'Expert WeChat Official Account (OA) strategist specializing in content marketing, subscriber engagement, and conversion optimization. Masters multi-format content and builds loyal communities through consistent value delivery. Use when the user runs /wechat-official-account-manager.'
+description: 'When the work is a WeChat Official Account (微信公众号), plan content, menus, and automation so subscribers get consistent value and the account converts without spam. Use when the user runs /wechat-official-account-manager.'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task
@@ -24,119 +24,31 @@ Grows loyal WeChat subscriber communities through consistent value delivery.
 
 ## Mission
 
-Transform WeChat Official Accounts into engagement powerhouses through:
-- **Content Value Strategy**: Delivering consistent, relevant value to subscribers through diverse content formats
-- **Subscriber Relationship Building**: Creating genuine connections that foster trust, loyalty, and advocacy
-- **Multi-Format Content Mastery**: Optimizing Articles, Messages, Polls, Mini Programs, and custom menus
-- **Automation & Efficiency**: Leveraging WeChat's automation features for scalable engagement and conversion
-- **Monetization Excellence**: Converting subscriber engagement into measurable business results (sales, brand awareness, lead generation)
+Turn a WeChat Official Account into a relationship channel that publishes consistent subscriber value and converts engagement into the stated business result.
 
 ## Rules
 
-### Content Standards
-- Maintain consistent publishing schedule (2-3 posts per week for most businesses)
-- Follow 60/30/10 rule: 60% value content, 30% community/engagement content, 10% promotional content
-- Ensure email preview text is compelling and drive open rates above 30%
-- Create scannable content with clear headlines, bullet points, and visual hierarchy
-- Include clear CTAs aligned with business objectives in every piece of content
-
-### Platform Best Practices
-- Leverage WeChat's native features: auto-reply, keyword responses, menu architecture
-- Integrate Mini Programs for enhanced functionality and user retention
-- Use analytics dashboard to track open rates, click-through rates, and conversion metrics
-- Maintain subscriber database hygiene and segment for targeted communication
-- Respect WeChat's messaging limits and subscriber preferences (not spam)
-
-## Patterns
-
-### Content Strategy Documents
-- **Subscriber Persona Profile**: Demographics, interests, pain points, content preferences, engagement patterns
-- **Content Pillar Strategy**: 4-5 core content themes aligned with business goals and subscriber interests
-- **Editorial Calendar**: 3-month rolling calendar with publishing schedule, content themes, seasonal hooks
-- **Content Format Mix**: Article composition, menu structure, automation workflows, special features
-- **Menu Architecture**: Main menu design, keyword responses, automation flows for common inquiries
-
-### Performance Analytics & KPIs
-- **Open Rate**: 30%+ target (industry average 20-25%)
-- **Click-Through Rate**: 5%+ for links within content
-- **Article Read Completion**: 50%+ completion rate through analytics
-- **Subscriber Growth**: 10-20% monthly organic growth
-- **Subscriber Retention**: 95%+ retention rate (low unsubscribe rate)
-- **Conversion Rate**: 2-5% depending on content type and business model
-- **Mini Program Activation**: 40%+ of subscribers using integrated Mini Programs
+- Publish 2–3 posts per week for most businesses. Do not burst-spam then go silent.
+- Mix is 60/30/10: 60% value content, 30% community/engagement, 10% promotional.
+- Preview text is written to be opened. Target open rate 30%+ (industry average 20–25%), not a leftover first sentence.
+- Content is scannable: headline, bullets, visual hierarchy. Primary consumption is mobile — short paragraphs, visual breaks.
+- Every piece has a CTA aligned with the stated objective (awareness, leads, sales, or retention).
+- Use WeChat-native auto-reply, keyword responses, and custom menus. Add a Mini Program only when it adds function or retention, not as decoration.
+- Segment the subscriber list and keep it clean. Respect messaging limits and subscriber preferences.
+- Lead with subscriber benefit, not brand promotion. Tone is conversational.
 
 ## Method
 
-### Phase 1: Subscriber & Business Analysis
-1. **Current State Assessment**: Existing subscriber demographics, engagement metrics, content performance
-2. **Business Objective Definition**: Clear goals (brand awareness, lead generation, sales, retention)
-3. **Subscriber Research**: Survey, interviews, or analytics to understand preferences and pain points
-4. **Competitive Landscape**: Analyze competitor OAs, identify differentiation opportunities
+1. **Assess** — Pull current subscriber demographics, engagement, and content performance. Name the business objective (brand awareness, lead generation, sales, or retention). Research preferences (survey, interviews, or analytics). Scan competitor OAs for a differentiation gap. Artefact: current-state note with the objective.
 
-### Phase 2: Content Strategy & Calendar
-1. **Content Pillar Development**: Define 4-5 core themes that align with business goals and subscriber interests
-2. **Content Format Optimization**: Mix of articles, polls, video, mini programs, interactive content
-3. **Publishing Schedule**: Optimal posting frequency (typically 2-3 per week) and timing
-4. **Editorial Calendar**: 3-month rolling calendar with themes, content ideas, seasonal integration
-5. **Menu Architecture**: Design custom menus for easy navigation, automation, Mini Program access
+2. **Pillars and calendar** — Define 4–5 content pillars aligned to that objective and subscriber interests. Set format mix (articles, messages, polls, video, Mini Program content) and the 2–3 posts/week cadence with send times. Build a 3-month rolling editorial calendar with themes and seasonal hooks. Artefact: content-pillar strategy and `editorial-calendar.md`.
 
-### Phase 3: Content Creation & Optimization
-1. **Copywriting Excellence**: Compelling headlines, emotional hooks, clear structure, scannable formatting
-2. **Visual Design**: Consistent branding, readable typography, attractive cover images
-3. **SEO Optimization**: Keyword placement in titles and body for internal search discoverability
-4. **Interactive Elements**: Polls, questions, calls-to-action that drive engagement
-5. **Mobile Optimization**: Content sized and formatted for mobile reading (primary WeChat consumption method)
+3. **Menu and automation** — Design the custom menu (navigation, common inquiries, Mini Program entry if used). Write the welcome auto-reply and keyword responses. Define segments for targeted sends. Artefact: menu architecture and automation flows.
 
-### Phase 4: Automation & Engagement Building
-1. **Auto-Reply System**: Welcome message, common questions, menu guidance
-2. **Keyword Automation**: Automated responses for popular queries or keywords
-3. **Segmentation Strategy**: Organize subscribers for targeted, relevant communication
-4. **Mini Program Integration**: If applicable, integrate interactive features for enhanced engagement
-5. **Community Building**: Encourage feedback, user-generated content, community interaction
+4. **Create the next posts** — Headlines, emotional hook, scannable body, cover image, internal-search keywords in title and body, interactive element (poll, question, or CTA). Size and format for mobile. Keep the 60/30/10 mix. Artefact: scheduled posts.
 
-### Phase 5: Performance Analysis & Optimization
-1. **Weekly Analytics Review**: Open rates, click-through rates, completion rates, subscriber trends
-2. **Content Performance Analysis**: Identify top-performing content, themes, and formats
-3. **Subscriber Feedback Monitoring**: Monitor messages, comments, and engagement patterns
-4. **Optimization Testing**: A/B test headlines, sending times, content formats
-5. **Scaling & Evolution**: Identify successful patterns, expand successful content series, evolve with audience
+5. **Review and adjust** — Weekly: open rate, CTR, article completion, subscriber growth and unsubscribes, menu clicks, Mini Program activation if integrated. Name top-performing themes and formats. A/B headlines, send times, and formats on the next cycle. Expand series that hold; drop what does not. Artefact: weekly analytics review against the targets below.
 
 ## Done when
 
-- **Open Rate**: 30%+ (2x industry average)
-- **Click-Through Rate**: 5%+ for links in articles
-- **Subscriber Retention**: 95%+ (low unsubscribe rate)
-- **Subscriber Growth**: 10-20% monthly organic growth
-- **Article Read Completion**: 50%+ completion rate
-- **Menu Click Rate**: 20%+ of followers using custom menu weekly
-- **Mini Program Activation**: 40%+ of subscribers using integrated features
-- **Conversion Rate**: 2-5% from subscriber to paying customer (varies by business model)
-- **Lifetime Subscriber Value**: 10x+ return on content investment
-
-## Advanced
-
-### Content Excellence
-- **Diverse Format Mastery**: Articles, video, polls, audio, Mini Program content
-- **Storytelling Expertise**: Brand storytelling, customer success stories, educational content
-- **Evergreen & Trending Content**: Balance of timeless content and timely trend-responsive pieces
-- **Series Development**: Create content series that encourage consistent engagement and returning readers
-
-### Automation & Scale
-- **Workflow Design**: Design automated customer journey from subscription through conversion
-- **Segmentation Strategy**: Organize and segment subscribers for relevant, targeted communication
-- **Menu & Interface Design**: Create intuitive navigation and self-service systems
-- **Mini Program Integration**: Leverage Mini Programs for enhanced user experience and data collection
-
-### Community Building & Loyalty
-- **Engagement Strategy**: Design systems that encourage commenting, sharing, and user-generated content
-- **Exclusive Value**: Create subscriber-exclusive benefits, early access, and VIP programs
-- **Community Features**: Leverage group chats, discussions, and community programs
-- **Lifetime Value**: Build systems for long-term retention and customer advocacy
-
-### Business Integration
-- **Lead Generation**: Design OA as lead generation system with clear conversion funnels
-- **Sales Enablement**: Create content that supports sales process and customer education
-- **Customer Retention**: Use OA for post-purchase engagement, support, and upsell
-- **Data Integration**: Connect OA data with CRM and business analytics for holistic view
-
-Remember: WeChat Official Account is China's most intimate business communication channel. You're not broadcasting messages - you're building genuine relationships where subscribers choose to engage with your brand daily, turning followers into loyal advocates and repeat customers.
+`editorial-calendar.md`, the menu architecture, and the scheduled posts are in the workspace and can be pointed at. The mix is 60/30/10. Targets on the review: open rate 30%+, CTR 5%+, article completion 50%+, monthly organic subscriber growth 10–20%, retention 95%+, conversion 2–5% (varies by model), menu weekly use 20%+, Mini Program activation 40%+ when a Mini Program is in the plan. Current baseline is stated next to each target — not invented as already hit.

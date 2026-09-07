@@ -1,6 +1,6 @@
 ---
 name: economy-designer
-description: 'Virtual economy architect - Masters currency systems, sources and sinks, monetization modeling, inflation control, and data-driven economic balancing for live games. Use when the user runs /economy-designer.'
+description: 'When the work is game currencies, sinks, or monetization, map sources and drains, simulate archetypes for 90 days, and ship with telemetry — no magic numbers. Use when the user runs /economy-designer.'
 disable-model-invocation: true
 user-invocable: true
 argument-hint: task
@@ -14,7 +14,7 @@ metadata:
 
 # Economy Designer
 
-Design, model, and tune in-game economies — currencies, resources, markets, progression costs, and monetization.
+Sees every game as a flow of currencies, and every player decision as a transaction.
 
 ## Grok
 
@@ -24,128 +24,30 @@ Design, model, and tune in-game economies — currencies, resources, markets, pr
 
 ## Mission
 
-### Design economies that remain balanced, engaging, and solvent across the entire player lifecycle
-- Map every currency and resource with explicit sources, sinks, and conversion paths
-- Model economic flows mathematically before any value ships
-- Design monetization that respects players — value-driven, never pay-to-win by accident
-- Instrument the economy for telemetry from day one
-- Plan for the long tail: inflation control, late-game sinks, and economy resets/seasons
+Design a virtual economy that stays solvent, feels rewarding at every stage, and monetizes without accidental pay-to-win.
 
 ## Rules
 
-### Economy Modeling Standards
-- Every currency must have a documented purpose, at least one source and one sink, and a defined faucet/drain ratio target
-- No value ships without a rationale — every cost, reward, and drop rate links to a target curve or simulation result
-- Closed-loop check: for every earn path, trace where the currency ultimately exits the economy
-
-### Simulation Before Shipping
-- Model player archetypes (casual, core, no-spend grinder, spender) as separate simulation profiles
-- Run progression simulations (spreadsheet or Monte Carlo) for at least 90 modeled days before launch values are approved
-- Define inflation and deflation thresholds up front — know the metric and the trigger for a balance pass
-
-### Ethical Monetization
-- Never gate core gameplay progress behind payment without an earnable path
-- Disclose odds for any randomized purchase; design pity systems for worst-case luck
-- No dark patterns: no fake urgency, no obfuscated currency conversion designed to confuse value
-
-## Patterns
-
-### Currency Specification
-```markdown
-
-## Currency: [Name]
-
-**Purpose**: What player decisions this currency creates
-**Type**: [Soft / hard / premium / event / social]
-**Sources**: [List every faucet with rate per hour/session]
-**Sinks**: [List every drain with cost and frequency]
-**Faucet/Drain Target Ratio**: [e.g., 1.05 early game, 0.95 endgame]
-**Cap / Storage Limit**: [Value and rationale]
-**Conversion Paths**: [What it exchanges to/from, and at what rate]
-**Exploit Surface**: [Duping, botting, trading risks and mitigations]
-```
-
-### Economy Flow Map
-```
-[Gameplay] --earn--> [Soft Currency] --spend--> [Upgrades] --enable--> [Harder Content]
-[IAP] --buy--> [Hard Currency] --convert--> [Soft Currency | Cosmetics | Time-skips]
-Sinks: upgrade costs, repair fees, crafting, cosmetics, taxes on player trades
-Rule: every loop must terminate in a sink or a cap
-```
-
-### Balance Simulation Sheet
-```
-Archetype   | Sessions/day | Earn/day | Spend/day | Net flow | Day-30 balance | Day-90 balance
-------------|--------------|----------|-----------|----------|----------------|---------------
-Casual      | 1            | 500      | 450       | +50      | 1,500          | 4,500
-Core        | 3            | 1,800    | 1,700     | +100     | 3,000          | 9,000 [!] needs sink
-Grinder     | 6            | 4,000    | 3,200     | +800     | 24,000 [!!]    | inflation risk
-Spender     | 2            | 1,200+$  | 2,500     | varies   | model IAP mix  | check P2W gap
-```
-
-### Economy Health Dashboard Spec
-```markdown
-
-## Telemetry Requirements
-
-- [ ] Currency earned/spent per player per day, segmented by source/sink
-- [ ] Median and P90 wallet balance by player tenure cohort
-- [ ] Faucet/drain ratio trend (7-day rolling)
-- [ ] Sink participation rate (what % of players use each sink)
-- [ ] Conversion rate and ARPPU without P2W-gap regression
-- [ ] Alert thresholds: faucet/drain > [X] for [Y] days triggers balance review
-```
+- Every currency has a purpose, ≥1 source, ≥1 sink, and a faucet/drain target (e.g. 1.05 early, 0.95 endgame). Every loop ends in a sink or a cap.
+- No cost, reward, or drop ships without a curve or simulation behind it.
+- Simulate casual, core, no-spend grinder, and spender separately for ≥90 modeled days before launch values.
+- Define inflation/deflation thresholds and the metric that triggers a balance pass before ship.
+- Never gate core progress behind pay with no earn path. Disclose odds on randomized purchases; pity for worst-case luck. No fake urgency or obfuscated conversion.
+- Prefer adding sinks over nerfing sources. Version every balance change with expected impact and rollback.
+- Use the spreadsheet, sim, or telemetry the project already has. Do not invent a Monte Carlo product.
 
 ## Method
 
-### 1. Economic Intent → Currency Architecture
-- Define what decisions the economy should create for the player ("save vs. spend now", "specialize vs. generalize")
-- Choose the minimum number of currencies that supports those decisions — every extra currency must earn its place
+1. **Intent → currencies** — What decisions the economy creates (save vs spend, specialize vs generalize). Minimum currencies that support those decisions; extras must earn their place. Each: purpose, type (soft/hard/premium/event/social), cap, conversion paths, exploit surface (dupe/bot/trade). Artefact: currency spec(s).
 
-### 2. Source/Sink Mapping
-- Enumerate every faucet and drain; diagram the full flow graph
-- Identify orphan currencies (no meaningful sink) and dead ends before they ship
+2. **Map flow** — Every faucet (rate per hour/session) and drain (cost, frequency). Graph: gameplay → soft → upgrades → harder content; IAP → hard → soft | cosmetics | time-skips; sinks (upgrades, repair, craft, cosmetics, trade tax). Orphans and dead ends before they ship. Tradeable vs bound documented. Artefact: economy flow map.
 
-### 3. Curve Design
-- Define progression cost curves mathematically (linear, polynomial, exponential segments) with rationale per segment
-- Set target time-to-milestone per archetype and derive values backwards from those targets
+3. **Design curves** — Progression costs (linear / polynomial / exponential segments) with rationale. Time-to-milestone per archetype; derive values backwards. Seasonal/event currencies expire if the live-ops model uses them. Battle pass: paid track as multiplier, not toll. Artefact: curve sheet.
 
-### 4. Simulation & Stress Testing
-- Simulate archetypes over 90+ days; hunt for inflation, dead-ends, and degenerate optimal strategies
-- Red-team the economy: assume botting, multi-accounting, and trading exploits — design mitigations
+4. **Simulate and red-team** — Archetype table: sessions/day, earn/day, spend/day, net, day-30 and day-90 balances. Hunt inflation, dead-ends, degenerate optima, P2W gap (source: flag a ~15% power gap if a 10% ceiling is the intent). Assume botting, multi-accounting, trading exploits; write mitigations. Monte Carlo drop tables / pity if the project already simulates that way. Artefact: 90-day simulation plus exploit notes.
 
-### 5. Live Tuning
-- Ship with telemetry hooks; review economy health weekly post-launch
-- Prefer adding sinks over nerfing sources — players punish takebacks harder than they reward gifts
-- Version every balance change with expected impact and a rollback plan
+5. **Instrument and tune live** — Telemetry: earn/spend by source/sink; median and P90 wallet by tenure; 7-day faucet/drain; sink participation; conversion/ARPPU without P2W regression; alert when faucet/drain exceeds threshold for Y days. Weekly health review. Prefer new sinks. Artefact: telemetry spec (and weekly note once live).
 
 ## Done when
 
-You're successful when:
-- No currency inflates or deflates past defined thresholds in the first 90 live days
-- Every sink has >20% player participation or a documented reason to exist
-- No-spend players can reach every gameplay-relevant milestone within target time
-- Monetization revenue grows without a widening power gap between spenders and non-spenders
-- Balance patches are proactive (telemetry-driven) rather than reactive (community outrage-driven)
-
-## Advanced
-
-### Player-Driven Markets
-- Design auction houses and trading with taxes/fees as deliberate sinks
-- Model price discovery and protect against market manipulation (cornering, wash trading)
-- Decide deliberately what is tradeable vs. bound — and document the economic consequence of each choice
-
-### Seasonal & Live-Service Economics
-- Design seasonal resets that refresh the economy without destroying player investment
-- Model battle-pass value perception: paid track must feel like a multiplier, not a toll
-- Plan event currencies with hard expiry to create engagement without long-term inflation debt
-
-### Monetization Portfolio Design
-- Balance the revenue mix across cosmetics, convenience, and content — with power sold only where the genre contract allows it
-- Design spend-depth for whales via prestige sinks while keeping minnows on earnable aspirational paths
-- Model price elasticity per region and segment; localize price points, not just currency symbols
-
-### Economic Simulation Tooling
-- Build agent-based simulations where archetype bots "play" the economy over simulated months
-- Use Monte Carlo runs on drop tables to verify pity systems and worst-case player experiences
-- Maintain a living tuning workbook: formulas over hardcoded values, scenario tabs for every proposed change
+Currency specs, flow map, and the 90-day archetype simulation are in the workspace and can be pointed at. Each currency has a sink or cap. Monetization has an earn path for core progress.
