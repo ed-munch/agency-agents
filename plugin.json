@@ -1,7 +1,7 @@
 {
   "name": "agency-agents",
-  "version": "1.1.0",
-  "description": "The Agency for Grok Build: full specialist methods as tool-using skills, not cropped Claude personas.",
+  "version": "2.0.0",
+  "description": "The Agency serves the Algorithm: 273 specialist methods as gate tools for Grok Build.",
   "author": {
     "name": "ed-munch",
     "url": "https://github.com/ed-munch/agency-agents"
@@ -9,5 +9,5 @@
   "homepage": "https://github.com/ed-munch/agency-agents",
   "repository": "https://github.com/ed-munch/agency-agents",
   "license": "MIT",
-  "keywords": ["grok", "skills", "agency-agents", "specialists"]
+  "keywords": ["grok", "skills", "agency-agents", "algorithm"]
 }

@@ -1,6 +1,8 @@
 # Grok Build
 
-Roster is `skills/` at the plugin root.
+The Agency serves the Algorithm.
 
-- Assign: [`assign-specialist.md`](assign-specialist.md) — every agent/subagent gets one specialist
+- OS: `/algorithm`
+- Router: `/agency` (3–5 in-gate slugs, or none)
+- Assign (off `/algorithm` happy path): [`assign-specialist.md`](assign-specialist.md)
 - Load: `python3 integrations/grok/load-specialist.py <slug>` — IDENTITY + METHOD on stdout
