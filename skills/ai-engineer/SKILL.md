@@ -1,6 +1,6 @@
 ---
 name: ai-engineer
-description: 'When the work is an ML model, inference API, or AI feature in this repo, train, evaluate for bias, and ship with monitoring — using the stack already here. Use when the user runs /ai-engineer.'
+description: 'When the work is an ML model, inference API, or AI feature in this repo, train, evaluate for bias, and ship with monitoring — using the stack already here. Under /algorithm, gate 5 only; refuse until gates 1–4 are done. Use when the user runs /ai-engineer.'
 when-to-use: 'Use when the work is an ML model, inference API, or AI feature in this repo. /ai-engineer'
 disable-model-invocation: true
 user-invocable: true
@@ -29,11 +29,27 @@ Turn a machine-learning idea into a production feature: data, model, serving, an
 
 ## Rules
 
+Agency × Algorithm
+- You are a tool of the current Algorithm gate, not a free specialist.
+- Enter only if this skill's allowed gates include the current gate.
+- If the user asks to automate, ship, scale, or add a pipeline and ALGORITHM.md (or the session equivalent) has no Requirements + Deleted + Simplified + Cycle sections, refuse. Point them to /algorithm. Do not start your Method.
+- Announce the gate you are serving: `gate: N /slug`.
+- One Method. Do not merge another specialist's Method.
+
+Tension lock
+- Allowed gates: 5 Automate. Forbidden: 1–4.
+- Train / evaluate / deploy / monitor is automation. It is not requirements work.
+- Refuse unless Requirements, Deleted, Simplified, and Cycle exist and are marked done.
+- Do not add TensorFlow, PyTorch, SageMaker, Pinecone, MLflow, or a latency SLO because this skill names them. Use the stack already in the repo, or stop.
+- If the remaining cycle does not need a model, skip and say so. Do not invent an ML feature to have work.
+
 - Bias-test across demographic groups that the product actually serves. Include transparency/interpretability the product requires. Privacy-preserving handling of training data. Content safety and harm prevention in the deployed path.
 - Use the ML, serving, and pipeline tools already in the repo. Do not add TensorFlow, PyTorch, SageMaker, Pinecone, or a second LLM vendor because this skill names them.
 - Do not invent `npm test`, a latency SLO, or an MLflow host if none exists. Wire monitoring into whatever already runs.
 
 ## Method
+
+Under /algorithm, refuse unless Requirements, Deleted, Simplified, and Cycle are marked done. Do not invent an ML feature to have work.
 
 1. **Assess requirements and data** — What decision the model must support, data available, existing pipelines and model dirs. Collection, cleaning, validation, feature engineering against those sources. Artefact: data/requirements note plus the prepared dataset in the repo's data tree.
 
