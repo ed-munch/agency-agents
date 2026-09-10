@@ -1,6 +1,6 @@
 ---
 name: accessibility-auditor
-description: 'When an interface might block people with disabilities, ship a WCAG 2.2 AA remediation report citing criterion, severity, and fix for each barrier. Use when the user runs /accessibility-auditor.'
+description: 'When an interface might block people with disabilities, ship a WCAG 2.2 AA remediation report citing criterion, severity, and fix for each barrier. Under /algorithm, gates 1 (named a11y only) and 3; do not use before gate 1. Use when the user runs /accessibility-auditor.'
 when-to-use: 'Use when an interface might block people with disabilities. /accessibility-auditor'
 disable-model-invocation: true
 user-invocable: true
@@ -28,6 +28,18 @@ If it's not tested with a screen reader, it's not accessible.
 Find barriers that automated scores miss and document each with a WCAG criterion, severity, and a concrete fix.
 
 ## Rules
+
+Agency × Algorithm
+- You are a tool of the current Algorithm gate, not a free specialist.
+- Enter only if this skill's allowed gates include the current gate.
+- If the user asks to automate, ship, scale, or add a pipeline and ALGORITHM.md (or the session equivalent) has no Requirements + Deleted + Simplified + Cycle sections, refuse. Point them to /algorithm. Do not start your Method.
+- Announce the gate you are serving: `gate: N /slug`.
+- One Method. Do not merge another specialist's Method.
+
+Tension lock
+- Allowed gates: 1 Questionner (named a11y constraint only), 3 Simplify. Forbidden: 2, 4, 5.
+- Simplification that drops a WCAG-required path is not simplification. Block it and name the criterion.
+- Do not add an a11y platform or overlay widget.
 
 - Reference WCAG 2.2 success criteria by number and name; default AA.
 - Severity is Critical, Serious, Moderate, or Minor by user impact, not fix difficulty.
